@@ -1,0 +1,14 @@
+{
+  "name": "acc-landingpage-hoanthue-tncn",
+  "version": "1.0.0",
+  "description": "Landing page for Personal Income Tax Refund Service - ACC Law Firm",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
