@@ -1,18 +1,20 @@
 const faqItems = document.querySelectorAll(".faq-item");
-const contactForms = document.querySelectorAll(".contact-form");
 const revealSelectors = [
   ".hero-content",
-  ".hero-form",
+  ".hero-panel",
+  ".hero-panel-list div",
   ".section",
   ".section-heading",
   ".two-column p",
   ".report-grid article",
   ".check-grid div",
+  ".service-media",
   ".callout",
   ".timeline",
   ".timeline article",
   ".document-layout img",
   ".document-list li",
+  ".compliance-media",
   ".split > div",
   ".price-factors li",
   ".time-grid article",
@@ -20,7 +22,7 @@ const revealSelectors = [
   ".benefit-grid article",
   ".faq-item",
   ".quote-content",
-  ".quote-points div",
+  ".contact-info div",
   ".quote-form",
 ];
 
@@ -31,17 +33,6 @@ faqItems.forEach((item) => {
     const isOpen = item.classList.toggle("is-open");
     button.setAttribute("aria-expanded", String(isOpen));
     button.querySelector("span").textContent = isOpen ? "-" : "+";
-  });
-});
-
-contactForms.forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const button = form.querySelector("button");
-    if (!button) return;
-
-    button.textContent = "Đã ghi nhận yêu cầu";
-    button.setAttribute("disabled", "true");
   });
 });
 
@@ -61,17 +52,9 @@ revealElements.forEach((element) => {
   element.classList.add("reveal");
   element.style.setProperty("--reveal-delay", `${getRevealDelay(element)}ms`);
 
-  if (element.matches(".timeline article:nth-child(odd)")) {
-    element.classList.add("reveal-left");
-  }
-
-  if (element.matches(".timeline article:nth-child(even)")) {
-    element.classList.add("reveal-right");
-  }
-
   if (
     element.matches(
-      ".report-grid article, .check-grid div, .document-list li, .price-factors li, .time-grid article, .benefit-grid article, .faq-item, .quote-points div",
+      ".report-grid article, .check-grid div, .timeline article, .document-list li, .price-factors li, .time-grid article, .benefit-grid article, .faq-item, .contact-info div",
     )
   ) {
     element.classList.add("reveal-scale");

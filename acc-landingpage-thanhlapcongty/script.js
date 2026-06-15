@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 5. INTERACTIVE FORM SUBMISSION & SUCCESS MODAL
   // ==========================================
-  const heroForm = document.getElementById('heroContactForm');
   const mainForm = document.getElementById('mainContactForm');
   const successModal = document.getElementById('successModal');
   const closeModalBtn = document.getElementById('closeModalBtn');
@@ -97,28 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
       successModal.classList.remove('show');
     }
   };
-
-  // Hero form submission
-  if (heroForm) {
-    heroForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const name = document.getElementById('heroName').value.trim();
-      const phone = document.getElementById('heroPhone').value.trim();
-      const type = document.getElementById('heroType').value;
-
-      if (name && phone) {
-        // Here you would normally send data to server
-        console.log('Hero form submitted:', { name, phone, type });
-        
-        // Reset form
-        heroForm.reset();
-        
-        // Show success
-        showSuccessModal();
-      }
-    });
-  }
 
   // Main contact form submission
   if (mainForm) {

@@ -7,7 +7,6 @@
   'use strict';
 
   // DOM Elements
-  const heroForm = document.getElementById('heroForm');
   const contactForm = document.getElementById('contactForm');
   const toast = document.getElementById('toast');
   const faqItems = document.querySelectorAll('.faq-item');
@@ -130,11 +129,6 @@
     initFAQ();
     initScrollReveal();
     initSmoothScroll();
-
-    handleFormSubmit(
-      heroForm,
-      'Cảm ơn bạn! Chuyên viên ACC sẽ liên hệ trong thời gian sớm nhất.'
-    );
 
     handleFormSubmit(
       contactForm,

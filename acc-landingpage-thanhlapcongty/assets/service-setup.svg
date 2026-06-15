@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="title desc">
+  <title id="title">Tu van thanh lap doanh nghiep</title>
+  <desc id="desc">Minh hoa tu van phap ly, ho so dang ky va giay phep doanh nghiep.</desc>
+  <rect width="760" height="300" rx="24" fill="#fdf5f5"/>
+  <circle cx="638" cy="72" r="48" fill="#d4af37" opacity=".2"/>
+  <circle cx="118" cy="230" r="58" fill="#7a2828" opacity=".08"/>
+  <rect x="84" y="62" width="226" height="176" rx="18" fill="#fff" stroke="#eadcdc" stroke-width="2"/>
+  <rect x="110" y="96" width="128" height="14" rx="7" fill="#7a2828"/>
+  <rect x="110" y="128" width="164" height="10" rx="5" fill="#d4af37" opacity=".75"/>
+  <rect x="110" y="154" width="148" height="9" rx="4.5" fill="#e6e0e0"/>
+  <rect x="110" y="178" width="112" height="9" rx="4.5" fill="#e6e0e0"/>
+  <circle cx="258" cy="196" r="28" fill="#7a2828" opacity=".1" stroke="#7a2828" stroke-width="3"/>
+  <path d="M244 196l9 9 20-24" fill="none" stroke="#7a2828" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="378" y="84" width="214" height="154" rx="18" fill="#fff" stroke="#eadcdc" stroke-width="2"/>
+  <path d="M420 206v-76h38v76M476 206V106h42v100M536 206v-56h28v56" fill="#f7eeee" stroke="#7a2828" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M402 206h184" stroke="#7a2828" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="590" cy="98" r="34" fill="#d4af37"/>
+  <path d="M574 99l10 10 21-24" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M334 150h42" stroke="#d4af37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M348 134l28 16-28 16" fill="none" stroke="#d4af37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="636" y="142" width="54" height="78" rx="10" fill="#fff" stroke="#7a2828" stroke-width="4"/>
+  <circle cx="663" cy="166" r="10" fill="#7a2828" opacity=".2"/>
+  <path d="M650 194h26M650 208h18" stroke="#7a2828" stroke-width="4" stroke-linecap="round"/>
+</svg>

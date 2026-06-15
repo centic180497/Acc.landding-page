@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="title desc">
+  <title id="title">Quy trinh thanh lap doanh nghiep</title>
+  <desc id="desc">Minh hoa quy trinh tu tu van, soan ho so, nop dang ky den ban giao ket qua.</desc>
+  <rect width="760" height="300" rx="24" fill="#fff"/>
+  <rect x="44" y="48" width="672" height="204" rx="22" fill="#fdf5f5" stroke="#eadcdc" stroke-width="2"/>
+  <path d="M154 150h104M322 150h104M490 150h104" stroke="#d4af37" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 18"/>
+  <g fill="#fff" stroke="#7a2828" stroke-width="5">
+    <circle cx="118" cy="150" r="46"/>
+    <circle cx="286" cy="150" r="46"/>
+    <circle cx="454" cy="150" r="46"/>
+    <circle cx="622" cy="150" r="46"/>
+  </g>
+  <g fill="none" stroke="#7a2828" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M98 154l13 13 29-34"/>
+    <path d="M270 132h28M270 150h32M270 168h22"/>
+    <path d="M436 168v-36h36v36M432 168h44"/>
+    <path d="M604 151l13 13 28-32"/>
+  </g>
+  <g fill="#7a2828" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="118" y="230">Tư vấn</text>
+    <text x="286" y="230">Hồ sơ</text>
+    <text x="454" y="230">Nộp đăng ký</text>
+    <text x="622" y="230">Bàn giao</text>
+  </g>
+  <circle cx="78" cy="74" r="18" fill="#d4af37" opacity=".28"/>
+  <circle cx="690" cy="224" r="24" fill="#7a2828" opacity=".08"/>
+</svg>
