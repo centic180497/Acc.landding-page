@@ -134,6 +134,129 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================
+  // 6. PROCESS CAROUSEL (Continuous + drag-to-scroll)
+  // ==========================================
+  (function initProcessCarousel() {
+    const root = document.getElementById('processCarousel');
+    if (!root) return;
+    const viewport = root.querySelector('.process-carousel-viewport');
+    const track = root.querySelector('#processCarouselTrack');
+    if (!viewport || !track) return;
+
+    const originals = Array.from(track.children);
+    if (originals.length === 0) return;
+
+    // Duplicate cards twice so the loop reads as continuous in both directions.
+    [1, 2].forEach(() => {
+      originals.forEach((li) => {
+        const clone = li.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+    });
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const SPEED = 60; // px / second
+    let loopWidth = 0;
+    let offset = 0;
+    let last = 0;
+    let rafId = null;
+    let paused = false;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartOffset = 0;
+    let pointerId = null;
+
+    const measure = () => {
+      const cardWidth = originals[0].getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+      loopWidth = (cardWidth + gap) * originals.length;
+      // Start a touch shifted in so user can drag forward or backward immediately.
+      if (offset === 0) offset = -loopWidth;
+      normalize();
+      apply();
+    };
+
+    const normalize = () => {
+      if (loopWidth <= 0) return;
+      // Keep offset within [-2*loopWidth, 0] so middle copy is on screen.
+      while (offset <= -2 * loopWidth) offset += loopWidth;
+      while (offset > -loopWidth) offset -= loopWidth;
+    };
+
+    const apply = () => {
+      track.style.transform = `translate3d(${offset}px, 0, 0)`;
+    };
+
+    const tick = (ts) => {
+      if (!last) last = ts;
+      const dt = (ts - last) / 1000;
+      last = ts;
+      if (!paused && !isDragging && !reduceMotion) {
+        offset -= SPEED * dt;
+        normalize();
+        apply();
+      }
+      rafId = requestAnimationFrame(tick);
+    };
+
+    // Pause on hover / focus.
+    root.addEventListener('mouseenter', () => { paused = true; });
+    root.addEventListener('mouseleave', () => { paused = false; });
+    root.addEventListener('focusin', () => { paused = true; });
+    root.addEventListener('focusout', () => { paused = false; });
+
+    // Pointer drag (mouse + touch + pen).
+    const onDown = (e) => {
+      if (e.button !== undefined && e.button !== 0) return;
+      isDragging = true;
+      pointerId = e.pointerId;
+      dragStartX = e.clientX;
+      dragStartOffset = offset;
+      root.classList.add('is-dragging');
+      try { viewport.setPointerCapture(pointerId); } catch (_) {}
+    };
+
+    const onMove = (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - dragStartX;
+      offset = dragStartOffset + dx;
+      normalize();
+      apply();
+    };
+
+    const onUp = (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      root.classList.remove('is-dragging');
+      try { viewport.releasePointerCapture(pointerId); } catch (_) {}
+      pointerId = null;
+      last = 0; // reset so auto-scroll resumes smoothly
+    };
+
+    viewport.addEventListener('pointerdown', onDown);
+    viewport.addEventListener('pointermove', onMove);
+    viewport.addEventListener('pointerup', onUp);
+    viewport.addEventListener('pointercancel', onUp);
+    viewport.addEventListener('pointerleave', onUp);
+
+    // Prevent native image drag inside cards from hijacking the pointer.
+    track.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Re-measure on resize.
+    let resizeTO;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTO);
+      resizeTO = setTimeout(measure, 120);
+    });
+
+    measure();
+    if (!reduceMotion) {
+      rafId = requestAnimationFrame(tick);
+    }
+  })();
+
   // Smooth scroll to links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

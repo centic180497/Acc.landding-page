@@ -1,21 +1,22 @@
-<html lang="vi">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#7a2828" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-    <script src="script.js" defer></script>
-  <body>
-    <main id="top">
+<!--
+  Dán toàn bộ block dưới đây vào WP Custom HTML block.
+  - Đảm bảo styles.css và script.js đã upload lên WP và sửa href/src cho đúng URL.
+    Ví dụ: /wp-content/uploads/2026/06/landing-bctc/styles.css
+  - File này KHÔNG có <!DOCTYPE>, <html>, <head>, <body>: WP đã có sẵn.
+-->
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+/>
+<style>
+  /* Khi nhúng vào WP: chặn scroll ngang do parent của theme có thể không clip overflow */
+  html, body { overflow-x: hidden; }
+</style>
+<main id="top">
       <section class="hero">
         <div class="hero-inner">
           <div class="hero-content">
@@ -468,5 +469,4 @@
         </div>
       </section>
     </main>
-  </body>
-</html>
+<script src="script.js" defer></script>

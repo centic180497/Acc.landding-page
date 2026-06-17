@@ -138,7 +138,7 @@ p {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 40px 0;
   position: relative;
 }
 
@@ -167,7 +167,7 @@ p {
 
 /* Section Header Styles */
 .section-title {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -381,19 +381,19 @@ p {
   width: 60px;
   height: 60px;
   border-radius: var(--radius-md);
-  background-color: var(--bg-soft);
-  color: var(--primary);
+  background: linear-gradient(135deg, #fff4dc 0%, #f3d896 55%, var(--accent) 100%);
+  color: var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  transition: var(--transition-normal);
+  box-shadow: 0 10px 22px rgba(207, 160, 82, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition: transform var(--transition-normal);
 }
 
 .card:hover .icon-box {
-  background-color: var(--primary);
-  color: var(--text-light);
+  transform: translateY(-2px);
 }
 
 /* =================================*********
@@ -458,7 +458,7 @@ p {
 .hero-content {
   display: flex;
   flex-direction: column;
-  max-width: 760px;
+  max-width: 920px;
 }
 
 .badge-premium {
@@ -539,6 +539,111 @@ p {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 34px;
+}
+
+/* Hero contact row: 2 hotline + zalo */
+.hero-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hero-hotline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 218, 143, 0.38);
+  color: var(--text-light);
+  transition: var(--transition-normal);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+}
+
+.hero-hotline-btn:hover {
+  background: rgba(255, 255, 255, 0.20);
+  border-color: rgba(255, 218, 143, 0.70);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.hero-hotline-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--primary-dark);
+  background: linear-gradient(135deg, #fff4dc 0%, #f3d896 55%, var(--accent) 100%);
+  box-shadow: 0 6px 14px rgba(207, 160, 82, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.hero-hotline-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.hero-hotline-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgba(255, 218, 143, 0.85);
+}
+
+.hero-hotline-number {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: var(--text-light);
+}
+
+/* Zalo pill button */
+.hero-zalo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #0084f7 0%, #0068ff 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-light);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 22px rgba(0, 104, 255, 0.38);
+  transition: var(--transition-normal);
+  text-decoration: none;
+  align-self: stretch;
+}
+
+.hero-zalo-btn:hover {
+  background: linear-gradient(135deg, #1a91ff 0%, #1a7dff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0, 104, 255, 0.46);
+}
+
+.hero-zalo-icon {
+  font-size: 1.05rem;
+}
+
+.hero-zalo-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Divider dot between hotline buttons */
+.hero-contact-row .hero-hotline-btn + .hero-hotline-btn::before {
+  content: none;
 }
 
 .hero-trust-panel {
@@ -1112,8 +1217,8 @@ p {
 }
 
 .support-item-icon {
-  background-color: var(--bg-soft);
-  color: var(--primary);
+  background: linear-gradient(135deg, #fff4dc 0%, #f3d896 55%, var(--accent) 100%);
+  color: var(--primary-dark);
   width: 50px;
   height: 50px;
   min-width: 50px;
@@ -1122,12 +1227,7 @@ p {
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
-  transition: var(--transition-normal);
-}
-
-.support-item:hover .support-item-icon {
-  background-color: var(--primary);
-  color: var(--text-light);
+  box-shadow: 0 8px 18px rgba(207, 160, 82, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .support-item-content h4 {
@@ -1233,14 +1333,15 @@ p {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: var(--bg-soft);
-  color: var(--primary);
+  background: linear-gradient(135deg, #fff4dc 0%, var(--accent) 100%);
+  color: var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   font-weight: 700;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--accent);
+  box-shadow: 0 6px 14px rgba(207, 160, 82, 0.3);
   z-index: 2;
 }
 
@@ -1323,8 +1424,8 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--primary);
-  color: var(--accent);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 60%, var(--accent) 130%);
+  color: #ffe9a8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1337,10 +1438,8 @@ p {
 }
 
 .process-node:hover .process-marker {
-  background-color: var(--accent);
-  color: var(--bg-dark);
-  box-shadow: 0 0 0 10px rgba(207, 160, 82, 0.25);
-  transform: translate(-50%, -2px) scale(1.1);
+  box-shadow: 0 0 0 10px rgba(207, 160, 82, 0.28);
+  transform: translate(-50%, -2px) scale(1.06);
 }
 
 .process-card {
@@ -1619,24 +1718,22 @@ p {
 }
 
 .why-card-icon {
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  background-color: var(--bg-soft);
-  color: var(--primary);
+  background: linear-gradient(135deg, #fff4dc 0%, #f3d896 55%, var(--accent) 100%);
+  color: var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
   margin-bottom: 24px;
-  transition: var(--transition-normal);
-  box-shadow: 0 4px 10px rgba(122, 40, 40, 0.05);
+  box-shadow: 0 12px 24px rgba(207, 160, 82, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  transition: transform var(--transition-normal);
 }
 
 .why-card:hover .why-card-icon {
-  background-color: var(--primary);
-  color: var(--text-light);
-  transform: rotateY(360deg);
+  transform: translateY(-3px) scale(1.04);
 }
 
 .why-card h4 {
@@ -1777,50 +1874,247 @@ p {
   margin-bottom: 40px;
 }
 
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-bottom: 40px;
+/* ==========================================
+   HOTLINE HIGHLIGHT CARD
+   ========================================= */
+.hotline-card {
+  position: relative;
+  margin-bottom: 26px;
+  padding: 22px 24px 24px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(120% 140% at 110% -20%, rgba(207, 160, 82, 0.32) 0%, rgba(207, 160, 82, 0) 55%),
+    linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #8e3232 100%);
+  color: var(--text-light);
+  box-shadow: 0 24px 48px rgba(122, 40, 40, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.contact-detail-item {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.contact-detail-icon {
-  width: 54px;
-  height: 54px;
+.hotline-card::before {
+  content: '';
+  position: absolute;
+  inset: auto -40px -60px auto;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  background-color: var(--primary);
-  color: var(--accent);
+  background: radial-gradient(circle, rgba(255, 218, 143, 0.28) 0%, rgba(255, 218, 143, 0) 70%);
+  z-index: -1;
+}
+
+.hotline-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.hotline-card-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
+  color: var(--primary-dark);
+  background: linear-gradient(135deg, #fff4dc 0%, #f3d896 55%, var(--accent) 100%);
+  box-shadow: 0 10px 22px rgba(207, 160, 82, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.hotline-card-headline {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hotline-card-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #ffd37c;
+}
+
+.hotline-card-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #58e08d;
+  box-shadow: 0 0 0 4px rgba(88, 224, 141, 0.25);
+  animation: hotlinePulse 1.6s ease-in-out infinite;
+}
+
+@keyframes hotlinePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(88, 224, 141, 0.45); }
+  50% { box-shadow: 0 0 0 8px rgba(88, 224, 141, 0); }
+}
+
+.hotline-card-sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.hotline-card-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hotline-number {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 218, 143, 0.28);
+  color: var(--text-light);
+  transition: var(--transition-normal);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.hotline-number:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 218, 143, 0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+}
+
+.hotline-number.primary {
+  background: linear-gradient(135deg, #ffd37c 0%, var(--accent) 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--primary-dark);
+  box-shadow: 0 12px 26px rgba(207, 160, 82, 0.4);
+}
+
+.hotline-number.primary:hover {
+  background: linear-gradient(135deg, #ffe1a3 0%, #e3b766 100%);
+  color: var(--primary-dark);
+}
+
+.hotline-number-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.hotline-number.primary .hotline-number-icon {
+  background: rgba(82, 26, 26, 0.18);
+  color: var(--primary-dark);
+}
+
+.hotline-number-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  min-width: 0;
+}
+
+.hotline-number-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.78;
+  margin-bottom: 4px;
+}
+
+.hotline-number-value {
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   CONTACT MINI ITEMS (Email + Zalo)
+   ========================================= */
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  color: inherit;
+  min-width: 0;
+}
+
+.contact-detail-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(207, 160, 82, 0.45);
+  box-shadow: 0 12px 24px rgba(122, 40, 40, 0.1);
+}
+
+.contact-detail-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  color: var(--text-light);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon-email {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.contact-icon-zalo {
+  background: linear-gradient(135deg, #008df0 0%, #0068ff 100%);
+}
+
+.contact-detail-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .contact-detail-text p:first-child {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  color: var(--accent-dark);
+  color: var(--text-secondary);
   font-weight: 700;
   margin-bottom: 2px;
   letter-spacing: 1px;
 }
 
 .contact-detail-text p:last-child {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--primary-dark);
   margin-bottom: 0;
-}
-
-.contact-detail-text a:last-child:hover {
-  color: var(--primary-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Contact Social links */
@@ -1844,8 +2138,9 @@ p {
 }
 
 .social-btn:hover {
-  background-color: var(--primary);
-  color: var(--text-light);
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  border-color: var(--accent);
   transform: translateY(-3px);
 }
 
@@ -1998,42 +2293,7 @@ p {
   object-fit: contain;
 }
 
-/* Back to top button */
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background-color: var(--bg-white);
-  color: var(--primary);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  cursor: pointer;
-  z-index: 999;
-  transition: var(--transition-normal);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(15px);
-}
-
-.back-to-top.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.back-to-top:hover {
-  background-color: var(--primary);
-  color: var(--text-light);
-  border-color: var(--primary);
-  transform: translateY(-3px);
-}
+/* back-to-top removed */
 
 /* ==========================================
    POPUP MODAL (SUCCESS DIALOG)
@@ -2110,7 +2370,7 @@ p {
 /* Tablets & Small Desktops (max-width: 1024px) */
 @media (max-width: 1024px) {
   .section {
-    padding: 80px 0;
+    padding: 50px 0;
   }
   
   .section-title h2 {
@@ -2151,6 +2411,23 @@ p {
 
 /* Mobile & Small Tablets (max-width: 768px) */
 @media (max-width: 768px) {
+  .section {
+    padding: 52px 0;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  .section-title h2 {
+    font-size: 1.6rem;
+    letter-spacing: 0;
+  }
+
+  .section-title p {
+    font-size: 1rem;
+  }
+
   .hero .container {
     grid-template-columns: 1fr;
     gap: 34px;
@@ -2165,8 +2442,36 @@ p {
     font-size: 2.25rem;
   }
 
+  /* Hero actions: CTA full width */
   .hero-actions {
+    width: 100%;
     justify-content: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* hero-contact-row: 3 rows on mobile */
+  .hero-contact-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .hero-hotline-btn {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 18px 12px 14px;
+  }
+
+  .hero-zalo-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 18px;
+    font-size: 1rem;
   }
   
   .hero-features {
@@ -2186,10 +2491,49 @@ p {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .icon-box {
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+  }
+
+  .case-card-title {
+    font-size: 1.1rem;
+  }
+
+  .case-card-text {
+    font-size: 0.95rem;
+  }
+
+  .support-item {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .support-item-content h4 {
+    font-size: 1rem;
+  }
   
   .docs-time-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .docs-card, .time-card {
+    padding: 28px 22px;
+  }
+
+  .docs-item {
+    gap: 12px;
+  }
+
+  .time-item-title {
+    font-size: 1.05rem;
   }
   
   .process-timeline::before {
@@ -2228,72 +2572,164 @@ p {
   .process-node:nth-child(odd) .process-card {
     transform-origin: left center;
   }
+
+  .process-card {
+    padding: 20px 18px;
+  }
+
+  .process-card h4 {
+    font-size: 1.05rem;
+  }
   
   .pricing-wrapper {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .pricing-box {
+    padding: 36px 24px;
   }
   
   .compare-container {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
+  .compare-box {
+    padding: 28px 22px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .why-card {
+    padding: 24px 16px;
+  }
+
+  .why-card-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.45rem;
+    margin-bottom: 16px;
+  }
+
+  .why-card h4 {
+    font-size: 1rem;
+  }
+
+  .faq-wrapper {
+    gap: 10px;
+  }
+
+  .faq-header {
+    padding: 18px 20px;
+  }
+
+  .faq-header h4 {
+    font-size: 0.97rem;
+  }
+
+  .faq-content-inner {
+    padding: 16px 20px 20px;
+    font-size: 0.92rem;
+  }
   
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   
   .contact-form-card {
-    padding: 30px 20px;
+    padding: 28px 18px;
+  }
+
+  .hotline-card-numbers {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hotline-number-value {
+    font-size: 1rem;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 /* Extra Small Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .section {
-    padding: 60px 0;
+    padding: 44px 0;
+  }
+
+  .container {
+    padding: 0 16px;
   }
   
   .section-title h2 {
-    font-size: 1.75rem;
+    font-size: 1.45rem;
+  }
+
+  .section-title p {
+    font-size: 0.95rem;
   }
   
   .hero-content h1 {
     font-size: 1.85rem;
   }
+
+  .badge-premium {
+    font-size: 0.75rem;
+    padding: 5px 11px;
+  }
   
   .hero-features {
     grid-template-columns: 1fr;
-    gap: 15px;
-    align-items: flex-start;
+    gap: 12px;
   }
   
   .hero-feature-item {
     min-height: auto;
-    padding: 18px;
+    padding: 16px;
     width: 100%;
   }
   
   .hero-feature-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-feature-desc {
+    font-size: 0.82rem;
   }
 
   .hero-actions .btn {
     width: 100%;
+    font-size: 1rem;
+    padding: 14px 20px;
+  }
+
+  .hero-hotline-number {
+    font-size: 0.95rem;
   }
 
   .hero-trust-card {
     padding: 28px 18px;
   }
 
+  .hero-trust-card h2 {
+    font-size: 1.4rem;
+  }
+
   .hero-trust-list div {
-    grid-template-columns: 74px 1fr;
-    gap: 12px;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    padding: 12px;
   }
 
   .hero-trust-list strong {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
   
   .tax-digit {
@@ -2307,16 +2743,394 @@ p {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .case-card {
+    padding: 22px 18px;
+  }
+
+  .case-card-title {
+    font-size: 1rem;
+  }
   
   .grid-3-col {
     grid-template-columns: 1fr;
   }
-  
-  .why-grid {
-    grid-template-columns: 1fr;
+
+  .support-item {
+    padding: 14px;
+  }
+
+  .support-item-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 1rem;
+  }
+
+  .docs-card, .time-card {
+    padding: 22px 16px;
+  }
+
+  .process-card {
+    padding: 16px 14px;
   }
   
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .why-card {
+    padding: 20px 12px;
+  }
+
+  .why-card-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+
+  .why-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .compare-box {
+    padding: 22px 16px;
+  }
+
+  .compare-box-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .hotline-card-numbers {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-box {
+    padding: 28px 18px;
+  }
+
   .price {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .faq-header {
+    padding: 16px;
+  }
+
+  .faq-header h4 {
+    font-size: 0.92rem;
+  }
+}
+
+/* ==========================================
+   HOTLINE & CONTACT RESPONSIVE
+   ========================================= */
+@media (max-width: 600px) {
+  .hotline-card {
+    padding: 20px 18px 22px;
+  }
+
+  .hotline-card-numbers {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hotline-number-value {
+    font-size: 1.05rem;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   SECTION CONTACT ACTIONS
+   ========================================= */
+.section-contact-actions {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 14px;
+  max-width: 940px;
+  margin: 34px auto 0;
+}
+
+.section-contact-actions.compact {
+  justify-content: flex-start;
+  max-width: none;
+  margin: 30px 0 0;
+}
+
+.section-contact-actions.pricing-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 28px 0 0;
+}
+
+.section-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: var(--transition-normal);
+  text-align: left;
+  min-width: 0;
+}
+
+.section-contact-btn:hover {
+  transform: translateY(-2px);
+}
+
+.section-contact-hotline,
+.section-contact-mobile {
+  flex: 1;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 58%, var(--primary-light) 100%);
+  color: var(--text-light);
+  border-color: rgba(207, 160, 82, 0.42);
+  box-shadow: 0 16px 32px rgba(122, 40, 40, 0.2);
+}
+
+.section-contact-mobile {
+  background: rgba(122, 40, 40, 0.94);
+}
+
+.section-contact-hotline:hover,
+.section-contact-mobile:hover {
+  box-shadow: 0 20px 38px rgba(122, 40, 40, 0.28);
+}
+
+.section-contact-zalo {
+  flex: 0.9;
+  background: linear-gradient(135deg, #008df0 0%, #0068ff 100%);
+  color: var(--text-light);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 30px rgba(0, 104, 255, 0.25);
+}
+
+.section-contact-zalo:hover {
+  box-shadow: 0 18px 36px rgba(0, 104, 255, 0.34);
+}
+
+.section-contact-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--text-light);
+}
+
+.section-contact-hotline .section-contact-icon,
+.section-contact-mobile .section-contact-icon {
+  background: linear-gradient(135deg, #fff4dc 0%, #f3d896 55%, var(--accent) 100%);
+  color: var(--primary-dark);
+  box-shadow: 0 8px 18px rgba(207, 160, 82, 0.34);
+}
+
+.section-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  line-height: 1.12;
+}
+
+.section-contact-text span {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.section-contact-text strong {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.section-contact-text small {
+  font-size: 0.82rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.pricing-actions .section-contact-btn {
+  width: 100%;
+  min-height: 58px;
+}
+
+@media (max-width: 768px) {
+  .section-contact-actions,
+  .section-contact-actions.compact {
+    width: 100%;
+    max-width: none;
+    margin-top: 26px;
+  }
+
+  .section-contact-text strong {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .section-contact-actions,
+  .section-contact-actions.compact {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-contact-btn {
+    width: 100%;
+    min-height: 58px;
+    padding: 11px 14px;
+  }
+
+  .section-contact-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .section-contact-text strong {
+    white-space: normal;
+  }
+}
+
+/* ==========================================
+   MOBILE HORIZONTAL OVERFLOW FIX
+   ========================================= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .hero,
+  .section,
+  .hero-content,
+  .hero .container,
+  .contact-grid,
+  .support-wrapper,
+  .docs-time-grid,
+  .pricing-wrapper,
+  .compare-container,
+  .whatis-content,
+  .grid-3-col,
+  .why-grid,
+  .section-contact-actions,
+  .hero-contact-row {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero {
+    overflow: hidden;
+  }
+
+  .hero-shape {
+    width: 280px;
+    height: 280px;
+    right: -150px;
+    top: -80px;
+  }
+
+  .support-floating-stats {
+    right: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+  }
+
+  .section-contact-actions {
+    overflow: hidden;
+  }
+
+  .section-contact-btn,
+  .hero-hotline-btn,
+  .hero-zalo-btn,
+  .hotline-number,
+  .contact-detail-item {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .section-contact-text,
+  .hero-hotline-info,
+  .hotline-number-info,
+  .contact-detail-text {
+    min-width: 0;
+  }
+
+  .section-contact-text strong,
+  .hero-hotline-number,
+  .hotline-number-value,
+  .contact-detail-text p:last-child {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1,
+  .section-title h2,
+  .hero-description,
+  .contact-info-desc {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .support-floating-stats {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 14px auto 0;
+    width: 100%;
+  }
+}
+
+/* Embedded form overflow guard */
+@media (max-width: 768px) {
+  .contact-form-wrapper,
+  .contact-form-card,
+  .bizfly-contact-form,
+  .form-lien-he,
+  #ticket-support-embed,
+  #ticket-support-embed iframe,
+  iframe,
+  embed,
+  object {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .contact-form-card,
+  .bizfly-contact-form,
+  .form-lien-he,
+  #ticket-support-embed {
+    overflow-x: hidden;
   }
 }

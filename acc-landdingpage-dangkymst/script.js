@@ -3,15 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // SCROLL EFFECTS
   // ==========================================
-  const backToTopBtn = document.getElementById('back-to-top');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      if (backToTopBtn) backToTopBtn.classList.add('active');
-    } else {
-      if (backToTopBtn) backToTopBtn.classList.remove('active');
-    }
-  });
+  // back-to-top removed
 
   // ==========================================
   // SCROLL REVEAL ANIMATION (INTERSECTION OBSERVER)
@@ -69,18 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // ==========================================
-  // BACK TO TOP BUTTON
-  // ==========================================
-  if (backToTopBtn) {
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
 
   // ==========================================
   // FORM HANDLING & SUCCESS MODAL

@@ -17,7 +17,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #2d3748;
-  background: #fffdfb;
+  background: #fff8f0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -111,9 +111,9 @@ p {
   color: #ffffff;
 }
 .btn--primary:hover {
-  background: #963232;
+  background: #8e2a2a;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
 }
 .btn--outline {
   background: transparent;
@@ -125,7 +125,7 @@ p {
   border-color: #ffffff;
 }
 .btn--gold {
-  background: #d4a853;
+  background: #e8b94d;
   color: #7a2828;
 }
 .btn--gold:hover {
@@ -147,8 +147,8 @@ p {
 .badge {
   display: inline-block;
   padding: 6px 16px;
-  background: rgba(212, 168, 83, 0.15);
-  color: #d4a853;
+  background: rgba(232, 185, 77, 0.15);
+  color: #e8b94d;
   font-size: 13px;
   font-weight: 600;
   border-radius: 50px;
@@ -161,17 +161,17 @@ p {
 }
 
 .section {
-  padding: 88px 0;
+  padding: 64px 0;
 }
 .section--alt {
-  background: #fbf7f4;
+  background: #fbecdf;
 }
 .section--dark {
   background: linear-gradient(135deg, #641f1f 0%, #7a2828 58%, #4d1717 100%);
   color: #ffffff;
 }
 .section--intro {
-  padding: 76px 0;
+  padding: 56px 0;
 }
 .section--contact {
   background: linear-gradient(135deg, #7a2828 0%, #963232 100%);
@@ -204,28 +204,36 @@ p {
   display: inline-block;
   font-size: 13px;
   font-weight: 700;
-  color: #d4a853;
+  color: #e8b94d;
   letter-spacing: 0.1em;
   margin-bottom: 0.75rem;
 }
 .section-tag--gold {
-  color: #d4a853;
+  color: #e8b94d;
 }
 
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 56px 0 24px;
+  padding: 64px 0 48px;
   overflow: hidden;
+}
+
+/* Desktop / tablet: hero fills the viewport on first paint */
+@media (min-width: 769px) {
+  .hero {
+    min-height: 100vh;
+    justify-content: center;
+    gap: 32px;
+  }
+  .hero__inner { width: 100%; }
 }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(33, 16, 14, 0.88), rgba(70, 25, 24, 0.67) 48%, rgba(33, 16, 14, 0.2)), url("https://congtyluatacc.vn/wp-content/uploads/2026/06/dang-ky-gpkd-gia-re.png");
+  background: linear-gradient(90deg, rgba(33, 12, 12, 0.92), rgba(95, 25, 25, 0.78) 48%, rgba(33, 12, 12, 0.4)), url("https://congtyluatacc.vn/wp-content/uploads/2026/06/dang-ky-gpkd-gia-re.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -235,7 +243,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(122, 40, 40, 0.75) 0%, rgba(122, 40, 40, 0.45) 50%, rgba(122, 40, 40, 0.2) 100%);
+  background: linear-gradient(to right, rgba(122, 40, 40, 0.85) 0%, rgba(122, 40, 40, 0.55) 50%, rgba(122, 40, 40, 0.25) 100%);
 }
 .hero__inner {
   width: 100%;
@@ -264,7 +272,7 @@ p {
   max-width: 780px;
 }
 .hero__title span {
-  color: #d4a853;
+  color: #e8b94d;
 }
 .hero__desc {
   font-size: 1.1rem;
@@ -279,12 +287,12 @@ p {
   margin-bottom: 1.4rem;
 }
 .hero .btn--primary {
-  background: #d4a853;
+  background: #e8b94d;
   color: #5b1d1d;
 }
 .hero .btn--primary:hover {
   background: #e0b96a;
-  box-shadow: 0 14px 34px rgba(212, 168, 83, 0.28);
+  box-shadow: 0 14px 34px rgba(232, 185, 77, 0.28);
 }
 .hero__stats {
   position: relative;
@@ -292,19 +300,14 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  margin-top: 28px;
+  margin-top: 32px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
 }
-@media (max-width: 768px) {
-  .hero__stats {
-    grid-template-columns: 1fr;
-    margin-top: 36px;
-  }
-}
+/* hero stats mobile rules moved to redesign block at EOF */
 
 .hero-points {
   display: grid;
@@ -322,7 +325,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  color: #d4a853;
+  color: #e8b94d;
   font-weight: 800;
 }
 
@@ -333,7 +336,7 @@ p {
 .stat strong {
   display: block;
   font-size: 1.55rem;
-  color: #d4a853;
+  color: #e8b94d;
   line-height: 1.2;
 }
 .stat span {
@@ -361,7 +364,7 @@ p {
   width: 190px;
   height: 190px;
   border-radius: 50%;
-  background: rgba(212, 168, 83, 0.18);
+  background: rgba(232, 185, 77, 0.18);
 }
 .hero-card h3 {
   position: relative;
@@ -391,7 +394,7 @@ p {
 .hero-card__header strong {
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(122, 40, 40, 0.08);
+  background: rgba(122, 40, 40, 0.14);
   color: #7a2828;
   font-size: 13px;
 }
@@ -406,7 +409,7 @@ p {
   border: 1px solid #f0e6e0;
   border-radius: 14px;
   background: #ffffff;
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
 }
 .hero-license-card__icon {
   width: 64px;
@@ -416,7 +419,7 @@ p {
   justify-content: center;
   border-radius: 10px;
   background: linear-gradient(180deg, #7a2828 0%, #963232 100%);
-  color: #d4a853;
+  color: #e8b94d;
   font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.05em;
@@ -448,7 +451,7 @@ p {
   width: 72%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #d4a853, #7a2828);
+  background: linear-gradient(90deg, #e8b94d, #7a2828);
 }
 .hero-progress__meta {
   display: flex;
@@ -496,13 +499,13 @@ p {
   font-weight: 700;
 }
 .hero-card__phone:hover {
-  border-color: #d4a853;
+  border-color: #e8b94d;
   color: #963232;
 }
 
 @media (max-height: 760px) and (min-width: 993px) {
   .hero {
-    padding: 34px 0 18px;
+    padding: 44px 0 28px;
   }
   .hero__inner {
     gap: 42px;
@@ -532,35 +535,7 @@ p {
   }
 }
 
-@media (max-width: 576px) {
-  .hero {
-    padding: 58px 0 26px;
-  }
-  .hero__inner {
-    padding: 0 18px;
-  }
-  .hero__title br {
-    display: none;
-  }
-  .hero__actions .btn {
-    width: 100%;
-  }
-  .hero-card {
-    padding: 24px;
-  }
-  .hero-license-card {
-    grid-template-columns: 1fr;
-  }
-  .hero-progress__meta {
-    display: block;
-  }
-  .hero-progress__meta span {
-    display: block;
-    max-width: none;
-    margin-top: 4px;
-    text-align: left;
-  }
-}
+/* hero mobile rules moved to redesign block at EOF */
 
 .intro-grid {
   display: grid;
@@ -612,7 +587,7 @@ p {
   border: 1px solid #f0e6e0;
   border-radius: 12px;
   margin-bottom: 0;
-  box-shadow: 0 2px 8px rgba(122, 40, 40, 0.08);
+  box-shadow: 0 2px 8px rgba(122, 40, 40, 0.14);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feature-mini:hover {
@@ -652,7 +627,7 @@ p {
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid #e8dede;
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
   background: #ffffff;
 }
 .section-visual--license,
@@ -662,7 +637,7 @@ p {
   justify-content: center;
   padding: 34px 30px 96px;
   background:
-    linear-gradient(135deg, rgba(122, 40, 40, 0.08), rgba(212, 168, 83, 0.16)),
+    linear-gradient(135deg, rgba(122, 40, 40, 0.14), rgba(232, 185, 77, 0.16)),
     #fffdfb;
 }
 .section-visual img,
@@ -738,7 +713,7 @@ p {
   text-transform: uppercase;
 }
 .license-mockup__top strong {
-  color: #d4a853;
+  color: #e8b94d;
 }
 .license-mockup__paper h3 {
   max-width: 240px;
@@ -796,8 +771,8 @@ p {
   padding: 18px;
   border: 1px solid #f0e6e0;
   border-radius: 12px;
-  background: #fffaf7;
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
+  background: #fff3e6;
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
 }
 .license-mockup__checklist span {
   color: #64748b;
@@ -843,7 +818,7 @@ p {
   padding: 16px;
   border: 1px solid #f0e6e0;
   border-radius: 12px;
-  background: #fffdfb;
+  background: #fff8f0;
 }
 .workflow-step > span {
   width: 48px;
@@ -871,12 +846,12 @@ p {
   color: #059669;
 }
 .workflow-step--active {
-  border-color: rgba(212, 168, 83, 0.72);
-  background: #fff8f2;
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
+  border-color: rgba(232, 185, 77, 0.72);
+  background: #fff1de;
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
 }
 .workflow-step--active > span {
-  background: #d4a853;
+  background: #e8b94d;
   color: #7a2828;
 }
 .workflow-board__footer {
@@ -905,7 +880,7 @@ p {
   background: #ffffff;
   border: 1px solid #f0e6e0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(122, 40, 40, 0.08);
+  box-shadow: 0 2px 8px rgba(122, 40, 40, 0.14);
 }
 
 .content-block p:last-of-type {
@@ -954,8 +929,8 @@ p {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .difficulty-card:hover {
-  border-color: #d4a853;
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
+  border-color: #e8b94d;
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
   transform: translateY(-4px);
 }
 .difficulty-card--wide {
@@ -971,7 +946,7 @@ p {
   font-size: 13px;
   font-weight: 700;
   color: #7a2828;
-  background: rgba(212, 168, 83, 0.22);
+  background: rgba(232, 185, 77, 0.22);
   padding: 5px 11px;
   border-radius: 8px;
   margin-bottom: 18px;
@@ -1018,7 +993,7 @@ p {
 }
 .service-item:hover {
   background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(212, 168, 83, 0.4);
+  border-color: rgba(232, 185, 77, 0.4);
 }
 .service-item span {
   display: inline-flex;
@@ -1027,8 +1002,8 @@ p {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(212, 168, 83, 0.16);
-  color: #d4a853;
+  background: rgba(232, 185, 77, 0.16);
+  color: #e8b94d;
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -1048,6 +1023,12 @@ p {
   position: sticky;
   top: 24px;
 }
+@media (max-width: 992px) {
+  .service-copy {
+    position: static;
+    top: auto;
+  }
+}
 .service-copy h2 {
   color: #ffffff;
 }
@@ -1057,15 +1038,16 @@ p {
 
 .cta-banner {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   flex-direction: column;
   justify-content: flex-start;
   gap: 24px;
   margin-top: 30px;
   padding: 28px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(212, 168, 83, 0.3);
+  border: 1px solid rgba(232, 185, 77, 0.3);
   border-radius: 12px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .cta-banner {
@@ -1078,13 +1060,13 @@ p {
   font-size: 1.05rem;
 }
 .cta-banner p strong {
-  color: #d4a853;
+  color: #e8b94d;
 }
 
 .inline-cta {
   margin-top: 1.5rem;
   padding: 20px;
-  background: #faf8f8;
+  background: #fff3e6;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1116,7 +1098,7 @@ p {
   background: #ffffff;
   border: 1px solid #f0e6e0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(122, 40, 40, 0.08);
+  box-shadow: 0 2px 8px rgba(122, 40, 40, 0.14);
 }
 .pricing-layout > .content-block:first-child,
 .aftercare-layout > .content-block:first-child {
@@ -1156,7 +1138,7 @@ p {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #d4a853, #e8dede);
+  background: linear-gradient(to bottom, #e8b94d, #e8dede);
 }
 @media (max-width: 576px) {
   .timeline::before {
@@ -1182,11 +1164,11 @@ p {
   align-items: center;
   justify-content: center;
   background: #7a2828;
-  color: #d4a853;
+  color: #e8b94d;
   font-weight: 800;
   font-size: 1.125rem;
   border-radius: 50%;
-  border: 3px solid #d4a853;
+  border: 3px solid #e8b94d;
   z-index: 1;
 }
 .timeline-item__content {
@@ -1197,8 +1179,8 @@ p {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .timeline-item__content:hover {
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
-  border-color: rgba(212, 168, 83, 0.3);
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
+  border-color: rgba(232, 185, 77, 0.3);
 }
 .timeline-item__content h3 {
   font-size: 1.05rem;
@@ -1236,8 +1218,8 @@ p {
 }
 .time-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.12);
-  border-color: #d4a853;
+  box-shadow: 0 8px 30px rgba(122, 40, 40, 0.18);
+  border-color: #e8b94d;
 }
 .time-card__icon {
   font-size: 2rem;
@@ -1246,7 +1228,7 @@ p {
 .time-card__time {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #d4a853;
+  color: #e8b94d;
   margin-bottom: 8px;
 }
 .time-card p:last-child {
@@ -1282,18 +1264,36 @@ p {
   border: 1px solid #e8dede;
   border-radius: 12px;
   overflow: hidden;
-  transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+.faq-item:hover {
+  border-color: rgba(232, 185, 77, 0.55);
 }
 .faq-item.active {
-  border-color: #d4a853;
+  border-color: #e8b94d;
+  box-shadow: 0 12px 30px rgba(122, 40, 40, 0.10);
+}
+.faq-item.active .faq-item__question {
+  background: linear-gradient(180deg, #fff7ea 0%, #fff3e0 100%);
 }
 .faq-item.active .faq-item__icon {
   transform: rotate(180deg);
+  background: #e8b94d;
+  color: #5b1d1d;
 }
 .faq-item.active .faq-item__answer {
-  max-height: 300px;
-  padding: 0 24px 20px;
+  grid-template-rows: 1fr;
 }
+.faq-item.active .faq-item__answer-inner {
+  opacity: 1;
+  transform: translateY(0);
+  padding: 4px 24px 22px;
+}
+
 .faq-item__question {
   width: 100%;
   display: flex;
@@ -1302,29 +1302,54 @@ p {
   gap: 16px;
   padding: 20px 24px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: #7a2828;
   text-align: left;
-  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 .faq-item__question:hover {
-  background: #faf8f8;
+  background: #fff7ea;
 }
 .faq-item__icon {
   flex-shrink: 0;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  color: #d4a853;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(232, 185, 77, 0.18);
+  color: #b58521;
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.3s ease,
+              color 0.3s ease;
 }
+
+/* Smooth, content-aware accordion using grid-rows */
 .faq-item__answer {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.21, 1, 0.32, 1);
+}
+.faq-item__answer-inner {
+  min-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 24px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity 0.35s ease 0.05s,
+    transform 0.35s cubic-bezier(0.21, 1, 0.32, 1) 0.05s,
+    padding 0.35s ease;
 }
 .faq-item__answer p {
-  font-size: 14px;
+  font-size: 14.5px;
   color: #64748b;
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .contact-grid {
@@ -1362,7 +1387,7 @@ p {
   opacity: 0.7;
 }
 .contact-detail a {
-  color: #d4a853;
+  color: #e8b94d;
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -1398,7 +1423,7 @@ p {
 .contact-form select:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #d4a853;
+  border-color: #e8b94d;
 }
 .contact-form .form-row {
   display: grid;
@@ -1437,8 +1462,8 @@ p {
   margin-bottom: 16px;
   padding: 7px 16px;
   border-radius: 999px;
-  background: rgba(212, 168, 83, 0.16);
-  color: #d4a853;
+  background: rgba(232, 185, 77, 0.16);
+  color: #e8b94d;
   font-size: 13px;
   font-weight: 700;
 }
@@ -1475,7 +1500,7 @@ p {
 
 .acc-contact-highlight strong {
   display: block;
-  color: #d4a853;
+  color: #e8b94d;
   font-size: 1.8rem;
   line-height: 1;
   margin-bottom: 8px;
@@ -1512,8 +1537,8 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(212, 168, 83, 0.16);
-  color: #d4a853;
+  background: rgba(232, 185, 77, 0.16);
+  color: #e8b94d;
   font-size: 1.2rem;
 }
 
@@ -1577,7 +1602,7 @@ p {
   padding: 13px 15px;
   border: 1px solid #e8dede;
   border-radius: 8px;
-  background: #fffdfb;
+  background: #fff8f0;
   color: #2d3748;
   font: inherit;
 }
@@ -1593,8 +1618,8 @@ p {
 .acc-shortcode-placeholder textarea:focus,
 .acc-form-container .wpcf7-form-control:not(.wpcf7-submit):focus {
   outline: none;
-  border-color: #d4a853;
-  box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.16);
+  border-color: #e8b94d;
+  box-shadow: 0 0 0 3px rgba(232, 185, 77, 0.16);
 }
 
 .acc-shortcode-placeholder input[type=submit],
@@ -1690,4 +1715,2874 @@ p {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ============================================================
+   Added: Zalo + Call CTAs, floating action bar, refined mobile
+   ============================================================ */
+
+.btn {
+  min-height: 48px;
+  letter-spacing: 0.01em;
+}
+.btn--lg {
+  min-height: 56px;
+}
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Zalo blue button */
+.btn--zalo {
+  background: #0068ff;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 104, 255, 0.28);
+}
+.btn--zalo:hover {
+  background: #0057d8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 104, 255, 0.38);
+}
+
+/* Make hero primary CTA pop with gold but keep the red brand vibe */
+.hero .btn--primary {
+  background: linear-gradient(135deg, #f3c75c 0%, #e8b94d 60%, #d99e2c 100%);
+  color: #5b1d1d;
+  box-shadow: 0 10px 28px rgba(232, 185, 77, 0.35);
+}
+.hero .btn--primary:hover {
+  background: linear-gradient(135deg, #f7d273 0%, #efc15a 60%, #e0a82e 100%);
+  box-shadow: 0 16px 36px rgba(232, 185, 77, 0.5);
+}
+.hero .btn--zalo {
+  background: #ffffff;
+  color: #0057d8;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+.hero .btn--zalo:hover {
+  background: #f1f7ff;
+  color: #0046b3;
+}
+
+/* CTA Row (used after Difficulty grid + after FAQ) */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 24px;
+  margin-top: 36px;
+  padding: 26px 30px;
+  background: linear-gradient(135deg, #7a2828 0%, #5b1d1d 100%);
+  border-radius: 16px;
+  box-shadow: 0 18px 48px rgba(122, 40, 40, 0.28);
+  color: #ffffff;
+}
+.cta-row--center {
+  margin-top: 32px;
+}
+.cta-row__text {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+.cta-row__text strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+.cta-row__text span {
+  display: block;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.cta-row__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+}
+.cta-row__actions .btn {
+  flex: 0 1 auto;
+  min-width: 160px;
+}
+@media (max-width: 992px) {
+  .cta-row {
+    justify-content: center;
+    text-align: center;
+  }
+  .cta-row__text { flex-basis: 100%; }
+  .cta-row__actions {
+    justify-content: center;
+    width: 100%;
+  }
+  .cta-row__actions .btn { flex: 1 1 200px; }
+}
+.cta-row .btn--primary {
+  background: #e8b94d;
+  color: #5b1d1d;
+}
+.cta-row .btn--primary:hover {
+  background: #f3c75c;
+  color: #5b1d1d;
+  box-shadow: 0 12px 30px rgba(232, 185, 77, 0.4);
+}
+
+/* CTA banner inside the dark services section */
+.cta-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.cta-banner__actions .btn {
+  flex: 1 1 200px;
+}
+
+/* Inline CTA inside pricing */
+.inline-cta {
+  flex-direction: column;
+  align-items: stretch;
+}
+.inline-cta__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.inline-cta__actions .btn {
+  flex: 1 1 180px;
+}
+
+/* Floating action bar (call + zalo, always visible on every section) */
+.acc-floating {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9998;
+}
+.acc-floating__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 12px 14px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.acc-floating__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+}
+.acc-floating__btn > span[aria-hidden="true"] {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 16px;
+}
+.acc-floating__btn--zalo {
+  background: #0068ff;
+}
+.acc-floating__btn--zalo:hover {
+  background: #0057d8;
+}
+.acc-floating__btn--call {
+  background: #7a2828;
+  position: relative;
+}
+.acc-floating__btn--call::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  border: 2px solid rgba(122, 40, 40, 0.6);
+  animation: accPulse 1.8s ease-out infinite;
+  pointer-events: none;
+}
+.acc-floating__btn--call:hover {
+  background: #8e2a2a;
+}
+@keyframes accPulse {
+  0%   { transform: scale(0.9); opacity: 0.8; }
+  70%  { transform: scale(1.18); opacity: 0; }
+  100% { transform: scale(1.18); opacity: 0; }
+}
+
+/* ---- Mobile polish: bigger sections, bigger cards, bigger CTAs ---- */
+@media (max-width: 768px) {
+  .section { padding: 48px 0; }
+  .section--intro { padding: 44px 0; }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.55rem; line-height: 1.3; }
+  h3 { font-size: 1.05rem; }
+
+  .container { padding: 0 18px; }
+
+  .hero-card { padding: 22px; }
+  .hero-card__list span { font-size: 15px; }
+
+  .difficulty-card { padding: 24px; }
+  .difficulty-card h3 { font-size: 1.05rem; }
+  .difficulty-card p  { font-size: 14.5px; }
+
+  .timeline-item { padding-left: 64px; }
+  .timeline-item__content { padding: 20px 22px; }
+
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block,
+  .license-content .content-block { padding: 24px; }
+
+  .time-card { padding: 22px; }
+  .time-card__time { font-size: 1.2rem; }
+
+  .faq-item__question { padding: 18px 20px; font-size: 15.5px; }
+  .faq-item.active .faq-item__answer-inner { padding: 4px 20px 18px; }
+
+  .acc-contact-detail { padding: 18px; }
+  .acc-contact-detail p { font-size: 15px; }
+
+  .cta-row {
+    grid-template-columns: 1fr;
+    padding: 22px 20px;
+    text-align: left;
+  }
+  .cta-row__actions .btn { flex: 1 1 calc(50% - 6px); }
+
+  .acc-floating__label { display: none; }
+  .acc-floating__btn { padding: 10px; }
+}
+
+@media (max-width: 576px) {
+  .section { padding: 40px 0; }
+  .section--intro { padding: 36px 0; }
+
+  .hero { padding: 48px 0 24px; }
+  .hero__title { font-size: 1.95rem; }
+
+  .btn,
+  .btn--lg { width: 100%; min-height: 52px; font-size: 15.5px; }
+  .hero__actions { gap: 12px; }
+  .hero__actions .btn { width: 100%; }
+
+  .cta-row__actions { width: 100%; }
+  .cta-row__actions .btn { width: 100%; flex: 1 1 100%; }
+  .cta-banner__actions .btn,
+  .inline-cta__actions .btn { width: 100%; flex: 1 1 100%; }
+
+  .feature-mini { padding: 16px; }
+
+  .acc-floating { right: 12px; bottom: 12px; }
+}
+
+/* ============================================================
+   Hero — Mobile redesign (<= 768px)
+   Goal: short, premium, no empty bottom space
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    /* override desktop flex spacing that creates a bottom gap */
+    display: block;
+    padding: 36px 0 28px;
+  }
+  .hero__bg {
+    background-position: center 30%;
+  }
+  .hero__bg::after {
+    background: linear-gradient(180deg,
+      rgba(33, 12, 12, 0.78) 0%,
+      rgba(122, 40, 40, 0.55) 55%,
+      rgba(33, 12, 12, 0.88) 100%);
+  }
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 0 18px;
+    align-items: start;
+  }
+
+  /* Roomier, more legible hero copy */
+  .hero__content { text-align: left; margin: 0; }
+  .hero .badge {
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    font-size: 13.5px;
+    border-radius: 999px;
+  }
+  .hero__title {
+    font-size: 2.25rem;
+    line-height: 1.18;
+    margin-bottom: 14px;
+    letter-spacing: 0;
+    font-weight: 800;
+  }
+  .hero__title br { display: none; }
+  .hero__title span {
+    display: inline;
+    color: #f3c75c;
+  }
+  .hero__desc {
+    font-size: 1.08rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.94);
+  }
+
+  /* Two CTAs side by side, taller and easier to read */
+  .hero__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    min-height: 56px;
+    padding: 14px 14px;
+    font-size: 15.5px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+  .hero__actions .btn__icon { font-size: 17px; }
+
+  /* Hide redundant tick list on mobile (stats already cover trust signals) */
+  .hero-points { display: none; }
+
+  /* Trust strip — bigger numbers, more breathing room */
+  .hero__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin: 22px 18px 0;
+    width: auto;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
+  }
+  .hero__stats .stat {
+    padding: 14px 10px;
+    text-align: center;
+    background: transparent;
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .hero__stats .stat:last-child { border-right: 0; }
+  .hero__stats .stat strong {
+    font-size: 1.3rem;
+    color: #f3c75c;
+    margin-bottom: 4px;
+    line-height: 1.1;
+  }
+  .hero__stats .stat span {
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: none;
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  /* Hero card — bigger, more premium */
+  .hero__card { width: 100%; }
+  .hero-card {
+    padding: 22px 20px 20px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #fff5e8 100%);
+    box-shadow: 0 22px 50px rgba(28, 12, 12, 0.34);
+  }
+  .hero-card::before {
+    width: 150px;
+    height: 150px;
+    top: -60px;
+    right: -60px;
+    background: rgba(232, 185, 77, 0.22);
+  }
+  .hero-card__header { margin-bottom: 16px; }
+  .hero-card__header span { font-size: 12.5px; }
+  .hero-card__header strong { font-size: 13px; padding: 6px 12px; }
+
+  /* License row */
+  .hero-license-card {
+    grid-template-columns: 64px 1fr;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+  .hero-license-card__icon {
+    width: 64px;
+    height: 80px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+  .hero-license-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.32;
+    margin-bottom: 6px;
+  }
+  .hero-license-card p { font-size: 14px; line-height: 1.55; }
+
+  /* Progress strip */
+  .hero-progress {
+    margin: 14px 0;
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+  .hero-progress__bar { height: 8px; }
+  .hero-progress__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap: 12px;
+  }
+  .hero-progress__meta strong {
+    font-size: 15.5px;
+    white-space: nowrap;
+  }
+  .hero-progress__meta span {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 62%;
+  }
+
+  /* Hide the 3-line checklist inside card on mobile — redundant */
+  .hero-card__list { display: none; }
+
+  /* Card buttons: side-by-side, comfortable height */
+  .hero-card__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .hero-card__actions .btn {
+    width: 100%;
+    min-height: 52px;
+    font-size: 14.5px;
+    padding: 12px 12px;
+    font-weight: 700;
+    border-radius: 12px;
+  }
+}
+
+/* Small phones: keep type generous, switch buttons to single column when really tight */
+@media (max-width: 420px) {
+  .hero { padding: 32px 0 26px; }
+  .hero__title { font-size: 2.05rem; line-height: 1.18; }
+  .hero__desc { font-size: 1.04rem; }
+  .hero__actions .btn { font-size: 14.5px; min-height: 54px; }
+  .hero-card__actions .btn { font-size: 14px; min-height: 50px; }
+  .hero__stats .stat strong { font-size: 1.2rem; }
+  .hero__stats .stat span { font-size: 11.5px; }
+  .hero-license-card { grid-template-columns: 58px 1fr; gap: 14px; }
+  .hero-license-card__icon { width: 58px; height: 72px; }
+  .hero-license-card h3 { font-size: 1.05rem; }
+  .hero-license-card p { font-size: 13.5px; }
+}
+
+@media (max-width: 360px) {
+  .hero__title { font-size: 1.85rem; }
+  .hero__desc { font-size: 1rem; }
+  .hero__actions { grid-template-columns: 1fr; }
+  .hero-card__actions { grid-template-columns: 1fr; }
+  .hero__stats .stat strong { font-size: 1.1rem; }
+  .hero__stats .stat span { font-size: 11px; }
+}
+
+/* ============================================================
+   Small phones — bigger, clearer, premium feel (<= 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  /* Section rhythm: a touch more air so cards breathe, but still cohesive */
+  .section { padding: 44px 0; }
+  .section--intro { padding: 40px 0; }
+  .container { padding: 0 16px; }
+
+  /* Type scale — bigger, easier to read */
+  h1 { font-size: 2.05rem; line-height: 1.2; }
+  h2 { font-size: 1.6rem; line-height: 1.28; }
+  h3 { font-size: 1.1rem; }
+  body { font-size: 16.5px; line-height: 1.7; }
+  .lead { font-size: 1.05rem; }
+
+  /* Section header gets centered + a little wider */
+  .section-header { margin-bottom: 2rem; }
+  .section-header h2 { margin-bottom: 0.6rem; }
+  .section-header p { font-size: 1rem; }
+
+  /* Buttons: tall, full width, generous tap targets */
+  .btn { min-height: 54px; font-size: 15.5px; border-radius: 12px; padding: 14px 18px; }
+  .btn--lg { min-height: 58px; font-size: 16px; }
+
+  /* Hero @ <=480px: keep generous size from main mobile rules; only fine-tune container padding */
+  .hero__inner { padding: 0 16px; }
+  .hero__stats { margin-left: 16px; margin-right: 16px; }
+
+  /* Intro: image card height capped + radius */
+  .intro-grid { gap: 28px; }
+  .intro-media,
+  .intro-media img { min-height: 240px; border-radius: 14px; }
+  .intro-grid__features { gap: 12px; margin-top: 22px; }
+  .feature-mini { padding: 16px 18px; gap: 14px; border-radius: 14px; }
+  .feature-mini__icon { font-size: 1.7rem; }
+  .feature-mini h4 { font-size: 1.05rem; }
+  .feature-mini p { font-size: 14px; }
+
+  /* License layout (Section 1+2) */
+  .license-layout { gap: 28px; }
+  .license-content { gap: 18px; }
+  .license-content .content-block { padding: 22px; border-radius: 14px; }
+  .check-list li { font-size: 15px; padding-left: 28px; margin-bottom: 14px; }
+
+  /* License mockup — keep but make it less tall */
+  .section-visual--license,
+  .process-visual--workflow { padding: 28px 22px 80px; }
+  .license-mockup { min-height: 360px; }
+  .license-mockup__paper { padding: 22px; min-height: 280px; }
+  .license-mockup__paper h3 { font-size: 1.3rem; margin-bottom: 22px; }
+  .license-mockup__seal { width: 70px; height: 70px; right: 22px; bottom: 22px; }
+  .license-mockup__checklist { padding: 14px; }
+  .license-mockup__checklist span { font-size: 13.5px; }
+
+  /* Difficulty cards — bigger, more readable */
+  .difficulty-grid { gap: 16px; }
+  .difficulty-card { padding: 22px; border-radius: 14px; }
+  .difficulty-card__num { font-size: 13px; padding: 6px 12px; margin-bottom: 14px; }
+  .difficulty-card h3 { font-size: 1.1rem; line-height: 1.35; margin-bottom: 0.6rem; }
+  .difficulty-card p { font-size: 14.5px; line-height: 1.65; }
+
+  /* Services (dark section) */
+  .service-layout { gap: 28px; }
+  .service-copy h2 { font-size: 1.7rem; }
+  .services-grid { gap: 12px; }
+  .service-item {
+    min-height: auto;
+    padding: 18px 18px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    border-radius: 14px;
+  }
+  .service-item span { width: 26px; height: 26px; font-size: 14px; }
+  .cta-banner { padding: 22px; gap: 16px; border-radius: 14px; }
+  .cta-banner p { font-size: 1rem; line-height: 1.55; }
+
+  /* Process / Timeline */
+  .process-layout { gap: 28px; }
+  .process-visual { height: 360px; border-radius: 14px; }
+  .timeline::before { left: 18px; }
+  .timeline-item { padding-left: 60px; padding-bottom: 28px; }
+  .timeline-item__marker {
+    width: 42px; height: 42px;
+    font-size: 1rem;
+    border-width: 3px;
+  }
+  .timeline-item__content {
+    padding: 18px 18px;
+    border-radius: 14px;
+  }
+  .timeline-item__content h3 { font-size: 1.05rem; }
+  .timeline-item__content p { font-size: 14px; }
+
+  /* Pricing + aftercare */
+  .pricing-layout,
+  .aftercare-layout { gap: 22px; }
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block { padding: 22px; border-radius: 14px; }
+  .time-grid { gap: 12px; }
+  .time-card { padding: 20px; border-radius: 14px; }
+  .time-card__icon { font-size: 1.7rem; }
+  .time-card__time { font-size: 1.15rem; }
+  .time-card p:last-child { font-size: 14px; }
+  .inline-cta { padding: 18px; border-radius: 14px; }
+  .inline-cta p { font-size: 15px; }
+
+  /* Benefits */
+  .benefit-list li { padding: 16px 0; }
+  .benefit-list li strong { font-size: 1.02rem; }
+  .benefit-list li span { font-size: 14px; }
+
+  /* FAQ */
+  .faq-list { gap: 10px; }
+  .faq-item { border-radius: 14px; }
+  .faq-item__question {
+    padding: 18px 18px;
+    font-size: 15px;
+    line-height: 1.45;
+    gap: 12px;
+  }
+  .faq-item.active .faq-item__answer-inner { padding: 4px 18px 16px; }
+  .faq-item__answer p { font-size: 14px; line-height: 1.7; }
+
+  /* CTA row in sections */
+  .cta-row {
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+    border-radius: 16px;
+    margin-top: 28px;
+    gap: 16px;
+  }
+  .cta-row__text strong { font-size: 1.1rem; }
+  .cta-row__text span { font-size: 14px; }
+  .cta-row__actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
+
+  /* Contact section */
+  .acc-contact-section { padding: 48px 16px; }
+  .acc-contact-copy h2 { font-size: 1.65rem; line-height: 1.25; }
+  .acc-contact-copy > p { font-size: 1rem; }
+  .acc-contact-highlights { gap: 12px; margin: 20px 0; }
+  .acc-contact-highlight { padding: 16px; border-radius: 14px; }
+  .acc-contact-highlight strong { font-size: 1.55rem; }
+  .acc-contact-highlight span { font-size: 13px; }
+  .acc-contact-detail { padding: 16px; gap: 14px; border-radius: 14px; }
+  .acc-contact-detail > span { width: 42px; height: 42px; }
+  .acc-contact-detail strong { font-size: 11.5px; }
+  .acc-contact-detail p { font-size: 14.5px; }
+  .acc-form-container { padding: 22px; border-radius: 14px; }
+  .acc-form-container h3 { font-size: 1.3rem; }
+  .acc-map-container iframe { height: 220px; }
+
+  /* Floating CTAs: keep compact on small phones */
+  .acc-floating { right: 12px; bottom: 12px; gap: 10px; }
+  .acc-floating__btn { padding: 10px; }
+  .acc-floating__label { display: none; }
+}
+
+/* Extra-small phones (≤ 380px): keep readable, 1-column rhythm */
+@media (max-width: 380px) {
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.45rem; }
+  body { font-size: 16px; }
+
+  .container { padding: 0 14px; }
+  .section { padding: 38px 0; }
+
+  .hero__title { font-size: 1.75rem; }
+  .hero__desc { font-size: 0.98rem; }
+  .hero__actions { grid-template-columns: 1fr; }
+  .hero__stats .stat strong { font-size: 1.05rem; }
+  .hero__stats .stat span { font-size: 11px; }
+
+  .difficulty-card,
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block,
+  .license-content .content-block,
+  .feature-mini,
+  .time-card,
+  .acc-form-container { padding: 18px; }
+
+  .timeline-item { padding-left: 54px; }
+  .timeline-item__marker { width: 38px; height: 38px; }
+  .timeline-item__content { padding: 16px; }
+}
+
+/* ============================================================
+   Callback button + Dual Hotline card + Modal + Floating expand
+   ============================================================ */
+
+/* "Nhận liên hệ" — luxe gold/red gradient with subtle shimmer */
+.btn--callback {
+  position: relative;
+  background: linear-gradient(135deg, #f3c75c 0%, #e8b94d 45%, #c98e22 100%);
+  color: #4d1717;
+  border: 0;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow:
+    0 12px 28px rgba(232, 185, 77, 0.38),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+  overflow: hidden;
+}
+.btn--callback::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.9s ease;
+  pointer-events: none;
+}
+.btn--callback:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #f7d273 0%, #efc15a 45%, #d99e2c 100%);
+  box-shadow:
+    0 16px 36px rgba(232, 185, 77, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+.btn--callback:hover::after {
+  transform: translateX(120%);
+}
+/* Inside dark services section, brighten contrast */
+.section--dark .btn--callback {
+  color: #4d1717;
+}
+
+/* Dual hotline card — compact and friendly, premium feel */
+.acc-hotline-card {
+  position: relative;
+  padding: 18px 18px 16px;
+  border-radius: 16px;
+  background:
+    linear-gradient(140deg, rgba(232, 185, 77, 0.18) 0%, rgba(255, 255, 255, 0.04) 60%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(232, 185, 77, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 16px 36px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+.acc-hotline-card::before {
+  content: "";
+  position: absolute;
+  inset: -50px -50px auto auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(232, 185, 77, 0.4), transparent 62%);
+  pointer-events: none;
+}
+
+.acc-hotline-card__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.acc-hotline-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(232, 185, 77, 0.18);
+  border: 1px solid rgba(232, 185, 77, 0.45);
+  color: #f3c75c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.acc-hotline-card__head strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.acc-hotline-card__list {
+  position: relative;
+  display: grid;
+  gap: 10px;
+}
+
+/* Single-row hotline pill: icon + label/number + chevron */
+.acc-hotline-line {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.acc-hotline-line:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(232, 185, 77, 0.55);
+  transform: translateY(-1px);
+}
+.acc-hotline-line--alt {
+  background: linear-gradient(135deg, #f3c75c 0%, #e8b94d 60%, #c98e22 100%);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #4d1717;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 10px 22px rgba(232, 185, 77, 0.32);
+}
+.acc-hotline-line--alt:hover {
+  border-color: #ffffff;
+}
+
+.acc-hotline-line__icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f3c75c, #c98e22);
+  color: #4d1717;
+  font-size: 1.05rem;
+  font-weight: 900;
+  box-shadow: 0 6px 14px rgba(232, 185, 77, 0.35);
+}
+.acc-hotline-line--alt .acc-hotline-line__icon {
+  background: linear-gradient(135deg, #ffffff 0%, #ffe8b0 100%);
+  color: #b83a0a;
+  box-shadow: 0 6px 18px rgba(255, 220, 120, 0.55), 0 2px 6px rgba(77, 23, 23, 0.18);
+}
+
+.acc-hotline-line__text {
+  display: grid;
+  min-width: 0;
+}
+.acc-hotline-line__label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.1;
+}
+.acc-hotline-line--alt .acc-hotline-line__label {
+  color: rgba(77, 23, 23, 0.7);
+}
+.acc-hotline-line__digits {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  color: #f3c75c;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.acc-hotline-line--alt .acc-hotline-line__digits {
+  color: #4d1717;
+}
+
+.acc-hotline-line__cta {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.acc-hotline-line:hover .acc-hotline-line__cta {
+  background: #f3c75c;
+  color: #4d1717;
+  transform: translateX(2px);
+}
+.acc-hotline-line--alt .acc-hotline-line__cta {
+  background: rgba(77, 23, 23, 0.18);
+  color: #4d1717;
+}
+.acc-hotline-line--alt:hover .acc-hotline-line__cta {
+  background: #4d1717;
+  color: #f3c75c;
+}
+
+@media (max-width: 480px) {
+  .acc-hotline-card { padding: 16px 14px 14px; border-radius: 14px; }
+  .acc-hotline-card__head { gap: 8px; }
+  .acc-hotline-card__head strong { font-size: 0.95rem; }
+  .acc-hotline-line {
+    grid-template-columns: 38px minmax(0, 1fr) 26px;
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .acc-hotline-line__icon { width: 38px; height: 38px; font-size: 0.95rem; }
+  .acc-hotline-line__digits { font-size: 1.1rem; }
+  .acc-hotline-line__cta { width: 26px; height: 26px; font-size: 15px; }
+}
+
+/* Floating bar additions */
+.acc-floating__btn--callback {
+  background: linear-gradient(135deg, #f3c75c 0%, #c98e22 100%);
+  color: #4d1717;
+  border: 0;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.acc-floating__btn--callback:hover {
+  background: linear-gradient(135deg, #f7d273 0%, #d99e2c 100%);
+}
+.acc-floating__btn--callback > span[aria-hidden="true"] {
+  background: rgba(255, 255, 255, 0.32);
+  color: #4d1717;
+}
+.acc-floating__btn--hotline {
+  background: #4d1717;
+}
+.acc-floating__btn--hotline:hover { background: #5b1d1d; }
+
+/* Modal */
+.acc-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.acc-modal[hidden] { display: none; }
+.acc-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 12, 12, 0.72);
+  backdrop-filter: blur(8px);
+  animation: accFadeIn 0.25s ease both;
+}
+.acc-modal__dialog {
+  position: relative;
+  width: min(100%, 480px);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  padding: 32px 28px 28px;
+  border-radius: 18px;
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(232, 185, 77, 0.18), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #fff5e8 100%);
+  box-shadow: 0 30px 80px rgba(28, 12, 12, 0.45);
+  border: 1px solid rgba(232, 185, 77, 0.35);
+  animation: accSlideUp 0.32s cubic-bezier(0.21, 1, 0.32, 1) both;
+}
+@keyframes accFadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes accSlideUp {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+.acc-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(122, 40, 40, 0.08);
+  color: #7a2828;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.acc-modal__close:hover { background: rgba(122, 40, 40, 0.18); transform: rotate(90deg); }
+.acc-modal__head { margin-bottom: 18px; }
+.acc-modal__eyebrow {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(232, 185, 77, 0.22);
+  color: #8e2a2a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.acc-modal__head h3 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: #5b1d1d;
+}
+.acc-modal__head p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.acc-modal__form { display: grid; gap: 12px; }
+.acc-modal__field { display: grid; gap: 6px; }
+.acc-modal__field > span {
+  font-size: 13px;
+  color: #5b1d1d;
+  font-weight: 700;
+}
+.acc-modal__field input,
+.acc-modal__field select {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e8dede;
+  background: #ffffff;
+  color: #2d3748;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.acc-modal__field input:focus,
+.acc-modal__field select:focus {
+  outline: none;
+  border-color: #e8b94d;
+  box-shadow: 0 0 0 4px rgba(232, 185, 77, 0.18);
+}
+.acc-modal__form .btn { margin-top: 4px; }
+.acc-modal__note {
+  margin: 6px 0 0;
+  text-align: center;
+  font-size: 12.5px;
+  color: #94a3b8;
+}
+
+@media (max-width: 480px) {
+  .acc-modal { padding: 16px; }
+  .acc-modal__dialog { padding: 26px 20px 22px; border-radius: 16px; }
+  .acc-modal__head h3 { font-size: 1.2rem; }
+}
+
+/* Body lock when modal open */
+body.is-modal-open { overflow: hidden; }
+
+/* Re-flow CTA actions: keep 3 buttons readable */
+.cta-row__actions { flex-wrap: wrap; }
+.cta-banner__actions { flex-wrap: wrap; }
+.cta-banner__actions .btn { flex: 1 1 180px; }
+.inline-cta__actions .btn { flex: 1 1 180px; }
+
+@media (max-width: 768px) {
+  .cta-row__actions .btn,
+  .cta-banner__actions .btn,
+  .inline-cta__actions .btn { flex: 1 1 100%; }
+}
+
+/* ============================================================
+   CTA action groups — unified grid layout
+   Goal: btn-hotline always spans full row (no clipped digits),
+         "Nhận liên hệ" + "Chat Zalo" share the row below.
+   ============================================================ */
+.hero__actions,
+.hero-card__actions,
+.cta-row__actions,
+.cta-banner__actions,
+.inline-cta__actions {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: initial;
+  justify-content: initial;
+}
+
+/* Hotline component spans the full row */
+.hero__actions > .btn-phone,
+.hero-card__actions > .btn-phone,
+.cta-row__actions > .btn-phone,
+.cta-banner__actions > .btn-phone,
+.inline-cta__actions > .btn-phone {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+/* Hero CTA only has hotline + zalo: stack each on its own row for clarity */
+.hero__actions > .btn--zalo {
+  grid-column: 1 / -1;
+}
+
+/* Reset any old flex sizing that fights the grid */
+.cta-row__actions .btn,
+.cta-banner__actions .btn,
+.inline-cta__actions .btn,
+.hero-card__actions .btn,
+.hero__actions .btn {
+  flex: initial;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Inside btn-hotline, the 2 numbers stay equal */
+.btn-hotline {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.btn-hotline__item {
+  grid-template-columns: 38px minmax(0, 1fr);
+  padding: 12px 12px;
+  column-gap: 10px;
+}
+.btn-hotline__icon {
+  width: 38px;
+  height: 38px;
+}
+.btn-hotline__num {
+  font-size: 16px;
+}
+.btn-hotline--lg .btn-hotline__num { font-size: 17px; }
+
+/* Tablet & narrow viewports: single column for action groups too */
+@media (max-width: 600px) {
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    grid-template-columns: 1fr;
+  }
+  /* btn-hotline still 2 numbers side by side as long as fits, else 1 col */
+  .btn-hotline { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 420px) {
+  .btn-hotline { grid-template-columns: 1fr; gap: 8px; }
+  .btn-hotline__item { padding: 12px 14px; }
+  .btn-hotline__num { font-size: 17px; }
+}
+
+/* ============================================================
+   btn-phone — luxury single phone CTA with animation
+   Anchored to #duong-day (the contact hotline card)
+   ============================================================ */
+.btn-phone {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background:
+    radial-gradient(120% 220% at 0% 0%, rgba(255, 246, 220, 0.42) 0%, transparent 55%),
+    linear-gradient(135deg, #f8d075 0%, #e8b94d 38%, #c98e22 100%);
+  color: #4d1717;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -2px 0 rgba(122, 40, 40, 0.18),
+    0 16px 36px rgba(232, 185, 77, 0.42),
+    0 4px 12px rgba(122, 40, 40, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+.btn-phone:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(122, 40, 40, 0.22),
+    0 22px 44px rgba(232, 185, 77, 0.55),
+    0 6px 16px rgba(122, 40, 40, 0.22);
+}
+.btn-phone:active { transform: translateY(0); }
+
+.btn-phone--lg { padding: 16px 22px; }
+.btn-phone--full { width: 100%; }
+
+/* Pulse rings around the icon */
+.btn-phone__pulse {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(122, 40, 40, 0.55);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  animation: btnPhonePulse 2.2s cubic-bezier(0.21, 1, 0.32, 1) infinite;
+}
+.btn-phone__pulse--2 { animation-delay: 1.1s; }
+
+.btn-phone--lg .btn-phone__pulse { left: 36px; }
+
+@keyframes btnPhonePulse {
+  0%   { width: 14px;  height: 14px;  opacity: 0.55; }
+  70%  { width: 64px;  height: 64px;  opacity: 0;    }
+  100% { width: 64px;  height: 64px;  opacity: 0;    }
+}
+
+/* Phone icon disc */
+.btn-phone__icon {
+  position: relative;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4d1717 0%, #7a2828 100%);
+  color: #f3c75c;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 6px 14px rgba(77, 23, 23, 0.45);
+  animation: btnPhoneRing 2.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  transform-origin: 50% 50%;
+}
+.btn-phone--lg .btn-phone__icon { width: 46px; height: 46px; }
+.btn-phone__icon svg { width: 22px; height: 22px; }
+
+@keyframes btnPhoneRing {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  3%  { transform: rotate(-12deg); }
+  6%  { transform: rotate(12deg); }
+  9%  { transform: rotate(-10deg); }
+  12% { transform: rotate(10deg); }
+  15% { transform: rotate(-6deg); }
+  18% { transform: rotate(6deg); }
+  21% { transform: rotate(0deg); }
+}
+
+/* Text block */
+.btn-phone__text {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+  text-align: left;
+}
+.btn-phone__label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(77, 23, 23, 0.72);
+  line-height: 1.1;
+}
+.btn-phone__title {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: #4d1717;
+  line-height: 1.15;
+}
+.btn-phone--lg .btn-phone__title { font-size: 19px; }
+
+/* Chevron */
+.btn-phone__chev {
+  position: relative;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(77, 23, 23, 0.12);
+  color: #4d1717;
+  font-size: 22px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.btn-phone:hover .btn-phone__chev {
+  transform: translateX(4px);
+  background: #4d1717;
+  color: #f3c75c;
+}
+
+/* Shine sweep on hover */
+.btn-phone__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 48%,
+    rgba(255, 255, 255, 0.05) 56%,
+    transparent 70%
+  );
+  transform: translateX(-110%);
+  pointer-events: none;
+  z-index: 3;
+  transition: transform 0.9s cubic-bezier(0.21, 1, 0.32, 1);
+}
+.btn-phone:hover .btn-phone__shine { transform: translateX(110%); }
+
+/* Highlight target when scrolled to */
+@keyframes accHotlineHighlight {
+  0%   { box-shadow: 0 0 0 0 rgba(232, 185, 77, 0.55), 0 16px 36px rgba(0, 0, 0, 0.16); }
+  60%  { box-shadow: 0 0 0 12px rgba(232, 185, 77, 0), 0 16px 36px rgba(0, 0, 0, 0.16); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 185, 77, 0), 0 16px 36px rgba(0, 0, 0, 0.16); }
+}
+.acc-hotline-card:target {
+  animation: accHotlineHighlight 1.6s ease-out 0.2s 2;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-phone__pulse,
+  .btn-phone__icon { animation: none; }
+  .btn-phone__shine { display: none; }
+}
+
+/* Mobile sizing */
+@media (max-width: 600px) {
+  .btn-phone { padding: 14px 16px; gap: 12px; }
+  .btn-phone__icon { width: 40px; height: 40px; }
+  .btn-phone__title { font-size: 16px; }
+  .btn-phone__label { font-size: 10.5px; }
+  .btn-phone__chev { width: 28px; height: 28px; font-size: 20px; }
+}
+@media (max-width: 380px) {
+  .btn-phone { padding: 12px 14px; gap: 10px; }
+  .btn-phone__icon { width: 38px; height: 38px; }
+  .btn-phone__title { font-size: 15.5px; }
+}
+
+/* ============================================================
+   FINAL CTA layout — authoritative
+   Hierarchy: btn-phone (primary, gold) → btn--callback + btn--zalo (peers)
+   ============================================================ */
+.hero__actions,
+.hero-card__actions,
+.cta-row__actions,
+.cta-banner__actions,
+.inline-cta__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(54px, auto);
+  gap: 12px;
+  width: 100%;
+  align-items: stretch;
+  max-width: 560px;
+}
+.cta-row__actions { max-width: none; justify-self: end; }
+/* Hero-card + cta-banner stretch fully across their parent */
+.hero-card__actions,
+.cta-banner__actions { max-width: none; }
+
+/* btn-phone always sits on top, full row */
+.hero__actions > .btn-phone,
+.hero-card__actions > .btn-phone,
+.cta-row__actions > .btn-phone,
+.cta-banner__actions > .btn-phone,
+.inline-cta__actions > .btn-phone {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+/* Hero has only phone + zalo: stack zalo full-width on row 2 */
+.hero__actions > .btn--zalo {
+  grid-row: 2;
+  grid-column: 1 / -1;
+}
+
+/* Harmonize secondary buttons (callback + zalo) inside CTA groups */
+.hero-card__actions .btn--callback,
+.hero-card__actions .btn--zalo,
+.cta-row__actions .btn--callback,
+.cta-row__actions .btn--zalo,
+.cta-banner__actions .btn--callback,
+.cta-banner__actions .btn--zalo,
+.inline-cta__actions .btn--callback,
+.inline-cta__actions .btn--zalo {
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tone down callback so it does not fight the gold phone CTA above:
+   keep gold gradient but slimmer + softer shadow */
+.hero-card__actions .btn--callback,
+.cta-row__actions .btn--callback,
+.cta-banner__actions .btn--callback,
+.inline-cta__actions .btn--callback {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 6px 18px rgba(232, 185, 77, 0.28);
+}
+.hero-card__actions .btn--callback:hover,
+.cta-row__actions .btn--callback:hover,
+.cta-banner__actions .btn--callback:hover,
+.inline-cta__actions .btn--callback:hover {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+    0 12px 28px rgba(232, 185, 77, 0.42);
+}
+
+/* ============================================================
+   Mobile CTA layout
+   <=600px:
+     row 1 = btn-phone (full width)
+     row 2 = btn--callback + btn--zalo (50/50)
+   Hero (chỉ có phone + zalo): cả hai full-width xếp dọc.
+   <=380px: tất cả full-width xếp dọc.
+   ============================================================ */
+@media (max-width: 600px) {
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    max-width: none;
+  }
+
+  /* Phone CTA always spans full row */
+  .hero__actions > .btn-phone,
+  .hero-card__actions > .btn-phone,
+  .cta-row__actions > .btn-phone,
+  .cta-banner__actions > .btn-phone,
+  .inline-cta__actions > .btn-phone {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+
+  /* Hero only has phone + zalo: zalo also full row */
+  .hero__actions > .btn--zalo {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+
+  /* Callback + Zalo: equal width pair on row 2 */
+  .hero-card__actions .btn--callback,
+  .hero-card__actions .btn--zalo,
+  .cta-row__actions .btn--callback,
+  .cta-row__actions .btn--zalo,
+  .cta-banner__actions .btn--callback,
+  .cta-banner__actions .btn--zalo,
+  .inline-cta__actions .btn--callback,
+  .inline-cta__actions .btn--zalo {
+    grid-column: span 1;
+    min-height: 52px;
+    padding: 11px 12px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    gap: 6px;
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.45),
+      0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  .hero-card__actions .btn__icon,
+  .cta-row__actions .btn__icon,
+  .cta-banner__actions .btn__icon,
+  .inline-cta__actions .btn__icon {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+  }
+}
+
+/* Very small phones — stack everything for breathing room */
+@media (max-width: 380px) {
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    grid-template-columns: 1fr;
+  }
+  .hero-card__actions .btn--callback,
+  .hero-card__actions .btn--zalo,
+  .cta-row__actions .btn--callback,
+  .cta-row__actions .btn--zalo,
+  .cta-banner__actions .btn--callback,
+  .cta-banner__actions .btn--zalo,
+  .inline-cta__actions .btn--callback,
+  .inline-cta__actions .btn--zalo {
+    grid-column: 1 / -1;
+    font-size: 14.5px;
+    padding: 12px 16px;
+  }
+}
+
+/* ============================================================
+   Mobile override — hero-card + cta-banner stacks full-width
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero-card__actions,
+  .cta-banner__actions {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+    max-width: none;
+  }
+  .hero-card__actions > *,
+  .cta-banner__actions > * {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+  .hero-card__actions .btn,
+  .cta-banner__actions .btn {
+    min-height: 52px;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    border-radius: 12px;
+    white-space: normal;
+    text-overflow: clip;
+    overflow: visible;
+  }
+  /* Service section: don't let cta-banner clip the dark backdrop */
+  .section--dark .service-copy {
+    position: static;
+  }
+  .cta-banner {
+    padding: 20px;
+    gap: 14px;
+  }
+}
+
+/* ============================================================
+   Mobile typography boost (<=768px)
+   Bigger paragraph / list / span text across all main sections
+   ============================================================ */
+@media (max-width: 768px) {
+  body { font-size: 17px; line-height: 1.7; }
+
+  .lead { font-size: 1.08rem; line-height: 1.7; }
+
+  /* Generic paragraph + list bumps inside sections */
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .content-block p,
+  .intro-grid__text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .check-list li,
+  .benefit-list li span,
+  .hero-points li {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .feature-mini h4 { font-size: 1.1rem; }
+  .feature-mini p { font-size: 15.5px; line-height: 1.6; }
+
+  .difficulty-card h3 { font-size: 1.12rem; }
+  .difficulty-card p { font-size: 15.5px; line-height: 1.65; }
+
+  .service-item { font-size: 16px; line-height: 1.6; }
+
+  .timeline-item__content h3 { font-size: 1.1rem; }
+  .timeline-item__content p { font-size: 15.5px; line-height: 1.7; }
+
+  .time-card__time { font-size: 1.18rem; }
+  .time-card p:last-child { font-size: 15.5px; line-height: 1.6; }
+
+  .benefit-list li strong { font-size: 1.05rem; }
+
+  .faq-item__question { font-size: 16px; line-height: 1.45; }
+  .faq-item__answer p { font-size: 15.5px; line-height: 1.75; }
+
+  .acc-contact-copy > p { font-size: 1.05rem; line-height: 1.7; }
+  .acc-contact-detail p { font-size: 15.5px; line-height: 1.5; }
+  .acc-contact-highlight span { font-size: 14px; line-height: 1.5; }
+}
+
+/* Slight extra bump for very small phones for clarity */
+@media (max-width: 420px) {
+  body { font-size: 17px; }
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .content-block p,
+  .intro-grid__text p,
+  .check-list li,
+  .benefit-list li span,
+  .difficulty-card p,
+  .service-item,
+  .timeline-item__content p,
+  .feature-mini p,
+  .time-card p:last-child,
+  .faq-item__answer p {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+  .faq-item__question { font-size: 15.5px; }
+}
+
+/* ============================================================
+   Mobile typography — extra step up (<=768px)
+   Push body text another notch for readability
+   ============================================================ */
+@media (max-width: 768px) {
+  body { font-size: 18px; line-height: 1.72; }
+
+  .lead { font-size: 1.12rem; line-height: 1.72; }
+
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .content-block p,
+  .intro-grid__text p {
+    font-size: 17px;
+    line-height: 1.72;
+  }
+
+  .check-list li,
+  .benefit-list li span,
+  .hero-points li {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .feature-mini h4 { font-size: 1.18rem; }
+  .feature-mini p { font-size: 16.5px; line-height: 1.65; }
+
+  .difficulty-card h3 { font-size: 1.18rem; }
+  .difficulty-card p { font-size: 16.5px; line-height: 1.7; }
+
+  .service-item { font-size: 17px; line-height: 1.65; }
+
+  .timeline-item__content h3 { font-size: 1.15rem; }
+  .timeline-item__content p { font-size: 16.5px; line-height: 1.72; }
+
+  .time-card__time { font-size: 1.25rem; }
+  .time-card p:last-child { font-size: 16.5px; line-height: 1.65; }
+
+  .benefit-list li strong { font-size: 1.1rem; }
+
+  .faq-item__question { font-size: 17px; line-height: 1.5; }
+  .faq-item__answer p { font-size: 16.5px; line-height: 1.78; }
+
+  .acc-contact-copy > p { font-size: 1.1rem; line-height: 1.72; }
+  .acc-contact-detail p { font-size: 16.5px; line-height: 1.55; }
+  .acc-contact-highlight span { font-size: 14.5px; line-height: 1.5; }
+}
+
+@media (max-width: 420px) {
+  body { font-size: 17.5px; line-height: 1.72; }
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .content-block p,
+  .intro-grid__text p,
+  .check-list li,
+  .benefit-list li span,
+  .difficulty-card p,
+  .service-item,
+  .timeline-item__content p,
+  .feature-mini p,
+  .time-card p:last-child,
+  .faq-item__answer p {
+    font-size: 16px;
+    line-height: 1.72;
+  }
+  .faq-item__question { font-size: 16px; }
+}
+
+/* ============================================================
+   Mobile typography — large readable scale (<=768px)
+   Final step up so headings/body/lists are comfortably big.
+   ============================================================ */
+@media (max-width: 768px) {
+  body { font-size: 19px; line-height: 1.72; }
+
+  h1 { font-size: 2.6rem;  line-height: 1.18; }
+  h2 { font-size: 2rem;    line-height: 1.22; }
+  h3 { font-size: 1.4rem;  line-height: 1.3;  }
+  h4 { font-size: 1.2rem;  line-height: 1.35; }
+
+  .lead { font-size: 1.18rem; line-height: 1.72; }
+
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .content-block p,
+  .intro-grid__text p {
+    font-size: 18px;
+    line-height: 1.72;
+  }
+
+  .check-list li,
+  .benefit-list li span,
+  .hero-points li {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .feature-mini h4 { font-size: 1.22rem; }
+  .feature-mini p  { font-size: 17px; line-height: 1.65; }
+
+  .difficulty-card h3 { font-size: 1.25rem; }
+  .difficulty-card p  { font-size: 17px; line-height: 1.7; }
+  .difficulty-card__num { font-size: 14px; padding: 6px 12px; }
+
+  .service-item { font-size: 18px; line-height: 1.65; }
+
+  .timeline-item__content h3 { font-size: 1.2rem; }
+  .timeline-item__content p  { font-size: 17px; line-height: 1.72; }
+  .timeline-item__marker { font-size: 1.15rem; }
+
+  .time-card__time { font-size: 1.32rem; }
+  .time-card p:last-child { font-size: 17px; line-height: 1.65; }
+  .time-card__icon { font-size: 2.1rem; }
+
+  .benefit-list li strong { font-size: 1.15rem; }
+
+  .faq-item__question { font-size: 18px; line-height: 1.5; }
+  .faq-item__answer p { font-size: 17px; line-height: 1.78; }
+
+  .acc-contact-copy h2 { font-size: 1.85rem; }
+  .acc-contact-copy > p { font-size: 1.15rem; line-height: 1.72; }
+  .acc-contact-detail strong { font-size: 13.5px; }
+  .acc-contact-detail p { font-size: 17px; line-height: 1.55; }
+  .acc-contact-highlight strong { font-size: 1.7rem; }
+  .acc-contact-highlight span   { font-size: 15px;  line-height: 1.5; }
+  .acc-form-container h3 { font-size: 1.4rem; }
+  .acc-form-note,
+  .acc-response-note { font-size: 14px; }
+
+  .section-tag { font-size: 14px; letter-spacing: 0.08em; }
+  .badge { font-size: 14px; padding: 7px 16px; }
+
+  .cta-row__text strong { font-size: 1.25rem; }
+  .cta-row__text span   { font-size: 16px; line-height: 1.6; }
+
+  .stat strong { font-size: 1.7rem; }
+  .stat span   { font-size: 14px;   line-height: 1.55; }
+}
+
+/* Extra-small phones (<=420px): rút lại 1 chút để vừa lề */
+@media (max-width: 420px) {
+  body { font-size: 18px; }
+
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.7rem;  }
+  h3 { font-size: 1.25rem; }
+
+  .lead { font-size: 1.12rem; }
+
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .content-block p,
+  .intro-grid__text p,
+  .check-list li,
+  .benefit-list li span,
+  .difficulty-card p,
+  .service-item,
+  .timeline-item__content p,
+  .feature-mini p,
+  .time-card p:last-child,
+  .faq-item__answer p {
+    font-size: 17px;
+    line-height: 1.72;
+  }
+  .faq-item__question { font-size: 17px; }
+
+  .acc-contact-copy h2 { font-size: 1.55rem; }
+  .acc-contact-copy > p { font-size: 1.08rem; }
+  .acc-contact-detail p { font-size: 16.5px; }
+
+  .stat strong { font-size: 1.55rem; }
+  .cta-row__text strong { font-size: 1.18rem; }
+}
+
+/* ============================================================
+   FINAL RESPONSIVE PASS — authoritative mobile design
+   Goal: even rhythm, clear hierarchy, large readable type,
+         premium card feel, comfortable tap targets.
+   Placed last so it wins the cascade.
+   ============================================================ */
+@media (max-width: 768px) {
+  /* ---- Type scale ---- */
+  html { font-size: 17px; }
+  body { font-size: 17px; line-height: 1.7; }
+
+  h1 { font-size: 2.2rem; line-height: 1.18; letter-spacing: -0.005em; }
+  h2 { font-size: 1.7rem; line-height: 1.22; margin-bottom: 0.85rem; }
+  h3 { font-size: 1.18rem; line-height: 1.32; margin-bottom: 0.6rem; }
+  h4 { font-size: 1.05rem; line-height: 1.35; }
+  p  { font-size: 1rem; line-height: 1.7; margin-bottom: 0.85rem; }
+  .lead { font-size: 1.08rem; line-height: 1.7; }
+
+  /* ---- Section rhythm ---- */
+  .section            { padding: 56px 0; }
+  .section--intro     { padding: 48px 0; }
+  .section--alt       { padding: 56px 0; }
+  .section--dark      { padding: 56px 0; }
+  .container          { padding: 0 18px; }
+  .container--narrow  { padding: 0 18px; }
+  .section-header     { margin: 0 auto 1.75rem; }
+  .section-header p   { font-size: 1rem; }
+  .section-tag, .badge { font-size: 12.5px; padding: 6px 14px; }
+
+  /* ---- Hero (text side already handled, this keeps copy readable) ---- */
+  .hero__title { font-size: 2rem; line-height: 1.18; margin-bottom: 0.7rem; }
+  .hero__desc  { font-size: 1.05rem; line-height: 1.6; margin-bottom: 1rem; }
+
+  /* ---- Intro grid ---- */
+  .intro-grid       { gap: 28px; }
+  .intro-grid__text p { font-size: 1rem; }
+  .feature-mini     { padding: 16px; gap: 14px; }
+  .feature-mini h4  { font-size: 1.05rem; }
+  .feature-mini p   { font-size: 0.95rem; line-height: 1.55; }
+
+  /* ---- License + content blocks ---- */
+  .license-layout   { gap: 28px; }
+  .license-content .content-block { padding: 22px; border-radius: 14px; }
+  .content-block p { font-size: 1rem; }
+  .check-list li   { font-size: 1rem; padding-left: 28px; margin-bottom: 10px; }
+
+  /* ---- Difficulty cards ---- */
+  .difficulty-grid  { gap: 14px; }
+  .difficulty-card  { padding: 22px; border-radius: 14px; }
+  .difficulty-card h3 { font-size: 1.1rem; margin-bottom: 0.55rem; }
+  .difficulty-card p  { font-size: 0.97rem; line-height: 1.6; }
+  .difficulty-card__num { font-size: 12.5px; padding: 5px 11px; margin-bottom: 14px; }
+
+  /* ---- Services (dark bg) ---- */
+  .service-layout   { gap: 24px; }
+  .service-copy h2  { font-size: 1.7rem; }
+  .service-copy p   { font-size: 1rem; }
+  .services-grid    { gap: 12px; }
+  .service-item     { font-size: 1rem; padding: 18px; min-height: 0; line-height: 1.55; }
+  .service-item span { width: 24px; height: 24px; }
+
+  /* ---- Process / timeline ---- */
+  .process-layout   { gap: 28px; }
+  .process-visual   { height: 320px; }
+  .timeline-item    { padding-left: 64px; padding-bottom: 24px; }
+  .timeline-item__marker { width: 44px; height: 44px; font-size: 1rem; }
+  .timeline-item__content { padding: 18px 20px; border-radius: 14px; }
+  .timeline-item__content h3 { font-size: 1.08rem; }
+  .timeline-item__content p  { font-size: 0.97rem; line-height: 1.65; }
+
+  /* ---- Pricing / aftercare ---- */
+  .pricing-layout, .aftercare-layout { gap: 18px; }
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block { padding: 22px; border-radius: 14px; }
+  .time-grid        { gap: 12px; }
+  .time-card        { padding: 20px; border-radius: 14px; }
+  .time-card__icon  { font-size: 1.85rem; margin-bottom: 10px; }
+  .time-card__time  { font-size: 1.18rem; }
+  .time-card p:last-child { font-size: 0.97rem; }
+  .inline-cta       { padding: 18px; border-radius: 14px; }
+  .inline-cta p     { font-size: 1rem; }
+
+  /* ---- Benefits ---- */
+  .benefit-list li        { padding: 14px 0; }
+  .benefit-list li strong { font-size: 1.05rem; margin-bottom: 4px; }
+  .benefit-list li span   { font-size: 0.97rem; line-height: 1.6; }
+
+  /* ---- FAQ ---- */
+  .faq-list { gap: 10px; }
+  .faq-item { border-radius: 14px; }
+  .faq-item__question { padding: 18px 20px; font-size: 1rem; }
+  .faq-item.active .faq-item__answer-inner { padding: 4px 20px 18px; }
+  .faq-item__answer-inner p { font-size: 0.97rem; line-height: 1.7; }
+
+  /* ---- CTA row ---- */
+  .cta-row { padding: 22px; border-radius: 14px; gap: 14px; }
+  .cta-row__text strong { font-size: 1.1rem; }
+  .cta-row__text span   { font-size: 0.97rem; line-height: 1.55; }
+
+  /* ---- Contact ---- */
+  .acc-contact-section { padding: 56px 18px; }
+  .acc-contact-copy h2 { font-size: 1.7rem; }
+  .acc-contact-copy > p { font-size: 1.02rem; line-height: 1.6; }
+  .acc-contact-eyebrow { font-size: 12.5px; }
+  .acc-contact-highlight { padding: 16px; border-radius: 12px; }
+  .acc-contact-highlight strong { font-size: 1.5rem; }
+  .acc-contact-highlight span   { font-size: 0.95rem; line-height: 1.45; }
+  .acc-contact-detail   { padding: 14px; border-radius: 12px; gap: 12px; }
+  .acc-contact-detail strong { font-size: 11.5px; }
+  .acc-contact-detail p { font-size: 1rem; line-height: 1.5; }
+  .acc-form-container   { padding: 22px; }
+  .acc-form-container h3 { font-size: 1.3rem; }
+  .acc-form-note, .acc-response-note { font-size: 0.95rem; }
+
+  /* ---- Stats strip ---- */
+  .stat strong { font-size: 1.4rem; }
+  .stat span   { font-size: 12px; }
+}
+
+/* Tablet portrait → small desktop tweak band */
+@media (min-width: 600px) and (max-width: 768px) {
+  .difficulty-grid { grid-template-columns: 1fr 1fr; }
+  .time-grid       { grid-template-columns: 1fr 1fr; }
+  .services-grid   { grid-template-columns: 1fr 1fr; }
+}
+
+/* Phones <= 480px: compact but still big and clear */
+@media (max-width: 480px) {
+  html { font-size: 16.5px; }
+  body { font-size: 16.5px; line-height: 1.68; }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.1rem; }
+
+  .section, .section--alt, .section--dark { padding: 48px 0; }
+  .section--intro { padding: 40px 0; }
+  .container, .container--narrow { padding: 0 16px; }
+
+  .difficulty-grid { grid-template-columns: 1fr; }
+  .services-grid   { grid-template-columns: 1fr; }
+  .time-grid       { grid-template-columns: 1fr; }
+
+  .acc-contact-section { padding: 48px 16px; }
+}
+
+/* Very small phones <= 380px: keep type readable, never crammed */
+@media (max-width: 380px) {
+  html { font-size: 16px; }
+  body { font-size: 16px; }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.05rem; }
+
+  .container, .container--narrow { padding: 0 14px; }
+  .section, .section--alt, .section--dark { padding: 44px 0; }
+
+  .difficulty-card,
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block,
+  .license-content .content-block,
+  .timeline-item__content,
+  .time-card,
+  .feature-mini { padding: 18px; border-radius: 12px; }
+
+  .acc-contact-section  { padding: 44px 14px; }
+  .acc-form-container   { padding: 18px; }
+}
+
+/* ============================================================
+   ✦ MOBILE REDESIGN — authoritative (<=768px) ✦
+   Goal:
+     • Type system rõ ràng, có hierarchy, đọc thoải mái trên điện thoại
+     • Bố cục dồn về 1 cột, card to rộng rãi, tap-target ≥ 52px
+     • Đứng cuối file để thắng cascade — không cần !important quá nhiều
+   ============================================================ */
+@media (max-width: 768px) {
+  /* ---- Type scale (root + body) ---- */
+  html { font-size: 16px; }
+  body {
+    font-size: 1rem;          /* 16px */
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+  }
+
+  /* ---- Headings ---- */
+  h1 { font-size: 2.05rem; line-height: 1.2;  margin-bottom: 0.85rem; letter-spacing: -0.005em; }
+  h2 { font-size: 1.55rem; line-height: 1.28; margin-bottom: 0.75rem; }
+  h3 { font-size: 1.15rem; line-height: 1.35; margin-bottom: 0.5rem;  }
+  h4 { font-size: 1.05rem; line-height: 1.4;  }
+
+  .lead { font-size: 1.075rem; line-height: 1.65; }
+
+  /* ---- Paragraph + list (consistent across sections) ---- */
+  p,
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .section--dark p,
+  .content-block p,
+  .intro-grid__text p,
+  .difficulty-card p,
+  .timeline-item__content p,
+  .time-card p,
+  .inline-cta p,
+  .feature-mini p,
+  .hero-license-card p,
+  .hero-card > p,
+  .service-copy p,
+  .acc-contact-copy > p,
+  .acc-contact-detail p,
+  .acc-contact-highlight span,
+  .check-list li,
+  .benefit-list li span,
+  .hero-points li,
+  .service-item,
+  .faq-item__answer p,
+  .faq-item__answer-inner p,
+  .cta-banner p,
+  .cta-row__text span {
+    font-size: 1rem;          /* 16px */
+    line-height: 1.65;
+  }
+
+  /* Small support labels stay smaller for hierarchy */
+  .stat span,
+  .acc-contact-detail strong,
+  .acc-form-note,
+  .acc-response-note,
+  .acc-contact-eyebrow,
+  .badge,
+  .section-tag,
+  .difficulty-card__num,
+  .acc-hotline-card__badge,
+  .acc-hotline-line__label,
+  .btn-phone__label,
+  .hero-card__header span,
+  .hero-card__header strong { font-size: 0.78rem; line-height: 1.4; }
+
+  /* ---- Section rhythm ---- */
+  .section          { padding: 52px 0; }
+  .section--intro   { padding: 44px 0; }
+  .section--alt     { padding: 52px 0; }
+  .section--dark    { padding: 52px 0; }
+  .container,
+  .container--narrow { padding: 0 18px; }
+  .section-header   { margin: 0 auto 1.75rem; }
+
+  /* ---- Single-column stack for every multi-column grid ---- */
+  .hero__inner,
+  .intro-grid,
+  .intro-grid__features,
+  .license-layout,
+  .license-content,
+  .difficulty-grid,
+  .service-layout,
+  .services-grid,
+  .process-layout,
+  .pricing-layout,
+  .aftercare-layout,
+  .time-grid,
+  .two-col,
+  .contact-grid,
+  .acc-contact-inner,
+  .acc-contact-highlights,
+  .acc-contact-panel,
+  .acc-hotline-card__list,
+  .form-row,
+  .contact-form .form-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .difficulty-grid,
+  .services-grid,
+  .time-grid,
+  .intro-grid__features,
+  .acc-contact-details,
+  .acc-contact-highlights { gap: 14px; }
+
+  .pricing-layout,
+  .aftercare-layout,
+  .license-layout,
+  .service-layout,
+  .process-layout,
+  .acc-contact-inner,
+  .intro-grid,
+  .contact-grid { gap: 28px; }
+
+  .difficulty-card--wide { grid-column: auto !important; }
+  .contact-form .form-row input { margin-bottom: 0; }
+
+  /* Stats strip: keep 3-up but breathe a bit more */
+  .hero__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 22px 18px 0;
+    border-radius: 14px;
+  }
+  .hero__stats .stat { padding: 14px 10px; text-align: center; }
+  .hero__stats .stat strong { font-size: 1.35rem; }
+  .hero__stats .stat span   { font-size: 0.78rem; line-height: 1.4; }
+
+  /* ---- Cards: roomy padding & friendly radius ---- */
+  .feature-mini,
+  .difficulty-card,
+  .timeline-item__content,
+  .time-card,
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block,
+  .license-content .content-block,
+  .acc-contact-detail,
+  .acc-contact-highlight,
+  .inline-cta,
+  .faq-item { border-radius: 14px; }
+
+  .feature-mini             { padding: 18px 18px; gap: 14px; }
+  .feature-mini__icon       { font-size: 1.6rem; }
+  .difficulty-card          { padding: 22px; }
+  .timeline-item__content   { padding: 20px 22px; }
+  .time-card                { padding: 22px; }
+  .time-card__icon          { font-size: 1.85rem; margin-bottom: 10px; }
+  .time-card__time          { font-size: 1.18rem; }
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block,
+  .license-content .content-block { padding: 24px; }
+  .acc-contact-detail       { padding: 16px; gap: 14px; }
+  .acc-contact-detail > span{ width: 42px; height: 42px; }
+  .acc-contact-highlight    { padding: 18px; }
+  .acc-contact-highlight strong { font-size: 1.55rem; }
+  .inline-cta               { padding: 20px; }
+
+  /* Hero stays generous but balanced */
+  .hero { padding: 40px 0 28px; }
+  .hero__title { font-size: 2.1rem; line-height: 1.18; }
+  .hero__title br { display: none; }
+  .hero__desc  { font-size: 1.05rem; line-height: 1.65; margin-bottom: 18px; }
+  .hero-points { display: none; }
+  .hero-card   { padding: 22px; border-radius: 18px; }
+  .hero-card__list { display: none; }
+  .hero-license-card        { grid-template-columns: 64px 1fr; gap: 16px; padding: 16px; border-radius: 14px; }
+  .hero-license-card h3     { font-size: 1.1rem; line-height: 1.32; }
+  .hero-license-card p      { font-size: 0.97rem; line-height: 1.55; }
+  .hero-progress            { padding: 14px 16px; border-radius: 12px; }
+  .hero-progress__meta      { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .hero-progress__meta strong { font-size: 1rem; }
+  .hero-progress__meta span   { font-size: 0.85rem; line-height: 1.4; max-width: 62%; }
+
+  /* ---- FAQ ---- */
+  .faq-list { gap: 10px; }
+  .faq-item__question { padding: 18px 20px; font-size: 1rem; line-height: 1.45; }
+  .faq-item.active .faq-item__answer-inner { padding: 4px 20px 18px; }
+
+  /* ---- CTA row + banner copy ---- */
+  .cta-row { padding: 22px 20px; border-radius: 14px; gap: 14px; text-align: left; }
+  .cta-row__text strong { font-size: 1.1rem; }
+
+  /* ---- Contact form area ---- */
+  .acc-contact-section { padding: 56px 18px; }
+  .acc-form-container  { padding: 22px; border-radius: 14px; }
+  .acc-form-container h3 { font-size: 1.3rem; }
+  .acc-map-container iframe { height: 240px; }
+
+  /* ---- Buttons: large, easy tap targets ---- */
+  .btn,
+  .btn-phone,
+  .acc-hotline-line {
+    min-height: 54px;
+    border-radius: 12px;
+    font-size: 0.97rem;
+    font-weight: 700;
+  }
+  .btn--lg { min-height: 58px; font-size: 1rem; }
+
+  .hero-card__actions,
+  .cta-banner__actions {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+  .hero-card__actions > *,
+  .cta-banner__actions > * {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+
+  /* Hotline phone CTA */
+  .btn-phone__title { font-size: 1rem; }
+  .btn-phone__label { font-size: 0.7rem; }
+
+  /* Floating CTAs compact on mobile */
+  .acc-floating { right: 14px; bottom: 14px; gap: 10px; }
+  .acc-floating__label { display: none; }
+  .acc-floating__btn { padding: 10px; }
+}
+
+/* ---- Phones <= 480px: tighten container, downshift one notch ---- */
+@media (max-width: 480px) {
+  html { font-size: 15.5px; }
+  body { font-size: 1rem; line-height: 1.65; }
+
+  h1 { font-size: 1.9rem;  }
+  h2 { font-size: 1.45rem; }
+  h3 { font-size: 1.1rem;  }
+
+  .container,
+  .container--narrow      { padding: 0 16px; }
+  .section,
+  .section--alt,
+  .section--dark          { padding: 48px 0; }
+  .section--intro         { padding: 40px 0; }
+
+  .hero__title            { font-size: 1.95rem; }
+  .hero__desc             { font-size: 1.02rem; }
+
+  .difficulty-card,
+  .timeline-item__content,
+  .time-card,
+  .feature-mini,
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block,
+  .license-content .content-block,
+  .acc-form-container     { padding: 20px; }
+
+  .acc-contact-section    { padding: 48px 16px; }
+  .hero__stats .stat strong { font-size: 1.2rem; }
+}
+
+/* ---- Very small phones <= 380px: keep everything readable ---- */
+@media (max-width: 380px) {
+  html { font-size: 15px; }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.35rem; }
+
+  .container,
+  .container--narrow      { padding: 0 14px; }
+  .section,
+  .section--alt,
+  .section--dark          { padding: 44px 0; }
+
+  .hero__title            { font-size: 1.8rem; }
+  .hero__actions,
+  .hero-card__actions     { grid-template-columns: 1fr !important; }
+
+  .timeline-item          { padding-left: 56px; }
+  .timeline-item__marker  { width: 40px; height: 40px; font-size: 0.95rem; }
+
+  .difficulty-card,
+  .timeline-item__content,
+  .time-card,
+  .feature-mini,
+  .pricing-layout > .content-block,
+  .aftercare-layout > .content-block,
+  .license-content .content-block,
+  .acc-form-container     { padding: 18px; border-radius: 12px; }
+}
+
+/* ============================================================
+   FINAL MOBILE PASS — typography uplift + compact CTA layout
+   Goal: text comfortably readable + Hotline/Zalo/Liên hệ
+         arranged compactly without losing hierarchy.
+   This block is placed last so it wins the cascade.
+   ============================================================ */
+@media (max-width: 768px) {
+  /* ---------- TYPOGRAPHY: one comfortable step up ---------- */
+  html { font-size: 17px; }
+  body {
+    font-size: 1.06rem;        /* ~18px */
+    line-height: 1.68;
+  }
+
+  h1 { font-size: 2.25rem; line-height: 1.18; }
+  h2 { font-size: 1.7rem;  line-height: 1.25; }
+  h3 { font-size: 1.22rem; line-height: 1.32; }
+  h4 { font-size: 1.1rem;  line-height: 1.38; }
+
+  .lead { font-size: 1.12rem; line-height: 1.7; }
+
+  p,
+  .section p,
+  .section--intro p,
+  .section--alt p,
+  .section--dark p,
+  .content-block p,
+  .intro-grid__text p,
+  .difficulty-card p,
+  .timeline-item__content p,
+  .time-card p,
+  .inline-cta p,
+  .feature-mini p,
+  .hero-license-card p,
+  .hero-card > p,
+  .service-copy p,
+  .acc-contact-copy > p,
+  .acc-contact-detail p,
+  .check-list li,
+  .benefit-list li span,
+  .hero-points li,
+  .service-item,
+  .faq-item__answer p,
+  .faq-item__answer-inner p,
+  .cta-banner p,
+  .cta-row__text span {
+    font-size: 1.06rem;        /* ~18px */
+    line-height: 1.68;
+  }
+
+  /* Sub-titles inside cards a touch larger than body */
+  .difficulty-card h3,
+  .timeline-item__content h3,
+  .feature-mini h4,
+  .benefit-list li strong,
+  .hero-license-card h3 { font-size: 1.18rem; line-height: 1.35; }
+
+  /* Card numeric / accent labels */
+  .time-card__time              { font-size: 1.22rem; }
+  .acc-contact-highlight strong { font-size: 1.7rem; }
+  .stat strong                  { font-size: 1.55rem; }
+
+  /* Tiny support labels — keep small for hierarchy */
+  .stat span,
+  .acc-contact-detail strong,
+  .acc-contact-highlight span,
+  .acc-form-note,
+  .acc-response-note,
+  .acc-contact-eyebrow,
+  .badge,
+  .section-tag,
+  .difficulty-card__num,
+  .acc-hotline-card__badge,
+  .acc-hotline-line__label,
+  .btn-phone__label,
+  .hero-card__header span,
+  .hero-card__header strong { font-size: 0.82rem; line-height: 1.4; }
+
+  /* Hero copy override (was smaller in earlier rule) */
+  .hero__title { font-size: 2.35rem; line-height: 1.16; margin-bottom: 0.85rem; }
+  .hero__desc  { font-size: 1.12rem; line-height: 1.6;  margin-bottom: 18px; }
+
+  /* ---------- CTA LAYOUT: compact 2-row pattern ----------
+     Row 1: Hotline (full width — primary)
+     Row 2: Liên hệ + Zalo (50/50 — peers)
+  */
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: auto;
+    gap: 10px !important;
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero__actions      > .btn-phone,
+  .hero-card__actions > .btn-phone,
+  .cta-row__actions   > .btn-phone,
+  .cta-banner__actions > .btn-phone,
+  .inline-cta__actions > .btn-phone {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+  }
+
+  /* Hero only has phone + zalo — let zalo span full row too */
+  .hero__actions > .btn--zalo {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Liên hệ + Zalo share row 2 (50/50) */
+  .hero-card__actions   .btn--callback,
+  .hero-card__actions   .btn--zalo,
+  .cta-row__actions     .btn--callback,
+  .cta-row__actions     .btn--zalo,
+  .cta-banner__actions  .btn--callback,
+  .cta-banner__actions  .btn--zalo,
+  .inline-cta__actions  .btn--callback,
+  .inline-cta__actions  .btn--zalo {
+    grid-column: span 1 !important;
+    width: 100% !important;
+    min-height: 52px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 0.97rem;
+    font-weight: 700;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Tighter button icons inside compact pair */
+  .hero-card__actions   .btn__icon,
+  .cta-row__actions     .btn__icon,
+  .cta-banner__actions  .btn__icon,
+  .inline-cta__actions  .btn__icon {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+  }
+
+  /* Hotline pill — keep punchy but compact */
+  .btn-phone {
+    padding: 12px 16px;
+    gap: 12px;
+    border-radius: 14px;
+    min-height: 60px;
+  }
+  .btn-phone__icon  { width: 42px; height: 42px; }
+  .btn-phone__title { font-size: 1.05rem; }
+  .btn-phone__label { font-size: 0.72rem; }
+  .btn-phone__chev  { width: 28px; height: 28px; font-size: 18px; }
+
+  /* Hotline numbers card (in contact section) — single column already */
+  .acc-hotline-line {
+    grid-template-columns: 40px minmax(0, 1fr) 26px;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .acc-hotline-line__digits { font-size: 1.18rem; }
+}
+
+/* Phones ≤480px: keep CTA pair compact, headings step down a notch */
+@media (max-width: 480px) {
+  html { font-size: 16.5px; }
+  body { font-size: 1.05rem; line-height: 1.65; }
+
+  h1 { font-size: 2rem;   }
+  h2 { font-size: 1.55rem; }
+  h3 { font-size: 1.18rem; }
+
+  .hero__title { font-size: 2.05rem; }
+  .hero__desc  { font-size: 1.08rem; }
+
+  /* Hotline + Zalo + Liên hệ stay in 2-row grid for compactness */
+  .hero-card__actions  .btn--callback,
+  .hero-card__actions  .btn--zalo,
+  .cta-row__actions    .btn--callback,
+  .cta-row__actions    .btn--zalo,
+  .cta-banner__actions .btn--callback,
+  .cta-banner__actions .btn--zalo,
+  .inline-cta__actions .btn--callback,
+  .inline-cta__actions .btn--zalo {
+    min-height: 50px;
+    font-size: 0.94rem;
+    padding: 11px 12px;
+  }
+
+  .btn-phone__title { font-size: 1rem; }
+  .btn-phone__label { font-size: 0.7rem; }
+}
+
+/* Very small phones ≤380px: stack everything for breathing room */
+@media (max-width: 380px) {
+  html { font-size: 16px; }
+
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.4rem;  }
+
+  .hero__title { font-size: 1.85rem; }
+
+  /* Single column when really tight — Hotline + Liên hệ + Zalo each on its own row */
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .hero-card__actions  .btn--callback,
+  .hero-card__actions  .btn--zalo,
+  .cta-row__actions    .btn--callback,
+  .cta-row__actions    .btn--zalo,
+  .cta-banner__actions .btn--callback,
+  .cta-banner__actions .btn--zalo,
+  .inline-cta__actions .btn--callback,
+  .inline-cta__actions .btn--zalo {
+    grid-column: 1 / -1 !important;
+    min-height: 52px;
+    font-size: 0.97rem;
+  }
+}
+
+/* ============================================================
+   FINAL CTA — compact mobile arrangement (≤768px)
+   Row 1: Hotline (slim, no pulse / chevron / shine)
+   Row 2: Liên hệ + Zalo (50/50, ~48px)
+   Goal: keep the hierarchy but reclaim vertical space.
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Wrapper grid: 2 columns */
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Row 1 — Hotline pill (slim, primary) */
+  .hero__actions       > .btn-phone,
+  .hero-card__actions  > .btn-phone,
+  .cta-row__actions    > .btn-phone,
+  .cta-banner__actions > .btn-phone,
+  .inline-cta__actions > .btn-phone {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+    min-height: 50px;
+    padding: 8px 14px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  /* Strip noisy decorations on mobile so hotline reads quickly */
+  .btn-phone__pulse,
+  .btn-phone__pulse--2,
+  .btn-phone__shine,
+  .btn-phone__chev { display: none !important; }
+
+  .btn-phone__icon  { width: 34px; height: 34px; animation: none; }
+  .btn-phone__icon svg { width: 18px; height: 18px; }
+  .btn-phone__label { display: none; }                /* hide eyebrow label */
+  .btn-phone__title { font-size: 1rem; line-height: 1.15; }
+
+  /* Row 2 — Liên hệ + Zalo as 50/50 peers */
+  .hero-card__actions   .btn--callback,
+  .hero-card__actions   .btn--zalo,
+  .cta-row__actions     .btn--callback,
+  .cta-row__actions     .btn--zalo,
+  .cta-banner__actions  .btn--callback,
+  .cta-banner__actions  .btn--zalo,
+  .inline-cta__actions  .btn--callback,
+  .inline-cta__actions  .btn--zalo {
+    grid-column: span 1 !important;
+    width: 100% !important;
+    min-height: 48px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 0.94rem;
+    font-weight: 700;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Compact icons inside the pair */
+  .hero-card__actions   .btn__icon,
+  .cta-row__actions     .btn__icon,
+  .cta-banner__actions  .btn__icon,
+  .inline-cta__actions  .btn__icon {
+    width: 16px;
+    height: 16px;
+    font-size: 13px;
+  }
+
+  /* Hero (only phone + zalo) — zalo full row to keep cadence */
+  .hero__actions > .btn--zalo {
+    grid-column: 1 / -1 !important;
+    min-height: 48px;
+    font-size: 0.94rem;
+  }
+}
+
+/* Very small phones ≤380px — stack everything for breathing room */
+@media (max-width: 380px) {
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .hero-card__actions   .btn--callback,
+  .hero-card__actions   .btn--zalo,
+  .cta-row__actions     .btn--callback,
+  .cta-row__actions     .btn--zalo,
+  .cta-banner__actions  .btn--callback,
+  .cta-banner__actions  .btn--zalo,
+  .inline-cta__actions  .btn--callback,
+  .inline-cta__actions  .btn--zalo {
+    grid-column: 1 / -1 !important;
+    min-height: 48px;
+  }
+}
+
+/* ============================================================
+   POLISH — CTA pair (Liên hệ + Zalo) at 381px–768px
+   The 50/50 pair was too cramped: icon + long Vietnamese label
+   forced ellipsis. Tighten layout, balance icon/text, allow
+   2-line wrap when needed so nothing gets clipped.
+   ============================================================ */
+@media (min-width: 381px) and (max-width: 768px) {
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    gap: 10px !important;
+  }
+
+  /* Pair buttons: balanced size, allow 2-line wrap, vertical icon-text */
+  .hero-card__actions   .btn--callback,
+  .hero-card__actions   .btn--zalo,
+  .cta-row__actions     .btn--callback,
+  .cta-row__actions     .btn--zalo,
+  .cta-banner__actions  .btn--callback,
+  .cta-banner__actions  .btn--zalo,
+  .inline-cta__actions  .btn--callback,
+  .inline-cta__actions  .btn--zalo {
+    min-height: 52px;
+    padding: 10px 10px;
+    gap: 8px;
+    font-size: 0.92rem;
+    line-height: 1.2;
+    white-space: normal;          /* allow wrap, no clipped text */
+    overflow: visible;
+    text-overflow: clip;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  /* Compact icon + tight gap so the label has room */
+  .hero-card__actions   .btn__icon,
+  .cta-row__actions     .btn__icon,
+  .cta-banner__actions  .btn__icon,
+  .inline-cta__actions  .btn__icon {
+    width: 18px;
+    height: 18px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+}
+
+/* 480–640px — comfortable middle ground */
+@media (min-width: 481px) and (max-width: 640px) {
+  .hero-card__actions   .btn--callback,
+  .hero-card__actions   .btn--zalo,
+  .cta-row__actions     .btn--callback,
+  .cta-row__actions     .btn--zalo,
+  .cta-banner__actions  .btn--callback,
+  .cta-banner__actions  .btn--zalo,
+  .inline-cta__actions  .btn--callback,
+  .inline-cta__actions  .btn--zalo {
+    font-size: 0.95rem;
+    padding: 11px 12px;
+  }
+}
+
+/* ============================================================
+   AUTHORITATIVE MOBILE CTA LAYOUT (≤768px)
+   Row 1: Gọi điện ngay (btn-phone)  — full width
+   Row 2: Nhận liên hệ tư vấn + Chat Zalo  — 50/50
+   This block is intentionally last so it overrides the
+   earlier ≤380px single-column rule.
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: auto !important;
+    gap: 10px !important;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Row 1 — Hotline always spans full row */
+  .hero__actions       > .btn-phone,
+  .hero-card__actions  > .btn-phone,
+  .cta-row__actions    > .btn-phone,
+  .cta-banner__actions > .btn-phone,
+  .inline-cta__actions > .btn-phone {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+  }
+
+  /* Hero block has only phone + zalo; keep zalo full row there */
+  .hero__actions > .btn--zalo {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Row 2 — Liên hệ + Zalo share the row 50/50 in every other group */
+  .hero-card__actions   .btn--callback,
+  .hero-card__actions   .btn--zalo,
+  .cta-row__actions     .btn--callback,
+  .cta-row__actions     .btn--zalo,
+  .cta-banner__actions  .btn--callback,
+  .cta-banner__actions  .btn--zalo,
+  .inline-cta__actions  .btn--callback,
+  .inline-cta__actions  .btn--zalo {
+    grid-column: span 1 !important;
+    width: 100% !important;
+    min-height: 50px;
+    padding: 10px 10px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    gap: 6px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    text-align: center;
+  }
+
+  /* Compact icon so the Vietnamese label fits comfortably */
+  .hero-card__actions   .btn__icon,
+  .cta-row__actions     .btn__icon,
+  .cta-banner__actions  .btn__icon,
+  .inline-cta__actions  .btn__icon {
+    width: 16px;
+    height: 16px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+}
+
+/* Extra-small phones ≤360px: only when really tight, stack the pair */
+@media (max-width: 360px) {
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-card__actions   .btn--callback,
+  .hero-card__actions   .btn--zalo,
+  .cta-row__actions     .btn--callback,
+  .cta-row__actions     .btn--zalo,
+  .cta-banner__actions  .btn--callback,
+  .cta-banner__actions  .btn--zalo,
+  .inline-cta__actions  .btn--callback,
+  .inline-cta__actions  .btn--zalo {
+    grid-column: 1 / -1 !important;
+    min-height: 48px;
+  }
+}
+
+
+/* ============================================================
+   FINAL AUTHORITATIVE — Mobile CTA layout (<=768px)
+   Trên điện thoại 3 nút (Hotline / Nhận liên hệ / Chat Zalo)
+   được xếp dọc full-width để nhãn tiếng Việt không bị chen.
+   Dùng `order` để giữ thứ tự hiển thị bất kể thứ tự DOM:
+     1. Hotline (btn-phone)  — CTA chính (gold)
+     2. Nhận liên hệ tư vấn  — btn--callback
+     3. Chat Zalo            — btn--zalo
+   Đặt cuối file để thắng cascade. Nhắm thẳng .btn để vô hiệu
+   hoá `.btn { display: inline-flex }` ở phần trên (vốn làm
+   nút co lại theo nội dung).
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Wrapper: cột đơn, nút trải đều full-width, có khoảng cách */
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: none !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Tất cả nút trong nhóm CTA: full-width, không co theo nội dung */
+  .hero__actions       > .btn,
+  .hero-card__actions  > .btn,
+  .cta-row__actions    > .btn,
+  .cta-banner__actions > .btn,
+  .inline-cta__actions > .btn,
+  .hero__actions       > .btn-phone,
+  .hero-card__actions  > .btn-phone,
+  .cta-row__actions    > .btn-phone,
+  .cta-banner__actions > .btn-phone,
+  .inline-cta__actions > .btn-phone {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    flex: 0 0 auto !important;
+    align-self: stretch !important;
+    margin: 0 !important;
+  }
+
+  /* Thứ tự hiển thị: Hotline -> Liên hệ -> Zalo */
+  .hero__actions       > .btn-phone,
+  .hero-card__actions  > .btn-phone,
+  .cta-row__actions    > .btn-phone,
+  .cta-banner__actions > .btn-phone,
+  .inline-cta__actions > .btn-phone { order: 1 !important; }
+
+  .hero__actions       > .btn--callback,
+  .hero-card__actions  > .btn--callback,
+  .cta-row__actions    > .btn--callback,
+  .cta-banner__actions > .btn--callback,
+  .inline-cta__actions > .btn--callback { order: 2 !important; }
+
+  .hero__actions       > .btn--zalo,
+  .hero-card__actions  > .btn--zalo,
+  .cta-row__actions    > .btn--zalo,
+  .cta-banner__actions > .btn--zalo,
+  .inline-cta__actions > .btn--zalo { order: 3 !important; }
+
+  /* Tinh chỉnh kích thước nút callback + zalo cho đẹp trên mobile */
+  .hero__actions       .btn--callback,
+  .hero__actions       .btn--zalo,
+  .hero-card__actions  .btn--callback,
+  .hero-card__actions  .btn--zalo,
+  .cta-row__actions    .btn--callback,
+  .cta-row__actions    .btn--zalo,
+  .cta-banner__actions .btn--callback,
+  .cta-banner__actions .btn--zalo,
+  .inline-cta__actions .btn--callback,
+  .inline-cta__actions .btn--zalo {
+    min-height: 52px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
+    gap: 8px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* Icon đầu nút giữ tỉ lệ vừa phải, không lấn chữ */
+  .hero__actions       .btn__icon,
+  .hero-card__actions  .btn__icon,
+  .cta-row__actions    .btn__icon,
+  .cta-banner__actions .btn__icon,
+  .inline-cta__actions .btn__icon {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* cta-row vốn căn phải trên desktop — reset về full khi mobile */
+  .cta-row__actions { justify-self: stretch !important; }
+}
+
+/* <=480px — nhỏ gọn lại một nhịp cho điện thoại nhỏ */
+@media (max-width: 480px) {
+  .hero__actions,
+  .hero-card__actions,
+  .cta-row__actions,
+  .cta-banner__actions,
+  .inline-cta__actions { gap: 9px !important; }
+
+  .hero__actions       .btn--callback,
+  .hero__actions       .btn--zalo,
+  .hero-card__actions  .btn--callback,
+  .hero-card__actions  .btn--zalo,
+  .cta-row__actions    .btn--callback,
+  .cta-row__actions    .btn--zalo,
+  .cta-banner__actions .btn--callback,
+  .cta-banner__actions .btn--zalo,
+  .inline-cta__actions .btn--callback,
+  .inline-cta__actions .btn--zalo {
+    min-height: 50px;
+    padding: 11px 14px;
+    font-size: 14.5px;
+  }
 }

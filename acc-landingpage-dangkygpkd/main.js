@@ -11,6 +11,7 @@
   const toast = document.getElementById('toast');
   const faqItems = document.querySelectorAll('.faq-item');
   const revealElements = document.querySelectorAll('.reveal');
+  const phoneRegex = /^(0|\+84)[0-9]{9,10}$/;
 
   /**
    * FAQ accordion
@@ -109,8 +110,7 @@
         return;
       }
 
-      const phoneRegex = /^(0|\+84)[0-9]{9,10}$/;
-      const cleanPhone = data.phone.replace(/\s/g, '');
+      const cleanPhone = String(data.phone).replace(/\s/g, '');
 
       if (!phoneRegex.test(cleanPhone)) {
         showToast('Số điện thoại không hợp lệ. Vui lòng kiểm tra lại.');

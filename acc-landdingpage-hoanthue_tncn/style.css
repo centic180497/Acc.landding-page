@@ -57,6 +57,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -116,12 +117,12 @@ button, input, textarea, select {
 }
 
 .section-padding {
-    padding: 100px 0;
+    padding: 36px 0;
 }
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 60px 0;
+        padding: 24px 0;
     }
 }
 
@@ -163,7 +164,7 @@ button, input, textarea, select {
 .mt-2 { margin-top: 8px !important; }
 .mt-3 { margin-top: 16px !important; }
 .mt-4 { margin-top: 24px !important; }
-.mt-5 { margin-top: 40px !important; }
+.mt-5 { margin-top: 28px !important; }
 .mr-3 { margin-right: 16px !important; }
 .text-center { text-align: center !important; }
 .d-none { display: none !important; }
@@ -262,10 +263,9 @@ button, input, textarea, select {
    ========================================================================== */
 .hero-section {
     position: relative;
-    padding-top: 90px;
-    padding-bottom: 70px;
-    min-height: 92vh;
-    min-height: 92dvh;
+    padding-top: 44px;
+    padding-bottom: 30px;
+    min-height: auto;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -312,7 +312,7 @@ button, input, textarea, select {
 .hero-grid {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 56px;
+    gap: 28px;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -381,7 +381,7 @@ button, input, textarea, select {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .feat-item {
@@ -406,8 +406,122 @@ button, input, textarea, select {
 
 .hero-buttons {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
+}
+
+.hero-hotlines {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: min(100%, 570px);
+    margin-top: 14px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-hotline {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    padding: 12px 14px;
+    background: rgba(27, 16, 16, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.hero-hotline:hover {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: rgba(212, 175, 55, 0.7);
+    transform: translateY(-2px);
+}
+
+.hero-hotline-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: var(--accent-color);
+    flex-shrink: 0;
+    box-shadow: 0 8px 18px rgba(212, 175, 55, 0.22);
+}
+
+.hero-hotline-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--bg-dark);
+}
+
+.hero-hotline-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.hero-hotline-label {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.hero-hotline strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--bg-white);
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+
+@media (max-width: 576px) {
+    .hero-hotlines {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        width: 100%;
+        max-width: 360px;
+        margin-top: 10px;
+        padding: 6px;
+        border-radius: 14px;
+    }
+    .hero-hotline {
+        width: 100%;
+        min-height: 92px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px 6px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .hero-hotline-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .hero-hotline-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    .hero-hotline-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.2px;
+    }
+    .hero-hotline strong {
+        font-size: 0.86rem;
+        white-space: normal;
+    }
 }
 
 /* Custom outline button inherits white styling */
@@ -502,6 +616,36 @@ button, input, textarea, select {
     font-size: 1.35rem;
     line-height: 1.35;
     margin-bottom: 18px;
+}
+
+.hero-summary-card .hero-hotlines {
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 8px;
+    background: linear-gradient(180deg, var(--primary-ultra-light), var(--bg-white));
+    border-color: rgba(122, 40, 40, 0.1);
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.hero-summary-card .hero-hotline {
+    background: var(--bg-white);
+    border-color: rgba(122, 40, 40, 0.12);
+    box-shadow: 0 8px 20px rgba(122, 40, 40, 0.06);
+}
+
+.hero-summary-card .hero-hotline:hover {
+    background: var(--accent-light);
+    border-color: rgba(212, 175, 55, 0.55);
+}
+
+.hero-summary-card .hero-hotline-label {
+    color: var(--text-light);
+}
+
+.hero-summary-card .hero-hotline strong {
+    color: var(--primary-color);
 }
 
 .summary-metrics {
@@ -625,13 +769,13 @@ button, input, textarea, select {
 @media (max-width: 1024px) {
     .hero-section {
         min-height: auto;
-        padding-top: 80px;
-        padding-bottom: 60px;
+        padding-top: 30px;
+        padding-bottom: 22px;
     }
     
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 28px;
     }
     
     .hero-content {
@@ -646,6 +790,11 @@ button, input, textarea, select {
     .hero-buttons {
         justify-content: center;
     }
+
+    .hero-hotlines {
+        margin-left: auto;
+        margin-right: auto;
+    }
     
     .hero-trust-panel {
         max-width: 760px;
@@ -655,25 +804,357 @@ button, input, textarea, select {
 }
 
 @media (max-width: 576px) {
+    .hero-section::after {
+        background: linear-gradient(180deg, rgba(27, 16, 16, 0.9), rgba(67, 26, 24, 0.78) 58%, rgba(27, 16, 16, 0.86));
+    }
+    .hero-section {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    .hero-grid {
+        gap: 14px;
+        justify-items: stretch;
+    }
+    .hero-content {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 18px 14px 14px;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.055));
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.26);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-content .badge {
+        max-width: 310px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        font-size: 0.66rem;
+        line-height: 1.35;
+        letter-spacing: 0.6px;
+        margin-bottom: 10px;
+    }
     .hero-content h1 {
-        font-size: 2.25rem;
+        max-width: 350px;
+        margin: 0 auto 10px;
+        font-size: 1.82rem;
+        line-height: 1.18;
+    }
+    .hero-desc {
+        max-width: 350px;
+        margin: 0 auto 12px;
+        font-size: 0.92rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.78);
+    }
+    .hero-features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin-bottom: 12px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    .feat-item {
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 34px;
+        padding: 7px 10px;
+        font-size: 0.84rem;
+        line-height: 1.25;
+        color: rgba(255, 255, 255, 0.92);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+    }
+    .check-icon {
+        width: 16px;
+        height: 16px;
+        margin-top: 0;
     }
     .hero-buttons {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        min-height: 44px;
+        padding: 11px 14px;
+        font-size: 0.92rem;
+        border-radius: 999px;
+        font-weight: 700;
+    }
+    .hero-buttons .btn-primary {
+        background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+        color: var(--bg-dark);
+        box-shadow: 0 12px 26px rgba(212, 175, 55, 0.28);
+    }
+    .hero-buttons .btn-outline-white {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.38);
+        color: var(--bg-white);
     }
     .hero-trust-panel {
-        max-width: 100%;
-        padding: 10px;
+        grid-column: 1 / -1;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        justify-self: stretch;
+        margin: 0;
+        padding: 0;
+        border-radius: 14px;
+        overflow: hidden;
     }
     .hero-image-card {
-        height: 220px;
+        height: 150px;
+        border-radius: 0;
     }
     .hero-summary-card {
-        padding: 22px 14px 16px;
+        padding: 16px 12px 12px;
+    }
+    .summary-label {
+        margin-bottom: 8px;
+        font-size: 0.68rem;
+        letter-spacing: 1px;
     }
     .hero-summary-card h3 {
-        font-size: 1.18rem;
+        font-size: 1.02rem;
+        line-height: 1.35;
+        margin-bottom: 12px;
     }
+    .hero-summary-card .hero-hotlines {
+        margin-bottom: 12px;
+        grid-template-columns: 1fr;
+    }
+    .summary-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+    .summary-metrics div {
+        padding: 10px 8px;
+        text-align: center;
+    }
+    .summary-metrics strong {
+        font-size: 1.25rem;
+        margin-bottom: 4px;
+    }
+    .summary-metrics span,
+    .hero-summary-list li {
+        font-size: 0.82rem;
+        line-height: 1.35;
+    }
+    .hero-summary-list {
+        gap: 7px;
+    }
+    .hero-summary-list li {
+        padding-left: 20px;
+    }
+    .hero-summary-list li::before {
+        top: 6px;
+        width: 10px;
+        height: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .hero-grid,
+    .hero-content,
+    .hero-trust-panel,
+    .hero-summary-card,
+    .contact-detail-card,
+    .detail-text {
+        min-width: 0;
+    }
+
+    .detail-value {
+        overflow-wrap: anywhere;
+    }
+
+    .hero-section {
+        padding: 18px 0 22px;
+    }
+
+    .hero-section::after {
+        background:
+            linear-gradient(180deg, rgba(27, 16, 16, 0.88) 0%, rgba(67, 26, 24, 0.82) 46%, rgba(27, 16, 16, 0.92) 100%),
+            linear-gradient(135deg, rgba(212, 175, 55, 0.14), rgba(122, 40, 40, 0));
+    }
+
+    .hero-section .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-grid {
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        padding: 20px 16px 16px;
+        border-radius: 20px;
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.055)),
+            rgba(27, 16, 16, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 22px 54px rgba(0, 0, 0, 0.32);
+        overflow: hidden;
+    }
+
+    .hero-content::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        opacity: 0.9;
+    }
+
+    .hero-content .badge {
+        max-width: 280px;
+        margin-bottom: 12px;
+        padding: 5px 11px;
+        background: rgba(212, 175, 55, 0.14);
+        border-color: rgba(212, 175, 55, 0.42);
+        color: #f4d77a;
+        font-size: 0.64rem;
+        letter-spacing: 0.7px;
+    }
+
+    .hero-content h1 {
+        max-width: 340px;
+        font-size: 1.78rem;
+        line-height: 1.15;
+        margin-bottom: 10px;
+    }
+
+    .hero-content .highlight-text {
+        display: block;
+        margin-top: 2px;
+    }
+
+    .hero-desc {
+        max-width: 340px;
+        font-size: 0.93rem;
+        line-height: 1.48;
+        margin-bottom: 14px;
+    }
+
+    .hero-features {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        max-width: 340px;
+        margin: 0 auto 14px;
+    }
+
+    .feat-item {
+        justify-content: flex-start;
+        min-height: 0;
+        padding: 8px 10px;
+        text-align: left;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.075);
+    }
+
+    .hero-buttons {
+        max-width: 340px;
+        gap: 9px;
+    }
+
+    .hero-buttons .btn {
+        min-height: 46px;
+        border-radius: 12px;
+    }
+
+    .hero-trust-panel {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.26);
+    }
+
+    .hero-image-card {
+        display: none;
+    }
+
+    .hero-summary-card {
+        padding: 16px;
+    }
+
+    .summary-label {
+        margin-bottom: 8px;
+    }
+
+    .hero-summary-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-summary-card .hero-hotlines {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        background: transparent;
+        border: 0;
+    }
+
+    .hero-summary-card .hero-hotline {
+        min-width: 0;
+        min-height: 86px;
+        padding: 10px 6px;
+        border-radius: 14px;
+        background: linear-gradient(180deg, var(--primary-ultra-light), var(--bg-white));
+    }
+
+    .hero-summary-card .hero-hotline-text {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hero-summary-card .hero-hotline strong {
+        font-size: 0.85rem;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .summary-metrics {
+        width: 100%;
+        min-width: 0;
+        margin-bottom: 12px;
+    }
+
+    .summary-metrics div {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-summary-card .hero-hotlines,
     .summary-metrics {
         grid-template-columns: 1fr;
     }
@@ -683,7 +1164,7 @@ button, input, textarea, select {
    SECTION TITLE
    ========================================================================== */
 .section-title {
-    margin-bottom: 60px;
+    margin-bottom: 22px;
 }
 
 .sub-title {
@@ -725,7 +1206,7 @@ button, input, textarea, select {
         font-size: 1.75rem;
     }
     .section-title {
-        margin-bottom: 40px;
+        margin-bottom: 18px;
     }
 }
 
@@ -735,13 +1216,13 @@ button, input, textarea, select {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 40px;
+    gap: 28px;
 }
 
 .section-feature-image {
     position: relative;
     max-width: 980px;
-    margin: -24px auto 48px;
+    margin: -14px auto 28px;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
@@ -1128,7 +1609,7 @@ button, input, textarea, select {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
 }
 
 .challenge-card {
@@ -1214,7 +1695,7 @@ button, input, textarea, select {
 .services-wrapper {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
+    gap: 24px;
     align-items: center;
 }
 
@@ -1236,7 +1717,7 @@ button, input, textarea, select {
     padding: 24px;
     border-radius: 0 12px 12px 0;
     box-shadow: var(--shadow-sm);
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .checked-list {
@@ -1305,7 +1786,7 @@ button, input, textarea, select {
 .visual-card-desc {
     font-size: 0.95rem;
     color: var(--text-light);
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     padding: 0 32px;
 }
 
@@ -1314,7 +1795,7 @@ button, input, textarea, select {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     border-top: 1px solid var(--border-color);
-    padding-top: 28px;
+    padding-top: 18px;
     margin: 0 32px;
 }
 
@@ -1340,7 +1821,7 @@ button, input, textarea, select {
 @media (max-width: 992px) {
     .services-wrapper {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 24px;
     }
     .services-visual {
         order: -1;
@@ -1550,7 +2031,7 @@ button, input, textarea, select {
 .pricing-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 28px;
     align-items: stretch;
 }
 
@@ -1737,8 +2218,8 @@ button, input, textarea, select {
 .regulation-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 28px;
+    margin-top: 26px;
 }
 
 .regulation-card {
@@ -1826,7 +2307,7 @@ button, input, textarea, select {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 22px;
-    margin-top: 40px;
+    margin-top: 26px;
 }
 
 .benefit-item {
@@ -1952,7 +2433,7 @@ button, input, textarea, select {
 .contact-grid {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
-    gap: 60px;
+    gap: 24px;
     align-items: start;
 }
 
@@ -1965,13 +2446,13 @@ button, input, textarea, select {
 
 .contact-intro {
     font-size: 1.05rem;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
 }
 
 .contact-details-list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
 }
 
 /* Detail Card highlighted */
@@ -2069,7 +2550,7 @@ button, input, textarea, select {
 .form-container-card p {
     font-size: 0.95rem;
     color: var(--text-medium);
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .ticket-support-box {
@@ -2154,7 +2635,7 @@ select:focus {
 @media (max-width: 992px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 24px;
     }
 }
 
