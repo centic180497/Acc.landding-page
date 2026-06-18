@@ -152,8 +152,8 @@ button, input, textarea, select {
 
 .section-visual-card img {
   width: 100%;
-  aspect-ratio: 19 / 8.2;
-  object-fit: contain;
+  aspect-ratio: 38 / 15;
+  object-fit: cover;
   display: block;
 }
 
@@ -662,8 +662,8 @@ button, input, textarea, select {
 
 .service-feature-visual img {
   width: 100%;
-  aspect-ratio: 19 / 8.5;
-  object-fit: contain;
+  aspect-ratio: 38 / 15;
+  object-fit: cover;
   display: block;
 }
 
@@ -1416,7 +1416,7 @@ button, input, textarea, select {
   backdrop-filter: blur(8px);
 }
 
-.notice-visual img { aspect-ratio: 4 / 2.8; }
+.notice-visual img { aspect-ratio: 38 / 15; }
 
 .notice-grid {
   display: grid;
@@ -2134,7 +2134,7 @@ button, input, textarea, select {
   }
 
   .section-visual-card img,
-  .process-visual img { aspect-ratio: 4 / 2.4; }
+  .process-visual img { aspect-ratio: 38 / 15; }
 
   /* HERO Mobile */
   .hero { padding: 70px 0 60px 0; }
