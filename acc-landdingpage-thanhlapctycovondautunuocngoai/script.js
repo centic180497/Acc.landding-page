@@ -1,59 +1,13 @@
-/* ============================================================
-   ACC LANDING PAGE - Vanilla JS, no framework
-   ============================================================ */
-
 (function () {
     'use strict';
-
     document.addEventListener('DOMContentLoaded', function () {
-        initHeader();
-        initMobileMenu();
         initSmoothScroll();
         initFadeInOnScroll();
         initCounters();
         initFAQ();
-        initBackToTop();
         initLazyLoad();
-        initActiveNav();
         initCarousels();
     });
-
-    /* ============ HEADER SCROLL ============ */
-    function initHeader() {
-        const header = document.getElementById('header');
-        if (!header) return;
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 50) header.classList.add('scrolled');
-            else header.classList.remove('scrolled');
-        }, { passive: true });
-    }
-
-    /* ============ MOBILE MENU ============ */
-    function initMobileMenu() {
-        const toggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('navMenu');
-        if (!toggle || !menu) return;
-
-        toggle.addEventListener('click', function (e) {
-            e.stopPropagation();
-            menu.classList.toggle('active');
-            toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
-        });
-
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                menu.classList.remove('active');
-            });
-        });
-
-        document.addEventListener('click', function (e) {
-            if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-                menu.classList.remove('active');
-            }
-        });
-    }
-
-    /* ============ SMOOTH SCROLL ============ */
     function initSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
             anchor.addEventListener('click', function (e) {
@@ -68,12 +22,9 @@
             });
         });
     }
-
-    /* ============ FADE-IN ON SCROLL ============ */
     function initFadeInOnScroll() {
         const elements = document.querySelectorAll('.fade-up');
         if (!elements.length) return;
-
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
@@ -83,18 +34,14 @@
                     }
                 });
             }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
             elements.forEach(function (el) { observer.observe(el); });
         } else {
             elements.forEach(function (el) { el.classList.add('visible'); });
         }
     }
-
-    /* ============ COUNTERS ============ */
     function initCounters() {
         const counters = document.querySelectorAll('.counter');
         if (!counters.length) return;
-
         const animate = function (counter) {
             const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
             const duration = 1800;
@@ -108,7 +55,6 @@
             };
             requestAnimationFrame(update);
         };
-
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
@@ -123,15 +69,12 @@
             counters.forEach(animate);
         }
     }
-
-    /* ============ FAQ ACCORDION ============ */
     function initFAQ() {
         const items = document.querySelectorAll('.faq-item');
         items.forEach(function (item) {
             const question = item.querySelector('.faq-question');
             const answer = item.querySelector('.faq-answer');
             if (!question || !answer) return;
-
             question.addEventListener('click', function () {
                 const isActive = item.classList.contains('active');
                 items.forEach(function (other) {
@@ -146,44 +89,22 @@
             });
         });
     }
-
-    /* ============ LEAD FORM ============ */
-    /* ============ TOAST ============ */
     function showToast(message, type) {
         const toast = document.getElementById('toast');
         if (!toast) return;
-
         const span = toast.querySelector('span');
         const icon = toast.querySelector('i');
-
         if (span) span.textContent = message;
         if (icon) {
             icon.className = type === 'error'
                 ? 'fas fa-circle-exclamation'
                 : 'fas fa-circle-check';
         }
-
         toast.classList.remove('toast-error', 'toast-success');
         toast.classList.add(type === 'error' ? 'toast-error' : 'toast-success');
         toast.classList.add('show');
-
         setTimeout(function () { toast.classList.remove('show'); }, 3500);
     }
-
-    /* ============ BACK TO TOP ============ */
-    function initBackToTop() {
-        const btn = document.getElementById('backToTop');
-        if (!btn) return;
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 400) btn.classList.add('show');
-            else btn.classList.remove('show');
-        }, { passive: true });
-        btn.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-    /* ============ LAZY LOAD ============ */
     function initLazyLoad() {
         const images = document.querySelectorAll('img[data-src]');
         if (!images.length) return;
@@ -204,39 +125,6 @@
             images.forEach(function (img) { img.src = img.getAttribute('data-src'); });
         }
     }
-
-    /* ============ ACTIVE NAV ============ */
-    function initActiveNav() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-        if (!sections.length || !navLinks.length) return;
-
-        let ticking = false;
-        const handle = function () {
-            const scrollY = window.pageYOffset;
-            const headerHeight = document.getElementById('header')?.offsetHeight || 80;
-
-            sections.forEach(function (section) {
-                const top = section.offsetTop - headerHeight - 50;
-                const bottom = top + section.offsetHeight;
-                const id = section.getAttribute('id');
-                if (scrollY >= top && scrollY < bottom) {
-                    navLinks.forEach(function (link) {
-                        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-                    });
-                }
-            });
-            ticking = false;
-        };
-        window.addEventListener('scroll', function () {
-            if (!ticking) {
-                requestAnimationFrame(handle);
-                ticking = true;
-            }
-        }, { passive: true });
-    }
-
-    /* ============ CAROUSELS ============ */
     function initCarousels() {
         const carousels = document.querySelectorAll('[data-carousel]');
         carousels.forEach(function (carousel) {
@@ -245,10 +133,8 @@
             const nextBtn = carousel.querySelector('[data-next]');
             const dotsWrap = carousel.querySelector('[data-dots]');
             if (!track) return;
-
             const slides = track.querySelectorAll('.carousel-slide');
             if (!slides.length) return;
-
             // Calculate visible slides per page from CSS
             const visibleSlides = function () {
                 const trackWidth = track.clientWidth;
@@ -256,7 +142,6 @@
                 const gap = parseFloat(getComputedStyle(track).gap) || 0;
                 return Math.max(1, Math.round((trackWidth + gap) / (slideWidth + gap)));
             };
-
             // Build dots
             const buildDots = function () {
                 if (!dotsWrap) return;
@@ -280,7 +165,6 @@
                 }
                 updateDots();
             };
-
             const updateDots = function () {
                 if (!dotsWrap) return;
                 const dots = dotsWrap.querySelectorAll('.carousel-dot');
@@ -294,7 +178,6 @@
                     dot.classList.toggle('active', idx === activePage);
                 });
             };
-
             const scrollByPage = function (dir) {
                 const visible = visibleSlides();
                 const slideWidth = slides[0].getBoundingClientRect().width;
@@ -302,26 +185,20 @@
                 const distance = (slideWidth + gap) * visible;
                 track.scrollBy({ left: dir * distance, behavior: 'smooth' });
             };
-
             if (prevBtn) prevBtn.addEventListener('click', function () { scrollByPage(-1); });
             if (nextBtn) nextBtn.addEventListener('click', function () { scrollByPage(1); });
-
             track.addEventListener('scroll', function () {
                 window.requestAnimationFrame(updateDots);
             }, { passive: true });
-
             window.addEventListener('resize', function () {
                 buildDots();
             });
-
             buildDots();
-
             // Autoplay
             var autoplayDelay = carousel.getAttribute('data-autoplay');
             if (autoplayDelay) {
                 autoplayDelay = parseInt(autoplayDelay, 10) || 3500;
                 var autoTimer = null;
-
                 var startAutoplay = function () {
                     stopAutoplay();
                     autoTimer = setInterval(function () {
@@ -333,11 +210,9 @@
                         }
                     }, autoplayDelay);
                 };
-
                 var stopAutoplay = function () {
                     if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
                 };
-
                 // Pause on hover/touch
                 carousel.addEventListener('mouseenter', stopAutoplay);
                 carousel.addEventListener('mouseleave', startAutoplay);
@@ -345,10 +220,8 @@
                 carousel.addEventListener('touchend', function () {
                     setTimeout(startAutoplay, 2000);
                 });
-
                 startAutoplay();
             }
         });
     }
-
 })();
