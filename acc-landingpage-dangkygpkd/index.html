@@ -1,106 +1,100 @@
 <html lang="vi">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 <body>
-  <!-- Hero -->
-  <section class="hero">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="trang-chu">
     <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
     <div class="container hero__inner">
-      <div class="hero__content">
+      <div class="hero__content fade-up">
         <span class="badge">Dịch vụ pháp lý uy tín</span>
-        <h1 class="hero__title">Đăng Ký Giấy Phép Kinh Doanh<br><span>Trọn Gói – Giá Rẻ</span></h1>
-        <p class="hero__desc">ACC hỗ trợ chuẩn bị hồ sơ, nộp và nhận giấy phép kinh doanh nhanh gọn, đúng quy định, hạn chế tối đa sai sót.</p>
-        <ul class="hero-points">
-          <li>Rà soát điều kiện trước khi nộp</li>
-          <li>Đại diện làm việc với cơ quan nhà nước</li>
-          <li>Tư vấn thủ tục thuế sau cấp phép</li>
+        <h1>Đăng Ký Giấy Phép Kinh Doanh<br><span class="text-gold">Trọn Gói – Giá Rẻ</span></h1>
+        <p class="hero__desc">ACC hỗ trợ chuẩn bị hồ sơ, nộp và nhận giấy phép kinh doanh nhanh gọn, đúng quy định, hạn
+          chế tối đa sai sót ngay từ lần đầu.</p>
+        <ul class="hero__points">
+          <li>✓ Tư vấn &amp; chuẩn bị hồ sơ đúng biểu mẫu</li>
+          <li>✓ Đại diện nộp và theo dõi tiến độ</li>
+          <li>✓ Bàn giao giấy phép tận nơi</li>
+          <li>✓ Hỗ trợ thủ tục sau thành lập</li>
         </ul>
+        <div class="hero__actions">
+          <a href="#lien-he" class="btn btn--gold">✉ Nhận Tư Vấn Miễn Phí</a>
+          <a href="tel:19003330" class="btn btn--outline">📞 1900 3330</a>
+        </div>
       </div>
-      <div class="hero__card">
-        <div class="hero-card">
-          <div class="hero-card__header">
+      <div class="hero__card fade-up" style="animation-delay:.15s">
+        <div class="card-inner">
+          <div class="card-head">
             <span>Hồ sơ kinh doanh</span>
             <strong>Trọn gói</strong>
           </div>
-          <div class="hero-license-card">
-            <div class="hero-license-card__icon">GPKD</div>
-            <div>
-              <h3>Giấy phép kinh doanh sẵn sàng bàn giao</h3>
-              <p>ACC rà soát điều kiện, soạn hồ sơ, đại diện nộp và theo dõi kết quả.</p>
+          <div class="stat-row">
+            <div class="stat-item">
+              <strong>03–05</strong>
+              <span>Ngày làm việc</span>
+            </div>
+            <div class="stat-item">
+              <strong>A–Z</strong>
+              <span>Trọn gói dịch vụ</span>
+            </div>
+            <div class="stat-item">
+              <strong>0đ</strong>
+              <span>Phí tư vấn ban đầu</span>
             </div>
           </div>
-          <div class="hero-progress">
-            <div class="hero-progress__bar"><span></span></div>
-            <div class="hero-progress__meta">
-              <strong>03–05 ngày</strong>
-              <span>Cơ quan nhà nước xử lý nếu hồ sơ hợp lệ</span>
-            </div>
+          <div class="card-services">
+            <div class="cs-item"><span>✓</span> Tư vấn loại hình phù hợp</div>
+            <div class="cs-item"><span>✓</span> Soạn hồ sơ đúng biểu mẫu</div>
+            <div class="cs-item"><span>✓</span> Đại diện nộp hồ sơ</div>
+            <div class="cs-item"><span>✓</span> Hỗ trợ sau cấp phép</div>
           </div>
-          <div class="hero-card__list">
-            <span>✓ Tư vấn loại hình phù hợp</span>
-            <span>✓ Soạn hồ sơ đúng biểu mẫu</span>
-            <span>✓ Hỗ trợ thủ tục sau cấp phép</span>
-          </div>
-          <div class="hero-card__actions">
-            <a href="#lien-he" class="btn btn--callback btn--full"><span class="btn__icon" aria-hidden="true">✉</span>Nhận liên hệ tư vấn</a>
-            <a href="#duong-day" class="btn-phone btn-phone--full" aria-label="Xem đường dây tư vấn ACC"><span class="btn-phone__pulse" aria-hidden="true"></span><span class="btn-phone__pulse btn-phone__pulse--2" aria-hidden="true"></span><span class="btn-phone__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span class="btn-phone__text"><span class="btn-phone__label">Hotline tư vấn 24/7</span><span class="btn-phone__title">Gọi điện ngay</span></span><span class="btn-phone__chev" aria-hidden="true">›</span><span class="btn-phone__shine" aria-hidden="true"></span></a>
-            <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener" class="btn btn--zalo btn--full"><span class="btn__icon" aria-hidden="true">💬</span>Chat Zalo Tư Vấn</a>
+          <div class="card-actions">
+            <a href="tel:19003330" class="btn btn--gold btn--full">📞 Gọi Ngay: 1900 3330</a>
+            <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener"
+              class="btn btn--zalo btn--full">💬 Chat Zalo Tư Vấn</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="container hero__stats">
-      <div class="stat">
-        <strong>03–05</strong>
-        <span>Ngày làm việc nếu hồ sơ hợp lệ</span>
-      </div>
-      <div class="stat">
-        <strong>01</strong>
-        <span>Đầu mối theo dõi toàn bộ hồ sơ</span>
-      </div>
-      <div class="stat">
-        <strong>A–Z</strong>
-        <span>Hồ sơ, nộp, nhận và hậu thành lập</span>
-      </div>
-    </div>
   </section>
 
-  <!-- Intro -->
-  <section class="section section--intro" id="gioi-thieu">
+  <!-- ===== INTRO ===== -->
+  <section class="section" id="gioi-thieu">
     <div class="container">
-      <div class="intro-grid">
-        <figure class="intro-media reveal">
-          <img src="https://congtyluatacc.vn/wp-content/uploads/2026/06/tax-bg-image.avif" alt="Chuyên viên tư vấn hồ sơ giấy phép kinh doanh" loading="lazy">
-        </figure>
-        <div class="intro-grid__text reveal">
-          <span class="section-tag">Tổng quan</span>
-          <h2>Đăng ký đúng ngay từ đầu để tránh sửa hồ sơ nhiều lần</h2>
-          <p class="lead">Một lỗi nhỏ về tên, ngành nghề hoặc biểu mẫu có thể khiến hồ sơ đăng ký kinh doanh bị trả lại.</p>
-          <p>ACC cung cấp <strong>dịch vụ đăng ký giấy phép kinh doanh trọn gói, giá rẻ</strong>, hỗ trợ từ tư vấn ban đầu đến khi khách hàng nhận giấy phép.</p>
-          <div class="intro-grid__features">
-            <div class="feature-mini">
-              <div class="feature-mini__icon">📋</div>
+      <div class="two-col two-col--reverse">
+        <div class="two-col__media fade-up">
+          <img src="https://congtyluatacc.vn/wp-content/uploads/2026/06/intro-team.jpg"
+            alt="Chuyên viên ACC tư vấn giấy phép kinh doanh" loading="lazy">
+        </div>
+        <div class="two-col__text fade-up">
+          <span class="eyebrow">Tổng quan</span>
+          <h2>Đăng Ký Đúng Ngay Từ Đầu – Tránh Mất Thời Gian Sửa Hồ Sơ</h2>
+          <p class="lead">Chỉ một lỗi nhỏ về tên, ngành nghề hoặc biểu mẫu có thể khiến hồ sơ bị trả lại nhiều lần.</p>
+          <p>Công ty Luật ACC cung cấp <strong>dịch vụ đăng ký giấy phép kinh doanh trọn gói, giá rẻ</strong>, hỗ trợ từ
+            tư vấn ban đầu đến khi khách hàng nhận giấy phép và sẵn sàng hoạt động.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="fi-icon">📋</div>
               <div>
                 <h4>Hồ sơ chuẩn</h4>
                 <p>Soạn thảo đúng biểu mẫu, hạn chế bị trả lại</p>
               </div>
             </div>
-            <div class="feature-mini">
-              <div class="feature-mini__icon">⚡</div>
+            <div class="feature-item">
+              <div class="fi-icon">⚡</div>
               <div>
                 <h4>Xử lý nhanh</h4>
                 <p>Đại diện nộp hồ sơ và theo dõi tiến độ</p>
               </div>
             </div>
-            <div class="feature-mini">
-              <div class="feature-mini__icon">🛡</div>
+            <div class="feature-item">
+              <div class="fi-icon">🛡️</div>
               <div>
                 <h4>Đúng pháp luật</h4>
                 <p>Chuyên viên cập nhật quy định mới nhất</p>
@@ -112,261 +106,263 @@
     </div>
   </section>
 
-  <!-- Section 1 & 2 -->
-  <section class="section section--alt">
+  <!-- ===== WHAT IS A LICENSE ===== -->
+  <section class="section section--alt" id="gp-la-gi">
     <div class="container">
-      <div class="license-layout">
-        <figure class="section-visual section-visual--license reveal">
-          <div class="license-mockup" aria-label="Minh họa giấy chứng nhận đăng ký kinh doanh">
-            <div class="license-mockup__paper">
-              <div class="license-mockup__top">
-                <span>Cơ quan đăng ký kinh doanh</span>
-                <strong>Giấy chứng nhận</strong>
-              </div>
-              <h3>Đăng ký kinh doanh</h3>
-              <div class="license-mockup__line license-mockup__line--long"></div>
-              <div class="license-mockup__line"></div>
-              <div class="license-mockup__line license-mockup__line--short"></div>
-              <div class="license-mockup__meta">
-                <span>Mã số</span>
-                <strong>0312 345 678</strong>
-              </div>
-              <div class="license-mockup__seal">ACC</div>
-            </div>
-            <div class="license-mockup__checklist">
-              <span>✓ Tên doanh nghiệp</span>
-              <span>✓ Ngành nghề</span>
-              <span>✓ Hồ sơ hợp lệ</span>
-            </div>
-          </div>
-          <figcaption>Minh họa giấy phép và các điều kiện cần kiểm tra trước khi nộp hồ sơ.</figcaption>
-        </figure>
-        <div class="license-content">
-          <article class="content-block reveal" id="gp-la-gi">
-            <!-- <span class="section-tag">01</span> -->
-            <h2>Giấy phép kinh doanh là gì?</h2>
-            <p>Giấy phép kinh doanh là giấy tờ pháp lý do cơ quan có thẩm quyền cấp, xác nhận cá nhân hoặc tổ chức đủ điều kiện hoạt động kinh doanh hợp pháp.</p>
-          </article>
-          <article class="content-block reveal" id="dieu-kien">
-            <!-- <span class="section-tag">02</span> -->
-            <h2>Điều kiện để được cấp giấy phép kinh doanh</h2>
-            <p>Theo <strong>Điều 27 Luật Doanh nghiệp 2020</strong>, doanh nghiệp cần đáp ứng các điều kiện chính sau:</p>
-            <ul class="check-list">
-              <li>Ngành, nghề đăng ký không thuộc danh mục cấm</li>
-              <li>Tên doanh nghiệp đặt đúng quy định và không gây nhầm lẫn</li>
-              <li>Hồ sơ đăng ký hợp lệ, đủ thông tin cần thiết</li>
-              <li>Nộp đủ lệ phí đăng ký theo quy định</li>
-            </ul>
-          </article>
+      <div class="section-header fade-up">
+        <h2>1. Giấy Phép Kinh Doanh Là Gì?</h2>
+      </div>
+      <div class="info-grid fade-up">
+        <div class="info-card">
+          <div class="info-card__icon">📜</div>
+          <h3>Khái niệm</h3>
+          <p>Giấy phép kinh doanh là loại giấy tờ pháp lý do cơ quan nhà nước có thẩm quyền cấp, chứng nhận cá nhân, tổ
+            chức đã đáp ứng đầy đủ điều kiện để kinh doanh hợp pháp.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon">⚖️</div>
+          <h3>Điều kiện cấp phép</h3>
+          <p>Theo <strong>Điều 27 Luật Doanh nghiệp 2020</strong>, doanh nghiệp cần đáp ứng:</p>
+          <ul class="check-list">
+            <li>Ngành nghề không bị cấm đầu tư kinh doanh</li>
+            <li>Tên doanh nghiệp đặt đúng quy định</li>
+            <li>Hồ sơ đăng ký hợp lệ</li>
+            <li>Nộp đủ lệ phí theo quy định</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon">🕐</div>
+          <h3>Thời gian cấp phép</h3>
+          <p>Thông thường cơ quan đăng ký kinh doanh xử lý trong <strong>03–05 ngày làm việc</strong> kể từ ngày nhận hồ
+            sơ hợp lệ.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Difficulties -->
+  <!-- ===== DIFFICULTIES ===== -->
   <section class="section" id="kho-khan">
     <div class="container">
-      <div class="section-header reveal">
-        <!-- <span class="section-tag">03</span> -->
-        <h2>Khó khăn thường gặp khi đăng ký giấy phép kinh doanh</h2>
-        <p>Phần lớn vướng mắc đến từ việc chọn sai loại hình, kê khai thiếu thông tin hoặc chưa hiểu rõ quy định sau khi thành lập.</p>
+      <div class="section-header fade-up">
+        <h2>3. Khó Khăn Thường Gặp Khi Đăng Ký Giấy Phép Kinh Doanh</h2>
+        <p>Phần lớn vướng mắc đến từ chưa nắm rõ quy định, dẫn đến hồ sơ bị trả lại nhiều lần.</p>
       </div>
-      <div class="difficulty-grid">
-        <div class="difficulty-card reveal">
-          <span class="difficulty-card__num">01</span>
-          <h3>Không biết lựa chọn loại hình kinh doanh phù hợp</h3>
-          <p>Dễ nhầm giữa hộ kinh doanh, doanh nghiệp tư nhân, công ty TNHH hoặc công ty cổ phần.</p>
+      <div class="diff-grid fade-up">
+        <div class="diff-card">
+          <span class="diff-num">01</span>
+          <h3>Không biết chọn loại hình kinh doanh</h3>
+          <p>Phân vân giữa hộ kinh doanh, doanh nghiệp tư nhân, công ty TNHH hay cổ phần — ảnh hưởng đến thuế và trách
+            nhiệm pháp lý.</p>
         </div>
-        <div class="difficulty-card reveal">
-          <span class="difficulty-card__num">02</span>
-          <h3>Hồ sơ chuẩn bị thiếu hoặc sai thông tin</h3>
-          <p>Kê khai sai biểu mẫu, thiếu giấy tờ hoặc thông tin không thống nhất thường khiến hồ sơ bị trả lại.</p>
+        <div class="diff-card">
+          <span class="diff-num">02</span>
+          <h3>Hồ sơ thiếu hoặc sai thông tin</h3>
+          <p>Kê khai sai biểu mẫu, thiếu giấy tờ hoặc thông tin không thống nhất là nguyên nhân phổ biến nhất khiến hồ
+            sơ bị trả lại.</p>
         </div>
-        <div class="difficulty-card reveal">
-          <span class="difficulty-card__num">03</span>
-          <h3>Tên và ngành nghề chưa đúng quy định</h3>
-          <p>Tên doanh nghiệp không được trùng, gây nhầm lẫn; ngành nghề cần chọn và mã hóa phù hợp.</p>
+        <div class="diff-card">
+          <span class="diff-num">03</span>
+          <h3>Tên doanh nghiệp trùng hoặc vi phạm</h3>
+          <p>Tên phải đáp ứng nhiều điều kiện pháp lý. Không ít trường hợp bị từ chối vì gây nhầm lẫn hoặc trùng tên đã
+            đăng ký.</p>
         </div>
-        <div class="difficulty-card reveal">
-          <span class="difficulty-card__num">04</span>
-          <h3>Mất thời gian xử lý thủ tục sau thành lập</h3>
-          <p>Doanh nghiệp còn cần kê khai thuế ban đầu, chữ ký số, hóa đơn điện tử và các thủ tục liên quan.</p>
+        <div class="diff-card">
+          <span class="diff-num">04</span>
+          <h3>Không xác định đúng ngành nghề</h3>
+          <p>Lựa chọn và mã hóa ngành nghề theo quy định gây khó khăn, đặc biệt với ngành nghề có điều kiện đặc thù.</p>
+        </div>
+        <div class="diff-card">
+          <span class="diff-num">05</span>
+          <h3>Chưa rõ quy định về vốn điều lệ</h3>
+          <p>Kê khai vốn chưa phù hợp với quy mô dẫn đến khó khăn vận hành và phát sinh trách nhiệm pháp lý không cần
+            thiết.</p>
+        </div>
+        <div class="diff-card">
+          <span class="diff-num">06</span>
+          <h3>Mất thời gian và thủ tục sau thành lập</h3>
+          <p>Sau cấp phép còn cần đăng ký thuế, hóa đơn điện tử, chữ ký số… Nếu không nắm rõ có thể bị xử phạt hành
+            chính.</p>
         </div>
       </div>
-      <div class="cta-row reveal">
-        <div class="cta-row__text">
+      <div class="cta-row fade-up">
+        <div>
           <strong>Bạn đang gặp đúng vấn đề trên?</strong>
           <span>Gọi ngay hoặc chat Zalo để được tư vấn miễn phí trong 24h.</span>
         </div>
-        <div class="cta-row__actions">
-          <a href="#lien-he" class="btn btn--callback"><span class="btn__icon" aria-hidden="true">✉</span>Nhận liên hệ tư vấn</a>
-          <a href="#duong-day" class="btn-phone btn-phone--md" aria-label="Xem đường dây tư vấn ACC"><span class="btn-phone__pulse" aria-hidden="true"></span><span class="btn-phone__pulse btn-phone__pulse--2" aria-hidden="true"></span><span class="btn-phone__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span class="btn-phone__text"><span class="btn-phone__label">Hotline tư vấn 24/7</span><span class="btn-phone__title">Gọi điện ngay</span></span><span class="btn-phone__chev" aria-hidden="true">›</span><span class="btn-phone__shine" aria-hidden="true"></span></a>
-          <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener" class="btn btn--zalo"><span class="btn__icon" aria-hidden="true">💬</span>Chat Zalo</a>
+        <div class="cta-row__btns">
+          <a href="tel:19003330" class="btn btn--gold">📞 1900 3330</a>
+          <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener" class="btn btn--zalo">💬 Chat
+            Zalo</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 4: Services -->
+  <!-- ===== SERVICES ===== -->
   <section class="section section--dark" id="dich-vu">
     <div class="container">
-      <div class="service-layout">
-        <div class="service-copy reveal">
-          <span class="section-tag section-tag--gold">Dịch vụ ACC</span>
-          <h2>Dịch vụ đăng ký giấy phép kinh doanh trọn gói tại ACC</h2>
-          <p>ACC hỗ trợ cá nhân, hộ kinh doanh và doanh nghiệp hoàn tất thủ tục pháp lý nhanh chóng, đúng quy định và tiết kiệm thời gian.</p>
-          <div class="cta-banner">
+      <div class="two-col">
+        <div class="two-col__text two-col__text--light fade-up">
+          <span class="eyebrow eyebrow--gold">Dịch vụ ACC</span>
+          <h2>4. Dịch Vụ Đăng Ký Giấy Phép Kinh Doanh Trọn Gói Tại ACC</h2>
+          <p>ACC hỗ trợ cá nhân, hộ kinh doanh và doanh nghiệp hoàn tất thủ tục pháp lý nhanh chóng, đúng quy định và
+            tiết kiệm thời gian.</p>
+          <div class="highlight-box">
             <p>Được <strong>tư vấn miễn phí</strong> và báo giá rõ ràng trước khi thực hiện.</p>
-            <div class="cta-banner__actions">
-              <a href="#lien-he" class="btn btn--callback"><span class="btn__icon" aria-hidden="true">✉</span>Nhận liên hệ tư vấn</a>
-              <a href="#duong-day" class="btn-phone btn-phone--md" aria-label="Xem đường dây tư vấn ACC"><span class="btn-phone__pulse" aria-hidden="true"></span><span class="btn-phone__pulse btn-phone__pulse--2" aria-hidden="true"></span><span class="btn-phone__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span class="btn-phone__text"><span class="btn-phone__label">Hotline tư vấn 24/7</span><span class="btn-phone__title">Gọi điện ngay</span></span><span class="btn-phone__chev" aria-hidden="true">›</span><span class="btn-phone__shine" aria-hidden="true"></span></a>
-              <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener" class="btn btn--zalo"><span class="btn__icon" aria-hidden="true">💬</span>Chat Zalo</a>
-            </div>
+            <a href="#lien-he" class="btn btn--gold">✉ Liên Hệ Ngay</a>
           </div>
         </div>
-        <div class="services-grid">
-          <div class="service-item reveal"><span>✓</span> Tư vấn loại hình, tên, ngành nghề và vốn phù hợp</div>
-          <div class="service-item reveal"><span>✓</span> Soạn thảo hồ sơ đăng ký theo đúng biểu mẫu</div>
-          <div class="service-item reveal"><span>✓</span> Đại diện nộp hồ sơ và làm việc với cơ quan nhà nước</div>
-          <div class="service-item reveal"><span>✓</span> Theo dõi tiến độ, hỗ trợ bổ sung khi có yêu cầu</div>
-          <div class="service-item reveal"><span>✓</span> Nhận và bàn giao giấy phép kinh doanh tận nơi</div>
-          <div class="service-item reveal"><span>✓</span> Tư vấn thủ tục thuế, hóa đơn, chữ ký số sau thành lập</div>
+        <div class="services-grid fade-up">
+          <div class="sv-item"><span>✓</span> Tư vấn lựa chọn loại hình kinh doanh phù hợp</div>
+          <div class="sv-item"><span>✓</span> Tư vấn đặt tên doanh nghiệp đúng quy định</div>
+          <div class="sv-item"><span>✓</span> Hỗ trợ đăng ký ngành nghề kinh doanh</div>
+          <div class="sv-item"><span>✓</span> Tư vấn kê khai vốn điều lệ phù hợp</div>
+          <div class="sv-item"><span>✓</span> Soạn thảo hồ sơ đăng ký giấy phép kinh doanh</div>
+          <div class="sv-item"><span>✓</span> Đại diện nộp hồ sơ và làm việc với cơ quan nhà nước</div>
+          <div class="sv-item"><span>✓</span> Theo dõi tiến độ và hỗ trợ bổ sung khi cần</div>
+          <div class="sv-item"><span>✓</span> Bàn giao giấy phép kinh doanh tận nơi</div>
+          <div class="sv-item"><span>✓</span> Hỗ trợ thủ tục sau thành lập doanh nghiệp</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 5: Process -->
-  <section class="section" id="quy-trinh">
+  <!-- ===== PROCESS ===== -->
+  <section class="section section--alt" id="quy-trinh">
     <div class="container">
-      <div class="section-header reveal">
-        <!-- <span class="section-tag">05</span> -->
-        <h2>Quy trình dịch vụ đăng ký giấy phép kinh doanh tại ACC</h2>
-        <p>Quy trình được tối ưu để khách hàng tiết kiệm thời gian và hạn chế tối đa sai sót khi thực hiện thủ tục.</p>
+      <div class="section-header fade-up">
+        <h2>5. Quy Trình Dịch Vụ Tại Công Ty Luật ACC</h2>
+        <p>Quy trình 7 bước chuyên nghiệp, rõ ràng giúp tiết kiệm thời gian và hạn chế sai sót.</p>
       </div>
-      <div class="process-layout">
-        <figure class="process-visual process-visual--workflow reveal">
-          <div class="workflow-board" aria-label="Minh họa quy trình xử lý hồ sơ đăng ký kinh doanh">
-            <div class="workflow-board__header">
-              <span>Hồ sơ đăng ký kinh doanh</span>
-              <strong>Đang theo dõi</strong>
-            </div>
-            <div class="workflow-board__steps">
-              <div class="workflow-step workflow-step--done">
-                <span>01</span>
-                <div>
-                  <strong>Tiếp nhận</strong>
-                  <p>Thông tin khách hàng</p>
-                </div>
-              </div>
-              <div class="workflow-step workflow-step--done">
-                <span>02</span>
-                <div>
-                  <strong>Soạn hồ sơ</strong>
-                  <p>Biểu mẫu và điều kiện</p>
-                </div>
-              </div>
-              <div class="workflow-step workflow-step--active">
-                <span>03</span>
-                <div>
-                  <strong>Nộp hồ sơ</strong>
-                  <p>Theo dõi phản hồi</p>
-                </div>
-              </div>
-              <div class="workflow-step">
-                <span>04</span>
-                <div>
-                  <strong>Bàn giao</strong>
-                  <p>Giấy phép và hướng dẫn</p>
-                </div>
-              </div>
-            </div>
-            <div class="workflow-board__footer">
-              <span>03-05 ngày làm việc</span>
-              <strong>Hồ sơ hợp lệ</strong>
-            </div>
+      <div class="process-list fade-up">
+        <div class="proc-step">
+          <div class="proc-step__num">01</div>
+          <div class="proc-step__body">
+            <h3>Tiếp nhận thông tin và tư vấn phương án</h3>
+            <p>ACC lắng nghe nhu cầu, tư vấn loại hình, tên, ngành nghề và vốn điều lệ phù hợp với định hướng kinh doanh
+              của bạn.</p>
           </div>
-          <figcaption>Minh họa quy trình ACC theo dõi từ lúc tiếp nhận đến khi bàn giao giấy phép.</figcaption>
-        </figure>
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-item__marker">1</div>
-            <div class="timeline-item__content">
-              <h3>Tiếp nhận và tư vấn</h3>
-              <p>Xác định loại hình, tên, ngành nghề và vốn phù hợp.</p>
-            </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step__num">02</div>
+          <div class="proc-step__body">
+            <h3>Báo giá rõ ràng và ký kết hợp đồng dịch vụ</h3>
+            <p>Chi phí được thông báo minh bạch ngay từ đầu, ký hợp đồng đảm bảo quyền lợi và cam kết trách nhiệm hai
+              bên.</p>
           </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-item__marker">2</div>
-            <div class="timeline-item__content">
-              <h3>Chuẩn bị và soạn hồ sơ</h3>
-              <p>Hướng dẫn giấy tờ cần có, soạn hồ sơ đúng biểu mẫu.</p>
-            </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step__num">03</div>
+          <div class="proc-step__body">
+            <h3>Soạn thảo và hoàn thiện hồ sơ</h3>
+            <p>ACC trực tiếp soạn thảo toàn bộ hồ sơ đúng quy định, kiểm tra kỹ nhằm hạn chế tối đa lỗi thường gặp.</p>
           </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-item__marker">3</div>
-            <div class="timeline-item__content">
-              <h3>Nộp và theo dõi hồ sơ</h3>
-              <p>ACC đại diện nộp hồ sơ, xử lý yêu cầu bổ sung nếu có.</p>
-            </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step__num">04</div>
+          <div class="proc-step__body">
+            <h3>Hướng dẫn khách hàng kiểm tra và ký hồ sơ</h3>
+            <p>Chuyên viên hướng dẫn chi tiết vị trí ký, giải thích nội dung quan trọng để bạn nắm rõ trước khi nộp.</p>
           </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-item__marker">4</div>
-            <div class="timeline-item__content">
-              <h3>Nhận và bàn giao giấy phép</h3>
-              <p>Bàn giao kết quả, tư vấn các thủ tục cần làm sau cấp phép.</p>
-            </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step__num">05</div>
+          <div class="proc-step__body">
+            <h3>Đại diện nộp hồ sơ và làm việc với cơ quan nhà nước</h3>
+            <p>ACC thay mặt nộp hồ sơ và theo dõi tiến độ. Trường hợp cần bổ sung, ACC xử lý nhanh để tránh kéo dài thời
+              gian.</p>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step__num">06</div>
+          <div class="proc-step__body">
+            <h3>Nhận giấy phép và bàn giao tận nơi</h3>
+            <p>Sau khi được phê duyệt, ACC nhận giấy phép và bàn giao tận nơi, kiểm tra lại thông tin trước khi đi vào
+              hoạt động.</p>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step__num">07</div>
+          <div class="proc-step__body">
+            <h3>Hỗ trợ thủ tục sau thành lập doanh nghiệp</h3>
+            <p>Tiếp tục hỗ trợ khắc dấu, chữ ký số, kê khai thuế ban đầu, mở tài khoản ngân hàng, đăng ký hóa đơn điện
+              tử.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cost & Time -->
+  <!-- ===== DOCUMENTS ===== -->
+  <section class="section" id="ho-so">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>6. Hồ Sơ Cần Cung Cấp</h2>
+        <p>Khách hàng chỉ cần cung cấp một số giấy tờ cơ bản theo hướng dẫn của ACC.</p>
+      </div>
+      <div class="doc-grid fade-up">
+        <div class="doc-card">📄 Giấy đề nghị đăng ký kinh doanh theo mẫu</div>
+        <div class="doc-card">📋 Điều lệ công ty</div>
+        <div class="doc-card">👥 Danh sách thành viên/cổ đông</div>
+        <div class="doc-card">🪪 Giấy tờ pháp lý của cá nhân/tổ chức</div>
+        <div class="doc-card">🌍 Giấy chứng nhận đăng ký đầu tư (nhà đầu tư nước ngoài)</div>
+        <div class="doc-card">🏢 Tên hộ kinh doanh/doanh nghiệp dự kiến</div>
+        <div class="doc-card">📍 Địa chỉ trụ sở kinh doanh dự kiến</div>
+        <div class="doc-card">🏷️ Ngành nghề kinh doanh dự kiến</div>
+        <div class="doc-card">💰 Mức vốn điều lệ dự kiến đăng ký</div>
+        <div class="doc-card">📊 Tỷ lệ góp vốn của các thành viên (nếu có)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COST & TIME ===== -->
   <section class="section section--alt" id="chi-phi">
     <div class="container">
-      <div class="pricing-layout">
-        <div class="content-block reveal">
-          <!-- <span class="section-tag">06</span> -->
-          <h2>Chi phí dịch vụ đăng ký giấy phép kinh doanh</h2>
-          <p>Chi phí tại ACC được báo rõ theo loại hình kinh doanh và phạm vi công việc cần hỗ trợ.</p>
+      <div class="two-col two-col--equal">
+        <div class="cost-block fade-up">
+          <span class="eyebrow">Chi phí</span>
+          <h2>7. Chi Phí Dịch Vụ</h2>
+          <p>Chi phí linh hoạt theo từng nhu cầu thực tế, đảm bảo phù hợp với loại hình và phạm vi công việc.</p>
           <ul class="check-list">
+            <li>Linh hoạt theo loại hình: hộ kinh doanh, TNHH, cổ phần</li>
+            <li>Báo giá rõ ràng trước khi thực hiện</li>
+            <li>Cam kết minh bạch, không phát sinh ngoài thỏa thuận</li>
             <li>Nhiều gói từ cơ bản đến trọn gói</li>
-            <li>Báo giá minh bạch trước khi thực hiện</li>
-            <li>Không phát sinh ngoài nội dung đã thỏa thuận</li>
+            <li>Tư vấn lựa chọn gói phù hợp, tối ưu chi phí</li>
           </ul>
-          <div class="inline-cta">
-            <p><strong>Muốn biết chi phí chính xác?</strong></p>
-            <div class="inline-cta__actions">
-              <a href="#lien-he" class="btn btn--callback"><span class="btn__icon" aria-hidden="true">✉</span>Nhận liên hệ tư vấn</a>
-              <a href="#duong-day" class="btn-phone btn-phone--md" aria-label="Xem đường dây tư vấn ACC"><span class="btn-phone__pulse" aria-hidden="true"></span><span class="btn-phone__pulse btn-phone__pulse--2" aria-hidden="true"></span><span class="btn-phone__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span class="btn-phone__text"><span class="btn-phone__label">Hotline tư vấn 24/7</span><span class="btn-phone__title">Gọi điện ngay</span></span><span class="btn-phone__chev" aria-hidden="true">›</span><span class="btn-phone__shine" aria-hidden="true"></span></a>
-              <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener" class="btn btn--zalo"><span class="btn__icon" aria-hidden="true">💬</span>Chat Zalo</a>
-            </div>
-          </div>
+          <a href="#lien-he" class="btn btn--primary">✉ Nhận Báo Giá Chi Tiết</a>
         </div>
-        <div class="content-block reveal">
-          <!-- <span class="section-tag">07</span> -->
-          <h2>Thời gian thực hiện</h2>
-          <div class="time-grid">
-            <div class="time-card">
-              <div class="time-card__icon">☎</div>
-              <div class="time-card__time">Trong ngày</div>
-              <p>Tư vấn và tiếp nhận thông tin</p>
+        <div class="time-block fade-up">
+          <span class="eyebrow">Thời gian</span>
+          <h2>8. Thời Gian Thực Hiện</h2>
+          <div class="timeline-simple">
+            <div class="ts-item">
+              <div class="ts-dot"></div>
+              <div>
+                <strong>Trong ngày</strong>
+                <p>Tư vấn sơ bộ và tiếp nhận thông tin</p>
+              </div>
             </div>
-            <div class="time-card">
-              <div class="time-card__icon">📝</div>
-              <div class="time-card__time">01–02 ngày</div>
-              <p>Hoàn thiện hồ sơ</p>
+            <div class="ts-item">
+              <div class="ts-dot"></div>
+              <div>
+                <strong>01–02 ngày làm việc</strong>
+                <p>Soạn thảo và hoàn thiện hồ sơ</p>
+              </div>
             </div>
-            <div class="time-card">
-              <div class="time-card__icon">🏛</div>
-              <div class="time-card__time">03–05 ngày</div>
-              <p>Cơ quan nhà nước xử lý</p>
+            <div class="ts-item">
+              <div class="ts-dot"></div>
+              <div>
+                <strong>03–05 ngày làm việc</strong>
+                <p>Cơ quan nhà nước xử lý hồ sơ</p>
+              </div>
             </div>
-            <div class="time-card">
-              <div class="time-card__icon">⚡</div>
-              <div class="time-card__time">Nhanh</div>
-              <p>Hỗ trợ bổ sung khi cần</p>
+            <div class="ts-item">
+              <div class="ts-dot"></div>
+              <div>
+                <strong>Sau cấp phép</strong>
+                <p>Hỗ trợ thủ tục sau thành lập theo yêu cầu</p>
+              </div>
             </div>
           </div>
         </div>
@@ -374,171 +370,221 @@
     </div>
   </section>
 
-  <!-- Benefits -->
-  <section class="section">
+  <!-- ===== WHO IS IT FOR ===== -->
+  <section class="section" id="phu-hop">
     <div class="container">
-      <div class="aftercare-layout">
-        <div class="content-block reveal">
-          <!-- <span class="section-tag">08</span> -->
-          <h2>Lợi ích khi sử dụng dịch vụ tại ACC</h2>
-          <ul class="benefit-list">
-            <li><strong>Trọn gói từ A–Z</strong><span>Không cần tự xử lý thủ tục phức tạp.</span></li>
-            <li><strong>Hồ sơ được kiểm tra kỹ</strong><span>Giảm rủi ro bị trả lại hoặc yêu cầu sửa đổi.</span></li>
-            <li><strong>Tiết kiệm thời gian</strong><span>Hạn chế đi lại và theo dõi thủ tục.</span></li>
-          </ul>
+      <div class="section-header fade-up">
+        <h2>9. Dịch Vụ Phù Hợp Với Ai?</h2>
+        <p>Dịch vụ đặc biệt phù hợp với những ai chưa có kinh nghiệm hoặc không có thời gian tự thực hiện thủ tục.</p>
+      </div>
+      <div class="who-grid fade-up">
+        <div class="who-card">🚀 Cá nhân lần đầu khởi nghiệp</div>
+        <div class="who-card">🏪 Hộ kinh doanh muốn hoạt động hợp pháp</div>
+        <div class="who-card">🏢 Người muốn thành lập công ty chuyên nghiệp</div>
+        <div class="who-card">🛒 Chủ shop online / thương mại điện tử</div>
+        <div class="who-card">⏰ Người bận rộn, không có thời gian tự làm</div>
+        <div class="who-card">📈 Doanh nghiệp cần đăng ký nhanh để ký hợp đồng</div>
+        <div class="who-card">❓ Người chưa rõ loại hình, ngành nghề hay vốn điều lệ</div>
+        <div class="who-card">🌐 Cá nhân ở xa muốn thực hiện từ xa</div>
+      </div>
+      <div class="cta-center fade-up">
+        <a href="#lien-he" class="btn btn--gold btn--lg">✉ Liên Hệ Tư Vấn Ngay</a>
+        <a href="tel:19003330" class="btn btn--outline-dark btn--lg">📞 1900 3330</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="section section--dark" id="loi-ich">
+    <div class="container">
+      <div class="section-header fade-up two-col__text two-col__text--light fade-up visible">
+        <h2>10. Lợi Ích Khi Sử Dụng Dịch Vụ Tại ACC</h2>
+        <p style="color:rgba(255,255,255,.82)">ACC mang đến giải pháp pháp lý chuyên nghiệp với nhiều ưu điểm nổi bật.
+        </p>
+      </div>
+      <div class="benefits-grid fade-up">
+        <div class="benefit-card">
+          <div class="bc-icon">🎯</div>
+          <h3>Trọn gói A–Z</h3>
+          <p>Chỉ cần cung cấp thông tin cơ bản, ACC thay mặt thực hiện toàn bộ thủ tục còn lại.</p>
         </div>
-        <div class="content-block reveal">
-          <!-- <span class="section-tag">09</span> -->
-          <h2>Lưu ý sau khi được cấp giấy phép</h2>
-          <ul class="check-list">
-            <li>Kê khai và nộp thuế đúng hạn</li>
-            <li>Đăng ký chữ ký số, hóa đơn điện tử khi cần xuất hóa đơn</li>
-            <li>Treo bảng hiệu tại địa chỉ trụ sở</li>
-            <li>Lưu trữ hồ sơ pháp lý, hóa đơn và chứng từ liên quan</li>
-          </ul>
+        <div class="benefit-card">
+          <div class="bc-icon">⚡</div>
+          <h3>Xử lý nhanh chóng</h3>
+          <p>Nhiều hồ sơ được hoàn thiện chỉ từ 03–05 ngày làm việc, tiết kiệm đáng kể thời gian.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="bc-icon">✅</div>
+          <h3>Tăng tỷ lệ hợp lệ</h3>
+          <p>Hạn chế tối đa việc sửa đổi hay bổ sung hồ sơ, ngay từ lần nộp đầu tiên.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="bc-icon">👨‍💼</div>
+          <h3>Chuyên viên giàu kinh nghiệm</h3>
+          <p>Thường xuyên cập nhật quy định pháp luật mới về doanh nghiệp và đăng ký kinh doanh.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="bc-icon">💳</div>
+          <h3>Chi phí minh bạch</h3>
+          <p>Báo giá rõ ràng ngay từ đầu, cam kết không phát sinh ngoài thỏa thuận.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="bc-icon">🌐</div>
+          <h3>Làm việc từ xa</h3>
+          <p>Quy trình đơn giản, khách hàng có thể đăng ký và làm việc từ xa mà không cần đi lại nhiều lần.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- ===== FAQ ===== -->
   <section class="section section--alt" id="faq">
     <div class="container container--narrow">
-      <div class="section-header reveal">
-        <!-- <span class="section-tag">10</span> -->
-        <h2>Câu hỏi thường gặp</h2>
+      <div class="section-header fade-up">
+        <h2>11. Câu Hỏi Thường Gặp</h2>
       </div>
-      <div class="faq-list">
-        <div class="faq-item reveal active">
-          <button class="faq-item__question" type="button" aria-expanded="true">
-            Giấy phép kinh doanh bao lâu thì có?
-            <span class="faq-item__icon">⌄</span>
+      <div class="faq-list fade-up">
+        <div class="faq-item active">
+          <button class="faq-q" aria-expanded="true">
+            Không có địa chỉ nhà riêng có đăng ký kinh doanh được không?
+            <span class="faq-icon">⌄</span>
           </button>
-          <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">
-              <p>Thông thường thời gian xử lý hồ sơ tại cơ quan đăng ký kinh doanh từ 03–05 ngày làm việc nếu hồ sơ hợp lệ.</p>
+          <div class="faq-a">
+            <div class="faq-a__inner">
+              <p>Có. Khách hàng có thể sử dụng địa chỉ nhà thuê, văn phòng hoặc địa điểm kinh doanh hợp pháp để đăng ký.
+                Địa chỉ phải đáp ứng điều kiện theo quy định pháp luật hiện hành.</p>
             </div>
           </div>
         </div>
-        <div class="faq-item reveal">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            ACC có hỗ trợ thủ tục sau khi có giấy phép không?
-            <span class="faq-item__icon">⌄</span>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Nên đăng ký hộ kinh doanh hay thành lập công ty?
+            <span class="faq-icon">⌄</span>
           </button>
-          <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">
-              <p>Có. ACC hỗ trợ các thủ tục như kê khai thuế ban đầu, chữ ký số, hóa đơn điện tử, khắc dấu và tư vấn vận hành pháp lý ban đầu.</p>
+          <div class="faq-a">
+            <div class="faq-a__inner">
+              <p>Tùy vào quy mô hoạt động, số lượng lao động, doanh thu dự kiến và định hướng phát triển. ACC sẽ hỗ trợ
+                tư vấn chi tiết để giúp bạn lựa chọn phương án tối ưu nhất.</p>
             </div>
           </div>
         </div>
-        <div class="faq-item reveal">
-          <button class="faq-item__question" type="button" aria-expanded="false">
-            Tôi ở xa có sử dụng dịch vụ được không?
-            <span class="faq-item__icon">⌄</span>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Sau khi có giấy phép cần thực hiện thêm thủ tục gì?
+            <span class="faq-icon">⌄</span>
           </button>
-          <div class="faq-item__answer">
-            <div class="faq-item__answer-inner">
-              <p>Có. ACC hỗ trợ khách hàng trên toàn quốc và có thể làm việc từ xa theo nhu cầu của khách hàng.</p>
+          <div class="faq-a">
+            <div class="faq-a__inner">
+              <p>Doanh nghiệp thường cần: khắc dấu, đăng ký chữ ký số, mở tài khoản ngân hàng, kê khai thuế ban đầu và
+                đăng ký hóa đơn điện tử. ACC sẽ hỗ trợ toàn bộ các thủ tục này.</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="cta-row cta-row--center reveal">
-        <div class="cta-row__text">
-          <strong>Còn câu hỏi khác?</strong>
-          <span>Chuyên viên ACC sẵn sàng giải đáp qua điện thoại hoặc Zalo.</span>
-        </div>
-        <div class="cta-row__actions">
-          <a href="#lien-he" class="btn btn--callback"><span class="btn__icon" aria-hidden="true">✉</span>Nhận liên hệ tư vấn</a>
-          <a href="#duong-day" class="btn-phone btn-phone--md" aria-label="Xem đường dây tư vấn ACC"><span class="btn-phone__pulse" aria-hidden="true"></span><span class="btn-phone__pulse btn-phone__pulse--2" aria-hidden="true"></span><span class="btn-phone__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span class="btn-phone__text"><span class="btn-phone__label">Hotline tư vấn 24/7</span><span class="btn-phone__title">Gọi điện ngay</span></span><span class="btn-phone__chev" aria-hidden="true">›</span><span class="btn-phone__shine" aria-hidden="true"></span></a>
-          <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener" class="btn btn--zalo"><span class="btn__icon" aria-hidden="true">💬</span>Chat Zalo</a>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Có thể sử dụng dịch vụ đăng ký kinh doanh online tại ACC không?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a__inner">
+              <p>Có. Khách hàng hoàn toàn có thể sử dụng dịch vụ từ xa qua hình thức online mà không cần đi lại. ACC sẽ
+                hỗ trợ tư vấn, tiếp nhận hồ sơ và xử lý nhanh chóng trong suốt quá trình.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="acc-contact-section" id="lien-he">
-    <div class="acc-contact-inner">
-      <div class="acc-contact-copy">
-        <span class="acc-contact-eyebrow">Liên hệ ACC</span>
-        <h2>Gửi yêu cầu tư vấn giấy phép kinh doanh</h2>
-        <p>Để lại thông tin, chuyên viên ACC sẽ tư vấn loại hình đăng ký, hồ sơ cần chuẩn bị, thời gian xử lý và chi phí phù hợp.</p>
-        <div class="acc-contact-highlights">
-          <div class="acc-contact-highlight">
-            <strong>24h</strong>
-            <span>Phản hồi trong giờ làm việc</span>
-          </div>
-          <div class="acc-contact-highlight">
-            <strong>0đ</strong>
-            <span>Tư vấn ban đầu miễn phí</span>
-          </div>
-        </div>
-        <div class="acc-contact-details">
-          <div class="acc-hotline-card" id="duong-day">
-            <div class="acc-hotline-card__head">
-              <span class="acc-hotline-card__badge">2 số hotline</span>
-              <strong>Đường dây tư vấn ACC</strong>
-            </div>
-            <div class="acc-hotline-card__list">
-              <a class="acc-hotline-line" href="tel:19003330" aria-label="Gọi tổng đài 1900 3330">
-                <span class="acc-hotline-line__icon" aria-hidden="true">☎</span>
-                <span class="acc-hotline-line__text">
-                  <span class="acc-hotline-line__label">Tổng đài</span>
-                  <span class="acc-hotline-line__digits">1900 3330</span>
-                </span>
-                <span class="acc-hotline-line__cta" aria-hidden="true">›</span>
-              </a>
-              <a class="acc-hotline-line acc-hotline-line--alt" href="tel:0846967979" aria-label="Gọi hotline 084.696.7979">
-                <span class="acc-hotline-line__icon" aria-hidden="true">📞</span>
-                <span class="acc-hotline-line__text">
-                  <span class="acc-hotline-line__label">HOTLINE TƯ VẤN</span>
-                  <span class="acc-hotline-line__digits">084.696.7979</span>
-                </span>
-                <span class="acc-hotline-line__cta" aria-hidden="true">›</span>
-              </a>
-            </div>
-          </div>
-          <a class="acc-contact-detail" href="mailto:info@congtyluatacc.vn">
-            <span>✉</span>
-            <div>
-              <strong>Email</strong>
-              <p>info@congtyluatacc.vn</p>
-            </div>
-          </a>
-          <a class="acc-contact-detail" href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener">
-            <span>💬</span>
-            <div>
-              <strong>Zalo</strong>
-              <p>Chat tư vấn nhanh trong 5 phút</p>
-            </div>
-          </a>
-          <div class="acc-contact-detail">
-            <span>⌖</span>
-            <div>
-              <strong>Văn phòng</strong>
-              <p>Tầng 3, 39 Hoàng Việt, phường Tân Sơn Nhất, TP Hồ Chí Minh</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="acc-contact-panel">
-        <div class="acc-form-container">
-          <h3>Nhận tư vấn miễn phí</h3>
-          <p class="acc-form-note">Điền thông tin, ACC sẽ liên hệ lại để tư vấn phương án phù hợp.</p>
-          <div class="acc-shortcode-placeholder">
-            [contact-form-7 id="042b861" title="Contact form 1"]
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--contact" id="lien-he">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <span class="eyebrow eyebrow--gold">Liên hệ ACC</span>
+          <h2>Gửi Yêu Cầu Tư Vấn Miễn Phí</h2>
+          <p>Để lại thông tin, chuyên viên ACC sẽ tư vấn loại hình đăng ký, hồ sơ cần chuẩn bị, thời gian xử lý và chi
+            phí phù hợp.</p>
+          <div class="contact-stats">
+            <div class="cs-stat">
+              <strong>24h</strong>
+              <span>Phản hồi trong giờ làm việc</span>
+            </div>
+            <div class="cs-stat">
+              <strong>0đ</strong>
+              <span>Tư vấn ban đầu miễn phí</span>
+            </div>
           </div>
-          <p class="acc-response-note">* Chúng tôi sẽ phản hồi yêu cầu của bạn trong vòng 24h làm việc.</p>
+          <div class="contact-channels">
+            <a href="tel:19003330" class="cc-item">
+              <span class="cc-icon">📞</span>
+              <div>
+                <strong>Tổng đài</strong>
+                <p>1900 3330</p>
+              </div>
+            </a>
+            <a href="tel:0846967979" class="cc-item">
+              <span class="cc-icon">📱</span>
+              <div>
+                <strong>Di động</strong>
+                <p>084.696.7979</p>
+              </div>
+            </a>
+            <a href="mailto:info@congtyluatacc.vn" class="cc-item">
+              <span class="cc-icon">✉</span>
+              <div>
+                <strong>Email</strong>
+                <p>info@congtyluatacc.vn</p>
+              </div>
+            </a>
+            <a href="https://zalo.me/2171133625094125529" target="_blank" rel="noopener" class="cc-item">
+              <span class="cc-icon">💬</span>
+              <div>
+                <strong>Zalo</strong>
+                <p>Chat tư vấn nhanh</p>
+              </div>
+            </a>
+            <div class="cc-item">
+              <span class="cc-icon">📍</span>
+              <div>
+                <strong>Văn phòng</strong>
+                <p>Tầng 3, 39 Hoàng Việt, P. Tân Sơn Nhất, TP.HCM</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="acc-map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2181622300004!2d106.65890410000002!3d10.794596199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529d0c1ce247f%3A0x4fdadd224202ce7f!2zQ8OUTkcgVFkgTFXhuqxUIEFDQw!5e0!3m2!1svi!2s!4v1766203797959!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contact-form-wrap fade-up">
+          <div class="contact-form">
+            <h3>Đăng Ký Nhận Tư Vấn</h3>
+            <p class="form-note">Điền thông tin, ACC sẽ liên hệ lại trong vòng 24h làm việc.</p>
+            <div class="ticket-support-box">
+              <div id="ticket-support-embed"></div>
+              <script type="text/javascript">
+                var TicketSupportInit = {
+                  email : "",
+                  name : "",
+                  description : ""
+                };
+                (function (d, s, type_id, tag_id) {
+                  TicketSupportInit.id = type_id;
+                  var time = parseInt(new Date().getTime()/60/60/1000);
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(tag_id)) return;
+                  js = d.createElement(s);
+                  js.id = tag_id;
+                  js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, "script", "67b017adffa25d6f46098465", "tk-embed"));
+              </script>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <div class="toast" id="toast"></div>
+
 
   <script src="main.js"></script>
 </body>
+
 </html>
