@@ -1359,24 +1359,20 @@ p:last-child {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-
   .hero__card {
     max-width: 480px;
     margin: 0 auto;
     width: 100%;
   }
-
   .two-col,
   .service-layout,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-
   .two-col--reverse .two-col__media {
     order: 0;
   }
-
   .info-grid,
   .benefits-grid {
     grid-template-columns: 1fr 1fr;
