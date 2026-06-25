@@ -944,6 +944,24 @@ html,body {
 .contact-form-card p {
   text-align:center; font-size:0.9rem; margin-bottom:30px;
 }
+.bizfly-contact-form,.form-lien-he,#ticket-support-embed,.ticket-sp-form {
+  width:100%; max-width:100%; min-width:0;
+}
+.form-lien-he.row {
+  margin-left:0; margin-right:0;
+}
+#ticket-support-embed,.ticket-sp-form {
+  overflow-x:hidden;
+}
+#ticket-support-embed iframe,.ticket-sp-form iframe {
+  width:100%!important; max-width:100%!important; min-width:0!important;
+}
+.ticket-sp-form,.ticket-sp-form * {
+  max-width:100%; box-sizing:border-box;
+}
+.ticket-sp-form input,.ticket-sp-form textarea,.ticket-sp-form select,.ticket-sp-form button {
+  width:100%; min-width:0;
+}
 .modal-overlay {
   position:fixed; top:0; left:0;
   width:100%; height:100%; background-color:rgba(30, 9, 9, 0.7);
@@ -1270,10 +1288,10 @@ html,body {
   .section-contact-text strong,.hero-hotline-number,.hotline-number-value,.contact-detail-text p:last-child {
     white-space:normal; overflow-wrap:anywhere; word-break:break-word;
   }
-  .contact-form-wrapper,.contact-form-card,.bizfly-contact-form,.form-lien-he,#ticket-support-embed,#ticket-support-embed iframe,iframe,embed,object {
-    max-width:100%!important; min-width:0!important;
+  .contact-form-wrapper,.contact-form-card,.bizfly-contact-form,.form-lien-he,#ticket-support-embed,.ticket-sp-form {
+    max-width:100%; min-width:0;
   }
-  .contact-form-card,.bizfly-contact-form,.form-lien-he,#ticket-support-embed {
+  .contact-form-card,.bizfly-contact-form,.form-lien-he,#ticket-support-embed,.ticket-sp-form {
     overflow-x:hidden;
   }
 }
