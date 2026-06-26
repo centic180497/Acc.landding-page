@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-    <script src="script.js"></script>
   <body>
     <main id="top">
       <section class="hero">
@@ -447,25 +446,26 @@
           <div class="form-lien-he row">
             <div id="ticket-support-embed"></div>
             <script type="text/javascript">
-              var TicketSupportInit = {
-                email: "",
-                name: "",
-                description: "",
-              };
-              (function (d, s, type_id, tag_id) {
-                TicketSupportInit.id = type_id;
-                var time = parseInt(new Date().getTime() / 60 / 60 / 1000);
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(tag_id)) return;
-                js = d.createElement(s);
-                js.id = tag_id;
-                js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
-                fjs.parentNode.insertBefore(js, fjs);
-              })(document, "script", "67b017adffa25d6f46098465", "tk-embed");
-            </script>
+                var TicketSupportInit = {
+                  email : "",
+                  name : "",
+                  description : ""
+                };
+                (function (d, s, type_id, tag_id) {
+                  TicketSupportInit.id = type_id;
+                  var time = parseInt(new Date().getTime()/60/60/1000);
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(tag_id)) return;
+                  js = d.createElement(s);
+                  js.id = tag_id;
+                  js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, "script", "67b017adffa25d6f46098465", "tk-embed"));
+              </script>
           </div>
         </div>
       </section>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>

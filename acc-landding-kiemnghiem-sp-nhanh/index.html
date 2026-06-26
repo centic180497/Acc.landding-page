@@ -938,22 +938,22 @@
               <div class="form-lien-he row">
                 <div id="ticket-support-embed"></div>
                 <script type="text/javascript">
-                  var TicketSupportInit = {
-                    email : "",
-                    name : "",
-                    description : ""
-                  };
-                  (function (d, s, type_id, tag_id) {
-                    TicketSupportInit.id = type_id;
-                    var time = parseInt(new Date().getTime()/60/60/1000);
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(tag_id)) return;
-                    js = d.createElement(s);
-                    js.id = tag_id;
-                    js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
-                    fjs.parentNode.insertBefore(js, fjs);
-                  }(document, "script", "67b017adffa25d6f46098465", "tk-embed"));
-                </script>
+                var TicketSupportInit = {
+                  email : "",
+                  name : "",
+                  description : ""
+                };
+                (function (d, s, type_id, tag_id) {
+                  TicketSupportInit.id = type_id;
+                  var time = parseInt(new Date().getTime()/60/60/1000);
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(tag_id)) return;
+                  js = d.createElement(s);
+                  js.id = tag_id;
+                  js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, "script", "67b017adffa25d6f46098465", "tk-embed"));
+              </script>
               </div>
             </div>
 
@@ -978,9 +978,9 @@
   </main>
 
   <!-- Toast -->
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <!-- <div class="toast" id="toast" role="status" aria-live="polite"></div> -->
 </body>
-<script type="application/ld+json">
+<!-- <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -993,6 +993,6 @@
     "areaServed": "Vietnam",
     "description": "Dịch vụ kiểm nghiệm sản phẩm trọn gói: tư vấn chỉ tiêu, lấy mẫu, theo dõi kết quả, hỗ trợ công bố sản phẩm sau kiểm nghiệm."
   }
-  </script>
+  </script> -->
   <script src="script.js"></script>
 </html>
