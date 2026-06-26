@@ -1051,10 +1051,13 @@ section.band {
   pointer-events:auto;
 }
 .reveal {
+  opacity:1; transform:none;
+}
+.js-enabled .reveal {
   opacity:0; transform:translateY(22px);
   transition:opacity 0.6s ease, transform 0.6s ease;
 }
-.reveal.in-view {
+.js-enabled .reveal.in-view {
   opacity:1; transform:translateY(0);
 }
 /* Responsive */
@@ -1062,7 +1065,7 @@ section.band {
   html {
     scroll-behavior:auto;
   }
-  .reveal,.btn,.problem-card,.service-card,.reason-card,.cost-card,.accordion-item,.check-list li,.contact-method {
+  .js-enabled .reveal,.btn,.problem-card,.service-card,.reason-card,.cost-card,.accordion-item,.check-list li,.contact-method {
     transition:none;
   }
 }

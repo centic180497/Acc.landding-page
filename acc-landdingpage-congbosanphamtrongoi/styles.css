@@ -929,10 +929,13 @@ section + section:not(.band):not(.contact-section):not(.hero) {
   border-bottom:1px solid var(--line);
 }
 .reveal {
-  opacity:0; transform:translateY(26px);
+  opacity:1; transform:none;
   transition:opacity 0.75s ease, transform 0.75s ease;
 }
-.reveal.in-view {
+.js-reveal .reveal {
+  opacity:0; transform:translateY(26px);
+}
+.js-reveal .reveal.in-view {
   opacity:1; transform:translateY(0);
 }
 @keyframes ticketShimmer {
