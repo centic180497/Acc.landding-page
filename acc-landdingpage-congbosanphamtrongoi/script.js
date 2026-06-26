@@ -1,3 +1,19 @@
+var TicketSupportInit = {
+                  email : "",
+                  name : "",
+                  description : ""
+                };
+                (function (d, s, type_id, tag_id) {
+                  TicketSupportInit.id = type_id;
+                  var time = parseInt(new Date().getTime()/60/60/1000);
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(tag_id)) return;
+                  js = d.createElement(s);
+                  js.id = tag_id;
+                  js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, "script", "67b017adffa25d6f46098465", "tk-embed"));
+
 const revealItems = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -9,7 +25,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.14 });
 
 revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${Math.min(index % 4, 3) * 80}ms`;
+  item.style.transitionDelay = Math.min(index % 4, 3) * 80 + "ms";
   observer.observe(item);
 });
 

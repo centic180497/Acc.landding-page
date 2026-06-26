@@ -9,7 +9,7 @@
      Reveal on scroll
      --------------------------------------------------------- */
   const revealItems = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealItems.length) {
+  if (("IntersectionObserver" in window) ? Boolean(revealItems.length) : false) {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -196,109 +196,6 @@
     start();
     window.addEventListener("resize", () => {
       setPerView();
-    });
-  });
-
-  /* ---------------------------------------------------------
-     Toast helper
-     --------------------------------------------------------- */
-  const toastEl = document.getElementById("toast");
-  const toast = (msg, type = "success") => {
-    if (!toastEl) return;
-    toastEl.textContent = msg;
-    toastEl.className = `toast show toast-${type}`;
-    clearTimeout(toast._t);
-    toast._t = setTimeout(() => {
-      toastEl.classList.remove("show");
-    }, 3200);
-  };
-
-  /* ---------------------------------------------------------
-     Form validation + fake submit
-     --------------------------------------------------------- */
-  const phoneRe = /^(0|\+84)(\d{9,10})$/;
-  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  const setError = (form, name, message) => {
-    const errEl = form.querySelector(`[data-error-for="${name}"]`);
-    const input = form.querySelector(`[name="${name}"]`);
-    if (errEl) errEl.textContent = message || "";
-    if (input) input.classList.toggle("is-invalid", Boolean(message));
-  };
-
-  const validateForm = (form) => {
-    let ok = true;
-    // Reset errors first
-    form.querySelectorAll("[data-error-for]").forEach((e) => (e.textContent = ""));
-    form.querySelectorAll(".is-invalid").forEach((e) => e.classList.remove("is-invalid"));
-
-    const name = form.querySelector("[name='name']");
-    const phone = form.querySelector("[name='phone']");
-    const email = form.querySelector("[name='email']");
-    const product = form.querySelector("[name='product']");
-
-    if (name && name.required && name.value.trim().length < 2) {
-      setError(form, "name", "Vui lòng nhập họ và tên");
-      ok = false;
-    }
-    if (phone && phone.required) {
-      const v = phone.value.replace(/\s+/g, "");
-      if (!phoneRe.test(v)) {
-        setError(form, "phone", "Số điện thoại không hợp lệ");
-        ok = false;
-      }
-    }
-    if (email && email.value.trim() && !emailRe.test(email.value.trim())) {
-      setError(form, "email", "Email không đúng định dạng");
-      ok = false;
-    }
-    if (product && product.required && !product.value) {
-      setError(form, "product", "Vui lòng chọn loại sản phẩm");
-      ok = false;
-    }
-    return ok;
-  };
-
-  document.querySelectorAll(".js-form").forEach((form) => {
-    // Live clear errors on input
-    form.querySelectorAll("input, select, textarea").forEach((field) => {
-      field.addEventListener("input", () => {
-        if (field.classList.contains("is-invalid")) {
-          field.classList.remove("is-invalid");
-          const errEl = form.querySelector(`[data-error-for="${field.name}"]`);
-          if (errEl) errEl.textContent = "";
-        }
-      });
-    });
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (!validateForm(form)) {
-        toast("Vui lòng kiểm tra lại thông tin", "error");
-        const firstInvalid = form.querySelector(".is-invalid");
-        if (firstInvalid) firstInvalid.focus();
-        return;
-      }
-      const btn = form.querySelector("button[type='submit']");
-      const labelSpan = btn.querySelector("span");
-      const original = labelSpan ? labelSpan.textContent : btn.textContent;
-      if (labelSpan) labelSpan.textContent = "Đang gửi...";
-      else btn.textContent = "Đang gửi...";
-      btn.disabled = true;
-
-      // Simulate submit
-      setTimeout(() => {
-        if (labelSpan) labelSpan.textContent = "Đã gửi yêu cầu ✓";
-        else btn.textContent = "Đã gửi yêu cầu ✓";
-        toast("Đã gửi yêu cầu. Chuyên viên ACC sẽ liên hệ trong 15 phút!", "success");
-
-        setTimeout(() => {
-          if (labelSpan) labelSpan.textContent = original;
-          else btn.textContent = original;
-          btn.disabled = false;
-          form.reset();
-        }, 2000);
-      }, 900);
     });
   });
 

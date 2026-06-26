@@ -1347,3 +1347,4 @@ section.band {
     width:min(calc(100% - 16px), var(--max));
   }
 }
+
