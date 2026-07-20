@@ -1,6 +1,4 @@
-/**
- * Công ty Luật ACC – Landing Page Tư vấn Ly hôn
- */
+
 (function () {
   'use strict';
 
