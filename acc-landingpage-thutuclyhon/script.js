@@ -98,7 +98,7 @@
         var el = entry.target;
         var raw = el.textContent.trim();
         var suffix = raw.replace(/[0-9]/g, '');
-        // var num = parseInt(raw.replace(/[^0-9]/g, ''), 10);
+        // var num = parseInt(raw.replace(/[^0-9]/g, ''), 10);  
         obs.unobserve(el);
         if (isNaN(num) || num === 0) return;
         var steps = 40, current = 0, inc = num / steps;

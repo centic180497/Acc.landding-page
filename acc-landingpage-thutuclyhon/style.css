@@ -12,6 +12,8 @@
   --muted: #666;
   --ok: #1B8A3D;
   --zalo: #0068ff;
+  --gold: #d4af37;
+  --gold-dark: #b8962f;
   --w: #fff;
   --font: "Roboto", sans-serif;
   --r: 14px;
@@ -247,6 +249,18 @@ p:last-child {
   box-shadow: 0 14px 32px rgba(255, 255, 255, .3);
 }
 
+/* Hero-specific gold button */
+.hero .btn--white {
+  background: var(--gold);
+  color: #3a2418;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, .38);
+}
+
+.hero .btn--white:hover {
+  background: var(--gold-dark);
+  box-shadow: 0 14px 32px rgba(212, 175, 55, .5);
+}
+
 .btn--zalo:hover {
   background: #0057d8;
   transform: translateY(-2px);
@@ -255,6 +269,129 @@ p:last-child {
 .btn--outline:hover {
   background: rgba(255, 255, 255, .14);
   border-color: var(--w);
+}
+
+/* ===== Phone pair (hotline + di động) ===== */
+.phone-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.phone-pair--stack {
+  grid-template-columns: 1fr;
+}
+
+.phone-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--rs);
+  font-weight: 700;
+  transition: var(--tr);
+  border: 2px solid transparent;
+  min-height: 54px;
+}
+
+.phone-btn__ic {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phone-btn__ic svg {
+  width: 16px;
+  height: 16px;
+}
+
+.phone-btn__tx {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.phone-btn__tx small {
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  opacity: .78;
+}
+
+.phone-btn__tx strong {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+/* Primary (dùng trong mobile nav) */
+.phone-btn--primary {
+  background: var(--p);
+  color: var(--w);
+  box-shadow: 0 6px 18px rgba(122, 40, 40, .28);
+}
+.phone-btn--primary .phone-btn__ic {
+  background: rgba(255, 255, 255, .18);
+  color: var(--w);
+}
+.phone-btn--primary:hover {
+  background: var(--pd);
+  transform: translateY(-2px);
+}
+
+.phone-btn--dark {
+  background: #2b0f0f;
+  color: var(--w);
+  border-color: rgba(255, 255, 255, .08);
+}
+.phone-btn--dark .phone-btn__ic {
+  background: rgba(255, 255, 255, .12);
+  color: #ffd7a8;
+}
+.phone-btn--dark:hover {
+  background: #3a1717;
+  transform: translateY(-2px);
+}
+
+/* Glass — dùng trên hero (nền tối) */
+.phone-btn--glass {
+  background: rgba(255, 255, 255, .1);
+  color: var(--w);
+  border: 1px solid rgba(255, 255, 255, .28);
+  backdrop-filter: blur(6px);
+}
+.phone-btn--glass .phone-btn__ic {
+  background: rgba(255, 255, 255, .18);
+  color: var(--w);
+}
+.phone-btn--glass:hover {
+  background: rgba(255, 255, 255, .18);
+  border-color: var(--w);
+  transform: translateY(-2px);
+}
+
+.phone-pair--hero {
+  max-width: 460px;
+}
+
+/* Outline dark — dùng trên hero card (nền trắng) */
+.btn--outline-dark {
+  background: transparent;
+  color: var(--p);
+  border-color: var(--p);
+}
+.btn--outline-dark:hover {
+  background: var(--p);
+  color: var(--w);
+  transform: translateY(-2px);
 }
 
 /* ===== Reveal animations ===== */
@@ -544,21 +681,25 @@ p:last-child {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("https://congtyluatacc.vn/wp-content/uploads/2026/07/hero.jpeg") no-repeat center/cover;
+  background: url("https://congtyluatacc.vn/wp-content/uploads/2026/07/z8062131581119_049f1e58063c8656b8abd66249ca2e39.jpg") no-repeat center/cover;
+}
+
+.hero__bg {
+  filter: brightness(.78) saturate(.9);
 }
 
 .hero__ov {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, .48);
+  background: linear-gradient(100deg, rgba(50, 10, 10, .93) 0%, rgba(90, 28, 28, .82) 50%, rgba(50, 10, 10, .6) 100%);
 }
 
 .hero__ov::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(83, 23, 23, .72) 0%, rgba(122, 40, 40, .42) 60%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .18) 0%, transparent 40%, rgba(0, 0, 0, .32) 100%);
 }
 
 .hero__in {
@@ -577,7 +718,8 @@ p:last-child {
 }
 
 .hero__hl {
-  color: #ffb3b3;
+  color: #f4d98f;
+  text-shadow: 0 2px 8px rgba(212, 175, 55, .4);
 }
 
 .hero__sub {
@@ -1234,6 +1376,90 @@ p:last-child {
   margin-bottom: 26px;
 }
 
+/* CTA Contact List */
+.cta-contact-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.cta-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: var(--r);
+  transition: var(--tr);
+}
+
+.cta-contact-item:hover {
+  background: rgba(255, 255, 255, .13);
+  border-color: rgba(255, 255, 255, .3);
+  transform: translateX(4px);
+}
+
+.cta-contact-ic {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-contact-ic svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--w);
+}
+
+.cta-contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.cta-contact-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: rgba(255, 255, 255, .68);
+}
+
+.cta-contact-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--w);
+  line-height: 1.35;
+  word-wrap: break-word;
+}
+
+.cta-form {
+  background: rgba(255, 255, 255, .09);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 20px;
+  padding: 28px 24px;
+}
+
+.cta-form h3 {
+  color: var(--w);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.cta-form-desc {
+  color: rgba(255, 255, 255, .74);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+/* Old unused rules cleanup */
 .cta-acts {
   display: flex;
   gap: 12px;
@@ -1270,19 +1496,6 @@ p:last-child {
   width: 16px;
   height: 16px;
   stroke: var(--w);
-}
-
-.cta-form {
-  background: rgba(255, 255, 255, .09);
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-radius: 20px;
-  padding: 24px;
-}
-
-.cta-form h3 {
-  color: var(--w);
-  font-size: 1.05rem;
-  margin-bottom: 16px;
 }
 
 /* ===== Focus ===== */
@@ -1361,6 +1574,33 @@ textarea:focus-visible {
 
   .hero__acts {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .phone-pair--hero {
+    max-width: 100%;
+  }
+
+  .cta-contact-list {
+    gap: 10px;
+  }
+
+  .cta-contact-item {
+    padding: 12px 14px;
+  }
+
+  .cta-contact-ic {
+    width: 38px;
+    height: 38px;
+  }
+
+  .cta-contact-ic svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cta-contact-value {
+    font-size: 14px;
   }
 }
 
@@ -1369,5 +1609,22 @@ textarea:focus-visible {
   .svc-grid,
   .docs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .phone-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-btn {
+    padding: 12px 14px;
+  }
+
+  .phone-btn__ic {
+    width: 38px;
+    height: 38px;
+  }
+
+  .phone-btn__tx strong {
+    font-size: 14px;
   }
 }
