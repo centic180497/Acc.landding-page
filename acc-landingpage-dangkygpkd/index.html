@@ -1,10 +1,11 @@
 <html lang="vi">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+
 <body>
 
   <!-- ===== HERO ===== -->
@@ -557,26 +558,26 @@
           <div class="contact-form">
             <h3>Đăng Ký Nhận Tư Vấn</h3>
             <p class="form-note">Điền thông tin, ACC sẽ liên hệ lại trong vòng 24h làm việc.</p>
-             <div class="ticket-support-box">
-                        <div id="ticket-support-embed"></div>
-                        <script type="text/javascript">
-                            var TicketSupportInit = {
-                                email : "",
-                                name : "",
-                                description : ""
-                            };
-                            (function (d, s, type_id, tag_id) {
-                                TicketSupportInit.id = type_id;
-                                var time = parseInt(new Date().getTime()/60/60/1000);
-                                var js, fjs = d.getElementsByTagName(s)[0];
-                                if (d.getElementById(tag_id)) return;
-                                js = d.createElement(s);
-                                js.id = tag_id;
-                                js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }(document, "script", "67b017adffa25d6f46098465", "tk-embed"));
-                        </script>
-                    </div>
+            <div class="ticket-support-box">
+              <div id="ticket-support-embed"></div>
+              <script type="text/javascript">
+                var TicketSupportInit = {
+                  email: "",
+                  name: "",
+                  description: ""
+                };
+                (function (d, s, type_id, tag_id) {
+                  TicketSupportInit.id = type_id;
+                  var time = parseInt(new Date().getTime() / 60 / 60 / 1000);
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(tag_id)) return;
+                  js = d.createElement(s);
+                  js.id = tag_id;
+                  js.src = "https://ticket.bizfly.vn/assets/v1/js/support/embed/embed.js?v=" + time;
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, "script", "67b017adffa25d6f46098465", "tk-embed"));
+              </script>
+            </div>
           </div>
         </div>
       </div>
